@@ -1,0 +1,54 @@
+16/11/2024
+analysis time 70 min
+
+============== some Requirements from backend
+1- add localization logic
+2- APIs for authentication (sing up login logout forgetpassword)
+3- verification the registration by sent e-mail
+3- api for best destinations
+4- api for search (products - visa) optional (multiable search will take more time-work  )
+5- api for edit profile (last name - first name - phone number- location, image)
+for step 5 the back will need to add record phone to the DB and source code
+in sign up and update profile
+6- api for booking ( first and last name - phone - email-note - upload passports images)
+for step 6 we need to allow the user to choose the type of the room (single - double - tripple)
+
+7- one api for (products-tours -destinations) but we need 3 one for best one for all for home but to save time
+8- api for offers
+8- api for gallery  (all details) instead of 2 apis
+9- one api for visa (all details) instead of 2 apis
+10- api for contact us form (names - email -phone - massage )
+11- privacy policy can generate it from api or i can make it simple site
+12 - api for more information(about us - contact us)
+13- apis notifications (only to show previous notifications if we will use FCM notifications) or we will hide it
+
+some details of the apis (image - title - cost - destination - Requirements )
+others:
+-logo of the app
+
+
+
+
+
+main tables
+1- visa
+2- products
+3- gallery
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- update to flutter version 24.24.4  dart sdk 3.5.4
+-- after update i had to enhance storage code
+-- change the old outdated package to compatibale one which make a bug
+-- create privacy policy site
+-- add privacy policy to the app app
