@@ -1,6 +1,8 @@
 16/11/2024
 analysis time 70 min
 
+
+
 ============== some Requirements from backend
 1- add localization logic
 2- APIs for authentication (sing up login logout forgetpassword)
@@ -26,26 +28,10 @@ some details of the apis (image - title - cost - destination - Requirements )
 others:
 -logo of the app
 
-
-
-
-
 main tables
 1- visa
 2- products
 3- gallery
-
-
-
-
-
-
-
-
-
-
-
-
 
 -- update to flutter version 24.24.4  dart sdk 3.5.4
 -- after update i had to enhance storage code
