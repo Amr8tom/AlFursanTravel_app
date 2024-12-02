@@ -4,7 +4,7 @@
     <application
         android:label="Al Fursan"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/flutter_luancher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

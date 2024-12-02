@@ -200,6 +200,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "flutter_screenutil",
       "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_screenutil-5.9.3",
       "packageUri": "lib/",
@@ -354,6 +360,12 @@
       "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "page_transition",
+      "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/page_transition-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "path",
@@ -692,7 +704,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-02T08:26:27.706503Z",
+  "generated": "2024-12-02T12:02:22.859679Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter",

@@ -159,4 +159,8 @@ class AssetRes {
   /// payments
   static const String fawry = 'assets/lotties/fawry.json';
   static const String mobileWallet = 'assets/lotties/mobile.json';
+
+  /// language
+  static const String en = 'assets/images/svgs/english.svg';
+  static const String ar = 'assets/images/pngs/ar.png';
 }

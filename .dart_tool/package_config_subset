@@ -218,6 +218,10 @@ package_config
 2.12
 file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.0/
 file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.0/lib/
+page_transition
+2.17
+file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/page_transition-2.1.0/
+file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/page_transition-2.1.0/lib/
 path
 3.0
 file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/
@@ -446,6 +450,10 @@ flutter
 3.3
 file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter/
 file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter/lib/
+flutter_localizations
+3.2
+file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter_localizations/
+file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter_localizations/lib/
 flutter_test
 3.3
 file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter/packages/flutter_test/

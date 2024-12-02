@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fursan_travel_app/utils/helpers/navigation_extension.dart';
@@ -11,7 +10,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     this.title,
     this.showBackArrow = false,
-    this.centerTitle = false,
+    this.centerTitle = true,
     this.leadingWidget,
     this.actions,
     this.bgColor,
@@ -20,7 +19,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.doSomeThing,
   });
 
-  final Widget? title;
+  final String? title;
   final bool showBackArrow;
   final bool showBackGroundColor;
   final bool centerTitle;
@@ -34,40 +33,33 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-          // left: showBackArrow || showBackGroundColor ? 0 : 20.w,
-          right: 0.w,
-          top: 0.h),
-      child: AppBar(
-        titleTextStyle: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 32.sp,
-            fontFamily: "Cairo",
-            color: ColorRes.greenBlue),
-        backgroundColor: bgColor ?? ColorRes.greenBlueLight,
-        automaticallyImplyLeading: false,
-        leadingWidth: 85.w,
-        leading: showBackArrow
-            ? IconButton(
-                onPressed: () {
-                  if (doSomeThing != null) {
-                    doSomeThing!();
-                  }
-                  context.pop();
-                },
-                icon: Icon(Icons.arrow_back_ios,
-                    color: arrowBackColor
-                        ? ColorRes.greenBlue
-                        : ColorRes.greenBlue))
-            : Padding(
-                padding: const EdgeInsets.only(right: 20.0),
-                child: leadingWidget,
-              ),
-        title: title,
-        centerTitle: centerTitle,
-        actions: actions,
-      ),
+    return AppBar(
+      titleTextStyle: TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 32.sp,
+          fontFamily: "Cairo",
+          color: ColorRes.primary),
+      backgroundColor: bgColor ?? ColorRes.primaryLight,
+      automaticallyImplyLeading: false,
+      // leadingWidth: 85.w,
+      leading: showBackArrow
+          ? IconButton(
+              onPressed: () {
+                if (doSomeThing != null) {
+                  doSomeThing!();
+                }
+                context.pop();
+              },
+              icon: Icon(Icons.arrow_back_ios,
+                  color:
+                      arrowBackColor ? ColorRes.greenBlue : ColorRes.greenBlue))
+          : Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: leadingWidget,
+            ),
+      title: Text(title ?? ""),
+      centerTitle: centerTitle,
+      actions: actions,
     );
   }
 

@@ -21,7 +21,7 @@ class DAppTheme {
       brightness: Brightness.light,
       primaryColor: Colors.blue,
       textTheme: DTextTheme.lightTextTheme,
-      chipTheme: DChipTheme.lightChipTheme,
+      // chipTheme: DChipTheme.lightChipTheme,
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: DAppBarTheme.lightAppBarTheme,
       checkboxTheme: DCheckBoxTheme.lightCheckboxTheme,

@@ -4,8 +4,13 @@ class ColorRes {
   ColorRes._();
 
   /// App Basic Colors
-  static const Color sdasd = Color(0xff483d8b);
-  static const Color primary = Color(0xff556b2f);
+  static const Color primary = Color(0xff007a8c);
+  static const Color primarymed = Color(0x8000788a);
+
+  ///50%
+  static const Color primaryLight = Color(0x4d007a8c);
+
+  ///30%
   // static const Color primary = Color(0xFF3D9889);
   static const Color primaryDark = Colors.blueGrey;
   static const Color accent = Color(0xFFB0C7FF);
@@ -81,4 +86,47 @@ class ColorRes {
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
   static const Color transparent = Colors.transparent;
+
+  /// gradient colors
+  ///
+  static const List<Color> giftGrad = [
+    Colors.yellow,
+    Colors.yellow,
+    Colors.yellow,
+    ColorRes.primary,
+    ColorRes.primary,
+    ColorRes.primary,
+    ColorRes.primary,
+    ColorRes.primary,
+    ColorRes.primary,
+  ];
+  static const List<Color> langGrad = [
+    Colors.white,
+    ColorRes.primaryLight,
+    ColorRes.primary,
+  ];
+  static const List<Color> pointsGrad = [
+    ColorRes.primary,
+    ColorRes.primary,
+    Colors.yellow
+  ];
+  static const List<Color> profileGrad = [
+    ColorRes.primary,
+    ColorRes.primary,
+    ColorRes.white,
+  ];
+
+  /// gift status grads
+  static const List<Color> pendinggrad = [
+    Colors.grey,
+    Colors.yellow,
+  ];
+  static const List<Color> refusedGrad = [Colors.grey, Colors.red];
+  static const List<Color> acceptedGrad = [
+    // ColorRes.primary,
+    // ColorRes.primary,
+    Colors.grey,
+
+    Colors.green
+  ];
 }
