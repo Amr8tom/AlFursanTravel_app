@@ -97,7 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("هناك خطأ ما"),
         "exitApp":
             MessageLookupByLibrary.simpleMessage("الخٍـروُج من التَـطبيـق"),
-        "favorite": MessageLookupByLibrary.simpleMessage("أصنافي المفضلة"),
+        "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "اصنافي المفضلة   ما ترغب في شرائه لاحقا"),
         "flashTodaySale":
@@ -173,7 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "productDescription":
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "productName": MessageLookupByLibrary.simpleMessage("أسم المنتج"),
-        "profileInfo": MessageLookupByLibrary.simpleMessage("الملف الشخصى"),
+        "profileInfo": MessageLookupByLibrary.simpleMessage("البروفايل"),
         "profileInfoDes": MessageLookupByLibrary.simpleMessage(
             "قُـم بتــعديل المــلف الشــخصي لك"),
         "reCharge": MessageLookupByLibrary.simpleMessage("أرسال"),
