@@ -6,6 +6,8 @@ import 'package:fursan_travel_app/features/home/presentation/home_screen.dart';
 import 'package:fursan_travel_app/features/notifications/presentation/notification_screen.dart';
 import 'package:fursan_travel_app/features/profile/presentation/profile_screen.dart';
 
+import '../../common/widgets/custom_lottie_floating_avtion_bottom.dart';
+import '../../common/widgets/navigationbar/bottom_navigation_bar.dart';
 import '../search/presentation/search_screen.dart';
 
 class NavigatorMenuScreen extends StatelessWidget {
@@ -18,6 +20,10 @@ class NavigatorMenuScreen extends StatelessWidget {
         showBackArrow: false,
       ),
       body: _buildScreen(1),
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+      floatingActionButton: const CustomLottieFloatingAvtionBottom(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 

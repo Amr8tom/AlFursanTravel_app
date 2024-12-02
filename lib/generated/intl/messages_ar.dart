@@ -143,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noResult": MessageLookupByLibrary.simpleMessage("لا توٌجـد نتــائج"),
         "noUserFound": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على هذه البيانات"),
+        "notifications": MessageLookupByLibrary.simpleMessage("الاشعارات"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
             "أنا المساعد الذكي هنا لمساعدتك عبر التطبيق"),
         "orderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),

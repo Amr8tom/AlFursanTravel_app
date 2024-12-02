@@ -5,7 +5,6 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utils/constants/colors.dart';
-import 'navigation_menu/navigation_menu_cubit.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({super.key});
@@ -21,10 +20,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
       notchSmoothness: NotchSmoothness.softEdge, // leftCornerRadius: 32,
 
-      activeIndex: context.read<NavigationMenuCubit>().indx,
+      activeIndex: 0,
       gapLocation: GapLocation.center,
-      onTap: (index) =>
-          context.read<NavigationMenuCubit>().setSelectedIndex(index),
+      onTap: (index) {},
     );
   }
 }
@@ -32,40 +30,40 @@ class CustomBottomNavigationBar extends StatelessWidget {
 List<Widget> _items = [
   Column(
     children: [
-      Icon(Iconsax.home, color: ColorRes.greenBlue),
+      Icon(Iconsax.home, color: ColorRes.primary),
       Text(
         S.current.home,
-        style: TextStyle(color: ColorRes.greenBlue),
+        style: TextStyle(fontSize: 12, color: ColorRes.primary),
       ),
     ],
   ),
   Column(
     children: [
-      Icon(Iconsax.building, color: ColorRes.greenBlue),
+      Icon(Iconsax.notification, color: ColorRes.primary),
       Text(
-        S.current.companies,
-        style: TextStyle(color: ColorRes.greenBlue),
+        S.current.notifications,
+        style: TextStyle(fontSize: 12, color: ColorRes.primary),
       ),
     ],
   ),
   Column(
     children: [
-      Icon(Iconsax.discount_circle, color: ColorRes.greenBlue),
-      // Text(
-      //   S.current.flashSale,
-      //   style: TextStyle(color: ColorRes.greenBlue),
-      // ),
+      Icon(Iconsax.heart, color: ColorRes.primary),
+      Text(
+        S.current.favorite,
+        style: TextStyle(fontSize: 12, color: ColorRes.primary),
+      ),
     ],
   ),
   Column(
     children: [
       Icon(
-        Iconsax.menu,
-        color: ColorRes.greenBlue,
+        Iconsax.profile,
+        color: ColorRes.primary,
       ),
       Text(
-        S.current.services,
-        style: TextStyle(color: ColorRes.greenBlue),
+        S.current.profileInfo,
+        style: TextStyle(fontSize: 12, color: ColorRes.primary),
       ),
     ],
   ),

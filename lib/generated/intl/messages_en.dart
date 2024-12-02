@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exitApp": MessageLookupByLibrary.simpleMessage("Exit App"),
         "expiredProducts": MessageLookupByLibrary.simpleMessage(
             "Expired Products or Expired Items.......Dispose of expired items by uploading expired or damaged products"),
-        "favorite": MessageLookupByLibrary.simpleMessage("my Favorites"),
+        "favorite": MessageLookupByLibrary.simpleMessage("Favorites"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "My Favorite Items.....What you want to buy later"),
         "fawry": MessageLookupByLibrary.simpleMessage("pay with fawry"),
@@ -213,6 +213,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "These credentials are not found"),
         "notVerified":
             MessageLookupByLibrary.simpleMessage("please verify your account"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
             "i am here to help you around the whole app"),
         "orderDetails": MessageLookupByLibrary.simpleMessage("Order Details"),

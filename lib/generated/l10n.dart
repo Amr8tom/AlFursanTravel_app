@@ -140,6 +140,16 @@ class S {
     );
   }
 
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Arrival Time`
   String get round {
     return Intl.message(
@@ -2122,10 +2132,10 @@ class S {
     );
   }
 
-  /// `my Favorites`
+  /// `Favorites`
   String get favorite {
     return Intl.message(
-      'my Favorites',
+      'Favorites',
       name: 'favorite',
       desc: '',
       args: [],
