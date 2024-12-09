@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fursan_travel_app/common/custom_ui.dart';
 
 import '../../constants/colors.dart';
 
@@ -7,7 +8,7 @@ class DTextTheme {
 
   /// Customizable Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
-    // button: TextStyle(fontSize: 45),
+    // : TextStyle(fontSize: 22,color: Colors.white),
     headlineLarge: const TextStyle().copyWith(
         fontSize: 44,
         fontWeight: FontWeight.w900,

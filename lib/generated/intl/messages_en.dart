@@ -50,13 +50,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "alsoAvailable":
             MessageLookupByLibrary.simpleMessage("Also Available In :"),
         "amount": MessageLookupByLibrary.simpleMessage("The amount"),
-        "appName": MessageLookupByLibrary.simpleMessage("Duaya"),
+        "appName": MessageLookupByLibrary.simpleMessage("Fursan"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "avaiableToLoan":
             MessageLookupByLibrary.simpleMessage("avaliable to loan"),
         "avaliableItemCount":
             MessageLookupByLibrary.simpleMessage("avaliable Itmes"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Back To Home"),
+        "bestDestination":
+            MessageLookupByLibrary.simpleMessage("Best destinations"),
+        "bestDestinations":
+            MessageLookupByLibrary.simpleMessage("Best Destinations"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
         "buildingNumber":
             MessageLookupByLibrary.simpleMessage("Building Number"),
@@ -124,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "details": MessageLookupByLibrary.simpleMessage("Details"),
         "discont": MessageLookupByLibrary.simpleMessage("discont"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
+        "dontHaveAccont":
+            MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "eMail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "editProduct": MessageLookupByLibrary.simpleMessage("Edit The Product"),
         "emailPasswordSend":
@@ -181,8 +187,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "localeee": MessageLookupByLibrary.simpleMessage("en"),
         "logOut": MessageLookupByLibrary.simpleMessage("Log Out"),
         "loginBody": MessageLookupByLibrary.simpleMessage(
-            "Enjoy a Shipping experiment with Duaya"),
-        "loginTitle": MessageLookupByLibrary.simpleMessage("Welcome ,doctor "),
+            "The World Is Waiting – Let’s Go!"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Welcome  "),
         "medicalServices": MessageLookupByLibrary.simpleMessage(
             " you can take a look on our newest digital services "),
         "medicalSupplies":
@@ -214,6 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "notVerified":
             MessageLookupByLibrary.simpleMessage("please verify your account"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+        "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
             "i am here to help you around the whole app"),
         "orderDetails": MessageLookupByLibrary.simpleMessage("Order Details"),
@@ -295,6 +302,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shippingBody": MessageLookupByLibrary.simpleMessage(
             "please wait your order in the way "),
         "singIn": MessageLookupByLibrary.simpleMessage("Sing In"),
+        "singUp": MessageLookupByLibrary.simpleMessage("Sing Up"),
         "size": MessageLookupByLibrary.simpleMessage("Size"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "souhoola": MessageLookupByLibrary.simpleMessage("Souhoola"),
@@ -308,6 +316,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "tours": MessageLookupByLibrary.simpleMessage("Tours"),
         "tryAgain":
             MessageLookupByLibrary.simpleMessage("Please try again or sign up"),
         "tryLater": MessageLookupByLibrary.simpleMessage("Please Try Later"),
@@ -318,7 +327,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateAvailable":
             MessageLookupByLibrary.simpleMessage("Update Available"),
         "updateBody": MessageLookupByLibrary.simpleMessage(
-            "A new version of the Duaya is available. Please update to continue"),
+            "A new version of the Fursan is available. Please update to continue"),
         "userName": MessageLookupByLibrary.simpleMessage("User Name"),
         "valu": MessageLookupByLibrary.simpleMessage("Valu"),
         "verificationCode":
@@ -326,6 +335,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "verification_status": MessageLookupByLibrary.simpleMessage(
             "conect with us for varification "),
         "verified": MessageLookupByLibrary.simpleMessage("verified"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
+        "visa": MessageLookupByLibrary.simpleMessage("Visa"),
         "wallet": MessageLookupByLibrary.simpleMessage(
             "Wallet......Here you can get money and cashback to help you increase your profits"),
         "walletCacheDes": MessageLookupByLibrary.simpleMessage(

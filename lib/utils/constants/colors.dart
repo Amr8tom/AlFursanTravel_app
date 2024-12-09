@@ -9,6 +9,8 @@ class ColorRes {
 
   ///50%
   static const Color primaryLight = Color(0x4d007a8c);
+  static const Color primaryBGAppBar = Color(0x8353a1b2);
+  // static const Color primaryBGAppBar = Color(0xff5fa5b8);
 
   ///30%
   // static const Color primary = Color(0xFF3D9889);
@@ -49,8 +51,7 @@ class ColorRes {
   ///Background Colors
   static const Color light = Color(0xFFF6F6F6);
   static const Color dark = Color(0xFF272727);
-  static const Color primaryBackground = Color(0xFF272727);
-  static const Color primaryBackground2 = Color(0xff0f2c20);
+  static const Color primaryBackground = Color(0x8353a1b2);
 
   ///Background Container Color
   static const Color lightContainer = Color(0xFFF6F6F6);

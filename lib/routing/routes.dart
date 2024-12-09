@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/login/login_screen.dart';
+import 'package:fursan_travel_app/features/categories/presentation/certain_category_screen.dart';
 import 'package:fursan_travel_app/features/language/select_language_screen.dart';
+import 'package:fursan_travel_app/features/search/presentation/search_screen.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../features/navigation_menu/navigator_menu_screen.dart';
+import '../features/authentication/presentation/singUp/signup_screen.dart';
+import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
 
 class RouteGenerator {
   /// generate Route
@@ -16,11 +20,41 @@ class RouteGenerator {
             type: PageTransitionType.fade,
             settings: settings);
 
-      /// when no routes
-
+      /// navigation
       case DRoutesName.navigationMenuRoute:
         return PageTransition(
             child: const NavigatorMenuScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// certain category Screen
+      case DRoutesName.certainCategoryRoute:
+        final Map<String, dynamic> arg =
+            settings.arguments as Map<String, dynamic>;
+        return PageTransition(
+            child: CertainCategoryScreen(arg: arg),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// when no routes
+
+      case DRoutesName.loginRoute:
+        return PageTransition(
+            child: const LoginScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// search Rourte
+      case DRoutesName.searchRoute:
+        return PageTransition(
+            child: const SearchScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// search Rourte
+      case DRoutesName.signupRoute:
+        return PageTransition(
+            child: const DSignupScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 

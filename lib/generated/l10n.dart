@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Duaya`
+  /// `Fursan`
   String get appName {
     return Intl.message(
-      'Duaya',
+      'Fursan',
       name: 'appName',
       desc: '',
       args: [],
@@ -750,10 +750,10 @@ class S {
     );
   }
 
-  /// `A new version of the Duaya is available. Please update to continue`
+  /// `A new version of the Fursan is available. Please update to continue`
   String get updateBody {
     return Intl.message(
-      'A new version of the Duaya is available. Please update to continue',
+      'A new version of the Fursan is available. Please update to continue',
       name: 'updateBody',
       desc: '',
       args: [],
@@ -1000,6 +1000,16 @@ class S {
     );
   }
 
+  /// `Best destinations`
+  String get bestDestination {
+    return Intl.message(
+      'Best destinations',
+      name: 'bestDestination',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Postal Code`
   String get postalCode {
     return Intl.message(
@@ -1065,6 +1075,16 @@ class S {
     return Intl.message(
       'Hours',
       name: 'hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t have an account?`
+  String get dontHaveAccont {
+    return Intl.message(
+      'Don’t have an account?',
+      name: 'dontHaveAccont',
       desc: '',
       args: [],
     );
@@ -1782,20 +1802,20 @@ class S {
     );
   }
 
-  /// `Welcome ,doctor `
+  /// `Welcome  `
   String get loginTitle {
     return Intl.message(
-      'Welcome ,doctor ',
+      'Welcome  ',
       name: 'loginTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enjoy a Shipping experiment with Duaya`
+  /// `The World Is Waiting – Let’s Go!`
   String get loginBody {
     return Intl.message(
-      'Enjoy a Shipping experiment with Duaya',
+      'The World Is Waiting – Let’s Go!',
       name: 'loginBody',
       desc: '',
       args: [],
@@ -1807,6 +1827,16 @@ class S {
     return Intl.message(
       'Buy Now',
       name: 'buyNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sing Up`
+  String get singUp {
+    return Intl.message(
+      'Sing Up',
+      name: 'singUp',
       desc: '',
       args: [],
     );
@@ -2112,11 +2142,61 @@ class S {
     );
   }
 
+  /// `View all`
+  String get viewAll {
+    return Intl.message(
+      'View all',
+      name: 'viewAll',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Done`
   String get done {
     return Intl.message(
       'Done',
       name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visa`
+  String get visa {
+    return Intl.message(
+      'Visa',
+      name: 'visa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tours`
+  String get tours {
+    return Intl.message(
+      'Tours',
+      name: 'tours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best Destinations`
+  String get bestDestinations {
+    return Intl.message(
+      'Best Destinations',
+      name: 'bestDestinations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Offers`
+  String get offers {
+    return Intl.message(
+      'Offers',
+      name: 'offers',
       desc: '',
       args: [],
     );

@@ -1,6 +1,7 @@
 class AssetRes {
   /// -- App Logos
-  static const String appLogo = 'assets/images/pngs/app-logo.png';
+  static const String appLogo =
+      'assets/images/pngs/social_images/google-logo.png';
   static const String appIcon = 'assets/images/pngs/app-logo.png';
   static const String animationLogo = 'assets/animations/logoAnimation.gif';
   static const String profileLogo = 'assets/images/jpegs/profileLogo.jpeg';
@@ -11,7 +12,7 @@ class AssetRes {
   static const String onBoardingImage2 = 'assets/lotties/drugJson.json';
   static const String onBoardingImage3 = 'assets/lotties/sell3.json';
 
-  /// -- OnBoarding Images png
+  /// -- OnBoarding Images pngF
   static const String onBoardingImagePng1 =
       'assets/images/pngs/on_boarding_images/onboarding_one.png';
   static const String onBoardingImagePng2 =
@@ -119,17 +120,17 @@ class AssetRes {
   /// Icons
   static const String removeIcon = 'assets/images/pngs/remove.png';
   static const String dollarIcon = 'assets/images/pngs/dollarIcon.png';
+  static const String planIcon = 'assets/images/svgs/Vector.svg';
+  static const String startIcon = 'assets/images/svgs/star.svg';
+  static const String rectangleIcon = 'assets/images/svgs/Rectangle.svg';
 
   /// Banners
-  static const String banner = 'assets/images/jpegs/banner.jpeg';
-  static const String banner2 = 'assets/images/jpegs/banner2.jpeg';
-  static const String banner3 = 'assets/images/jpegs/banner3.jpeg';
+  static const String homeBanner = 'assets/images/svgs/home_banner.png';
+  static const String homeBanner2 =
+      'assets/images/pngs/Explore the Beautiful world!_2.png';
+  // static const String homeBanner = 'assets/images/svgs/banner.svg';
 
   /// Category
-  static const String medicine = 'assets/images/pngs/medicine.png';
-  static const String medicalSupplies =
-      'assets/images/pngs/medicalSupplies.png';
-  static const String beautyTools = 'assets/images/pngs/beautyTools.png';
 
   /// Product
   static const String product = 'assets/images/pngs/product.png';

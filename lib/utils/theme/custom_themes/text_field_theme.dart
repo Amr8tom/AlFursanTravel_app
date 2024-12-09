@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,8 +8,8 @@ class DTextFormFieldTheme {
 
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 2,
-    prefixIconColor: ColorRes.greenBlue,
-    suffixIconColor: ColorRes.greenBlue,
+    prefixIconColor: ColorRes.primary,
+    suffixIconColor: ColorRes.primary,
     labelStyle: const TextStyle().copyWith(
         fontWeight: FontWeight.w400, fontSize: 14.sp, color: Colors.grey),
     hintStyle: const TextStyle().copyWith(
@@ -21,15 +20,15 @@ class DTextFormFieldTheme {
         const TextStyle().copyWith(color: ColorRes.black.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14.r),
-      borderSide: BorderSide(width: 1.w, color: ColorRes.greenBlue),
+      borderSide: BorderSide(width: 1.w, color: ColorRes.primary),
     ),
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14.r),
-      borderSide: BorderSide(width: 1.w, color: ColorRes.greenBlue),
+      borderSide: BorderSide(width: 1.w, color: ColorRes.primary),
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14.r),
-      borderSide: BorderSide(width: 1.w, color: ColorRes.greenBlue),
+      borderSide: BorderSide(width: 1.w, color: ColorRes.primary),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14.r),

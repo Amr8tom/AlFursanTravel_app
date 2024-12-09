@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
 import 'package:fursan_travel_app/routing/routes.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/theme/theme.dart';
@@ -13,33 +15,36 @@ class FursanApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String? changedLang = PrefService.getString(key: CacheKeys.lang);
+    final controller = context.read<NavigationCubit>();
 
-    String? storedLang = changedLang == '' ? "en" : changedLang;
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          themeMode: ThemeMode.light,
-          theme: DAppTheme.lightTheme(context),
-          darkTheme: DAppTheme.darkTheme(context),
-          onGenerateRoute: RouteGenerator.generateRoute,
-          initialRoute: changedLang == ''
-              ? DRoutesName.langRoute
-              : DRoutesName.navigationMenuRoute,
-          supportedLocales: S.delegate.supportedLocales,
-          localeResolutionCallback: (locale, supportedLocales) {
-            return Locale(storedLang!);
+        return BlocBuilder<NavigationCubit, NavigationState>(
+          builder: (context, state) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              themeMode: ThemeMode.light,
+              theme: DAppTheme.lightTheme(context),
+              darkTheme: DAppTheme.darkTheme(context),
+              onGenerateRoute: RouteGenerator.generateRoute,
+              initialRoute: controller.changedLang == ''
+                  ? DRoutesName.langRoute
+                  : DRoutesName.navigationMenuRoute,
+              supportedLocales: S.delegate.supportedLocales,
+              localeResolutionCallback: (locale, supportedLocales) {
+                return controller.currentLang;
+              },
+              localizationsDelegates: [
+                S.delegate, // //
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate
+              ],
+            );
           },
-          localizationsDelegates: [
-            S.delegate, // //
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate
-          ],
         );
       },
     );

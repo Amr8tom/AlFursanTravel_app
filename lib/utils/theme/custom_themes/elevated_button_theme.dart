@@ -10,19 +10,16 @@ class DElevatedButtonTheme {
   static final ElevatedButtonThemeData lightElevatedButtonTheme =
       ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      elevation: 0,
-      // foregroundColor: Colors.white,
-      backgroundColor: ColorRes.greenBlue,
-      // disabledForegroundColor: Colors.white,
-      // disabledBackgroundColor: Colors.white,
-      side: BorderSide(color: ColorRes.white.withOpacity(0.7)),
-      padding: EdgeInsets.symmetric(vertical: 18.h),
+      side: const BorderSide(color: ColorRes.primary),
+      // elevation: 2,
+      backgroundColor: ColorRes.primary,
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
       textStyle: TextStyle(
+          color: Colors.white,
           fontFamily: "Cairo",
-          fontSize: 23.sp,
-          color: Colors.red,
+          fontSize: 21.sp,
           fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.r)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
     ),
   );
 
@@ -30,16 +27,16 @@ class DElevatedButtonTheme {
   static final ElevatedButtonThemeData darkElevatedButtonTheme =
       ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      elevation: 0,
-      // foregroundColor: Colors.white,
-      backgroundColor: ColorRes.lightGreen.withOpacity(.8),
-      // disabledForegroundColor: Colors.white,
-      // disabledBackgroundColor: Colors.white,
-      side: const BorderSide(color: Colors.white),
-      padding: EdgeInsets.symmetric(vertical: 18.h),
+      side: const BorderSide(color: ColorRes.primary),
+      // elevation: 2,
+      backgroundColor: ColorRes.primary,
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
       textStyle: TextStyle(
-          fontSize: 23.sp, color: Colors.red, fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.r)),
+          color: Colors.white,
+          fontFamily: "Cairo",
+          fontSize: 21.sp,
+          fontWeight: FontWeight.bold),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
     ),
   );
 }

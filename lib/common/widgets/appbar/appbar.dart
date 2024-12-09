@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fursan_travel_app/utils/helpers/navigation_extension.dart';
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/exports.dart';
 import '../../../utils/device/device_utility.dart';
 
 class DAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -39,7 +38,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
           fontSize: 32.sp,
           fontFamily: "Cairo",
           color: ColorRes.primary),
-      backgroundColor: bgColor ?? ColorRes.primaryLight,
+      backgroundColor: bgColor ?? ColorRes.primaryBGAppBar,
       automaticallyImplyLeading: false,
       // leadingWidth: 85.w,
       leading: showBackArrow

@@ -41,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("العربيه"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("العودة إلى الرئيسية"),
+        "bestDestination": MessageLookupByLibrary.simpleMessage("أفضل الوجهات"),
+        "bestDestinations":
+            MessageLookupByLibrary.simpleMessage("أفضل الوجهات"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("أفـضـل العٍــروض"),
         "buildingNumber": MessageLookupByLibrary.simpleMessage("رقم المبني"),
         "buyNow": MessageLookupByLibrary.simpleMessage("قُــم بالِشــراء الأن"),
@@ -90,6 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "discont": MessageLookupByLibrary.simpleMessage("خَصــم"),
         "done": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
+        "dontHaveAccont":
+            MessageLookupByLibrary.simpleMessage("لا يـوجد لـديك حســاب ؟"),
         "eMail": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "editProduct":
             MessageLookupByLibrary.simpleMessage("تَــعديـل المُنـتج"),
@@ -126,9 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "localeee": MessageLookupByLibrary.simpleMessage("ar"),
         "logOut": MessageLookupByLibrary.simpleMessage("تَســجيل الخــروج"),
         "loginBody": MessageLookupByLibrary.simpleMessage(
-            "أسـتمتع بتـجربة شـراء ممـيزة من الفرسان"),
-        "loginTitle":
-            MessageLookupByLibrary.simpleMessage("مرحبـاً بك يا دكــتور"),
+            "العالم في انتظارك – هيا بنا!"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("مرحبـاً بك"),
         "minutes": MessageLookupByLibrary.simpleMessage("دقائق"),
         "mobileWallet": MessageLookupByLibrary.simpleMessage("محفظة الهاتف"),
         "moneyYouLoan": MessageLookupByLibrary.simpleMessage("قَم بسـداد"),
@@ -144,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noUserFound": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على هذه البيانات"),
         "notifications": MessageLookupByLibrary.simpleMessage("الاشعارات"),
+        "offers": MessageLookupByLibrary.simpleMessage("العـروض"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
             "أنا المساعد الذكي هنا لمساعدتك عبر التطبيق"),
         "orderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
@@ -209,11 +214,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "singIn": MessageLookupByLibrary.simpleMessage("تسجـيل الدخـول"),
+        "singUp": MessageLookupByLibrary.simpleMessage("حسـاب جـديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطـى"),
         "status": MessageLookupByLibrary.simpleMessage("الحالة"),
         "streetName": MessageLookupByLibrary.simpleMessage("أسم الشارع"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
+        "tours": MessageLookupByLibrary.simpleMessage("الرحـلات"),
         "tryAgain": MessageLookupByLibrary.simpleMessage(
             "  يُـرجى المُحاولة مرة أخرى أو التسجيل"),
         "tryLater": MessageLookupByLibrary.simpleMessage(
@@ -230,6 +237,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "verification_status": MessageLookupByLibrary.simpleMessage(
             "تَـواصـل مع الأدارة لتفعيل حٍسابـك"),
         "verified": MessageLookupByLibrary.simpleMessage("تم تفعيل الحساب"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("رؤية الكل"),
+        "visa": MessageLookupByLibrary.simpleMessage("التـأشيرات"),
         "walletCacheDes":
             MessageLookupByLibrary.simpleMessage("ادفع من رصيد محفظتك"),
         "walletTitle": MessageLookupByLibrary.simpleMessage(

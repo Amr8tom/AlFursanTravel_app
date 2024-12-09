@@ -15,6 +15,7 @@ class AppSizes {
 
   /// Padding
   static final double padding = 15.w;
+  static final double iconPadding = 10.w;
 
   /// Icon sizes
   static final double iconXs = 12.sp;
@@ -24,8 +25,8 @@ class AppSizes {
 
   /// Font sized
   static final double fontSizeSm = 16.sp;
-  static final double fontSizeMd = 16.sp;
-  static final double fontSizeLg = 18.sp;
+  static final double fontSizeMd = 20.sp;
+  static final double fontSizeLg = 24.sp;
 
   /// Button sized
   static final double buttonHeight = 18.h;
@@ -50,6 +51,8 @@ class AppSizes {
   static final double borderRadiusSm = 4.r;
   static final double borderRadiusMd = 8.r;
   static final double borderRadiusLg = 12.r;
+  static final double borderRadiusXLg = 20.r;
+  static final double borderRadiusXXLg = 28.r;
 
   /// Divider height
   static final double dividerHeight = 1.h;
@@ -58,6 +61,7 @@ class AppSizes {
   static final double productImageSize = 120.sp;
   static final double productImageRadius = 16.r;
   static final double productItemHeight = 160.h;
+  static final double productItemWidth = 80.w;
 
   /// Input field
   static final double inputFieldRadius = 12.r;
@@ -92,6 +96,7 @@ class AppSizes {
 
   /// Container Size
   static final double spaceBtwItemcontainer = 54.w;
+  static final double heightcontainerCategories = 50.h;
   static final double heightcontainer = 50.h;
   static final double widthcontainer = 150.h;
 }

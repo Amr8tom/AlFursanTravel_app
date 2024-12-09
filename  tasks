@@ -1,0 +1,76 @@
+
+all works in UI till I get the API
+I used Dummy data to work
+- build home Screen UI no integrations
+- build login Screen UI no integrations
+- build visa Screen UI no integrations
+- build tours Screen UI no integrations
+- build offers Screen UI no integrations
+- build best_destinations Screen UI no integrations
+
+In general without details
+  - build home Screen UI no integrations
+- build login Screen UI no integrations
+
+9:20 Am
+to
+5:
+In general make The Skeleton of the app or initialize it
+
+  Customizations for  Two default appBars
+  one for All Screens Around the app
+  one for home Screens
+  Add Custom Navigation bar Using animated_bottom_navigation_bar package
+  Add Language Screen UI To toggle Between 2 LAnguage Using intl package
+  Add Routes Map to navigate between Screens using page_transition package
+  Add Routes Map to navigate between Screens using page_transition package
+  Add flutter_svg package to handdle SVG Images
+  Add flutter_screenutil package to make the app responsive
+  Create Class appSizes To make consistent sizes around the app
+  add Many Customization Widgets which i had written before
+  Add shared_preferences as a local storage and create ChacheKeys Enums with standers values
+  Add standers words in 2 language AR EN
+  for more variety of Icons add iconsax
+
+
+
+
+In general (structure of the app was set up and initializing core
+components required for most of all screens and routing ) .
+
+Some Details as i remember
+-custom appbars: Two custom app bars were implemented:
+-a default_app bar for use across all screens.
+-a specific_app bar designed for the home screen,profileScreen,notification_screen_favourite_Screen.
+-a custom Bottom Navigation Bar
+- add animated_bottom_navigation_bar package
+- to create a dynamic and interactive navigation bar for improved user experience.
+
+- I added the page_transition package enhancing the visual flow between screens.
+
+- language toggle UI
+ developed a language toggle screen with the intl package,
+ allowing users to easily switch between Arabic and English.
+
+-integrated the flutter_screenutil package to work on different devices.
+
+- I added an customized appSizes class to define and manage consistent sizes across the app
+
+- I added the flutter_svg package to handle scalable vector graphics
+
+- I add shared_preferences  as a local storage and
+    build CacheKeys enum for standardized local storage key management.
+
+- add the iconsax package to provide a wider selection of icons
+
+- i added intl package for multi language support
+ I added standard words in both Arabic and English
+
+ - added cairo font
+ - add poppins font
+ - add poppins font
+ - add customization theme for many parts of the app
+
+- I added splash Screen logo
+- implement loginScreen
+- implement navigationScreen
