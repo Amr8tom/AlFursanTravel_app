@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-
 import '../../../../dummy/dummy_lists.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
@@ -10,7 +9,6 @@ import '../../../../utils/constants/image_strings.dart';
 
 class CustomCategoriesWidget extends StatelessWidget {
   const CustomCategoriesWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Row(
