@@ -9,14 +9,14 @@ import 'utils/device/device_utility.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // DI.execute();
   DDeviceUtils.setStatusBarColor(ColorRes.transparent);
   DDeviceUtils.initCacheHelper();
   ScreenUtil.ensureScreenSize();
   NavigationCubit controller = NavigationCubit();
-  controller.init();
+  await controller.init();
   runApp(BlocProvider(
     create: (context) => controller,
     child: const FursanApp(),

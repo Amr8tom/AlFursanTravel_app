@@ -154,6 +154,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "orderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "orderNumber": MessageLookupByLibrary.simpleMessage("رقم الطلب "),
         "orederPlaced": MessageLookupByLibrary.simpleMessage("تم الطلب"),
+        "ourOffers": MessageLookupByLibrary.simpleMessage("عروضنا"),
+        "ourTours": MessageLookupByLibrary.simpleMessage("رحلاتنا"),
         "packing": MessageLookupByLibrary.simpleMessage("جاري تجهيز الطلب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordTooShort": MessageLookupByLibrary.simpleMessage(

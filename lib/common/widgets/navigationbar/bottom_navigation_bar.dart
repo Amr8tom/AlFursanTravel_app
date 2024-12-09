@@ -59,7 +59,7 @@ List<Widget> _items = [
   Column(
     children: [
       Icon(
-        Iconsax.profile,
+        Iconsax.profile_2user,
         color: ColorRes.primary,
       ),
       Text(

@@ -30,9 +30,11 @@ class FursanApp extends StatelessWidget {
               theme: DAppTheme.lightTheme(context),
               darkTheme: DAppTheme.darkTheme(context),
               onGenerateRoute: RouteGenerator.generateRoute,
-              initialRoute: controller.changedLang == ''
-                  ? DRoutesName.langRoute
-                  : DRoutesName.navigationMenuRoute,
+              initialRoute:
+                  // controller.changedLang == ''
+                  //     ? DRoutesName.langRoute
+                  //     :
+                  DRoutesName.navigationMenuRoute,
               supportedLocales: S.delegate.supportedLocales,
               localeResolutionCallback: (locale, supportedLocales) {
                 return controller.currentLang;

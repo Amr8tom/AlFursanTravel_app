@@ -11,16 +11,25 @@ class NavigationCubit extends Cubit<NavigationState> {
   NavigationCubit() : super(NavigationInitial());
   int indx = 0;
   late String storedLang;
-  late Locale currentLang;
+  Locale currentLang = Locale("en");
   String? changedLang = PrefService.getString(key: CacheKeys.lang);
   Future<void> init() async {
+    emit(NavigationLoading());
+
     storedLang = (changedLang == '' ? "ar" : changedLang)!;
     currentLang = Locale(storedLang);
+    emit(NavigationSuccess());
   }
 
   void chnageIndx(int index) {
     emit(NavigationLoading());
     indx = index;
+    emit(NavigationSuccess());
+  }
+
+  void chnageLange(Locale lang) {
+    emit(NavigationLoading());
+    currentLang = lang;
     emit(NavigationSuccess());
   }
 

@@ -1,7 +1,6 @@
 class AssetRes {
   /// -- App Logos
-  static const String appLogo =
-      'assets/images/pngs/social_images/google-logo.png';
+  static const String appLogo = 'assets/images/pngs/app_logo.png';
   static const String appIcon = 'assets/images/pngs/app-logo.png';
   static const String animationLogo = 'assets/animations/logoAnimation.gif';
   static const String profileLogo = 'assets/images/jpegs/profileLogo.jpeg';
@@ -157,9 +156,20 @@ class AssetRes {
   /// company
   static const String companyAnitmation = 'assets/lotties/company3.json';
 
+  /// towns
+  static const String town3 = 'assets/images/pngs/town3.jpg';
+  static const String town2 = 'assets/images/pngs/town2.jpg';
+  static const String town1 = 'assets/images/pngs/town1.jpg';
+
   /// payments
   static const String fawry = 'assets/lotties/fawry.json';
   static const String mobileWallet = 'assets/lotties/mobile.json';
+
+  /// country
+  static const String saudiArabia =
+      'assets/images/pngs/Flag_of_Saudi_Arabia.png';
+  static const String russia = 'assets/images/pngs/Flag_of_Russia.png';
+  static const String span = 'assets/images/pngs/span.jpg';
 
   /// language
   static const String en = 'assets/images/svgs/english.svg';

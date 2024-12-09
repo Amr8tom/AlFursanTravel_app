@@ -228,6 +228,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "orederPlaced": MessageLookupByLibrary.simpleMessage("Oreder Placed"),
         "orederPlacedBody": MessageLookupByLibrary.simpleMessage(
             "Oreder Placed and we review it "),
+        "ourOffers": MessageLookupByLibrary.simpleMessage("Our Offers"),
+        "ourTours": MessageLookupByLibrary.simpleMessage("Our Tours"),
         "packing": MessageLookupByLibrary.simpleMessage("packing"),
         "packingBody": MessageLookupByLibrary.simpleMessage(
             "we are packing your order and searching for nearest delivery"),

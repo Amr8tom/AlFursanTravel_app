@@ -24,9 +24,11 @@ class CustomNavigationAppbar extends StatelessWidget
         return AppBar(
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, DRoutesName.langRoute);
+              },
               icon: Icon(Iconsax.translate4),
-              color: Colors.black,
+              color: ColorRes.primary,
             ),
             IconButton(
                 onPressed: () {
@@ -34,7 +36,7 @@ class CustomNavigationAppbar extends StatelessWidget
                 },
                 icon: Icon(
                   Iconsax.setting_2,
-                  color: Colors.black,
+                  color: ColorRes.primary,
                 )),
           ],
           title: Text(
@@ -52,9 +54,7 @@ class CustomNavigationAppbar extends StatelessWidget
     );
   }
 
-  @override
-  Size get preferredSize => Size.fromHeight(
-      DDeviceUtils.getAppBarHeight()); // Set the height of the AppBar
+  Size get preferredSize => Size.fromHeight(DDeviceUtils.getAppBarHeight());
 }
 
 List<String> _title = [

@@ -1010,6 +1010,26 @@ class S {
     );
   }
 
+  /// `Our Offers`
+  String get ourOffers {
+    return Intl.message(
+      'Our Offers',
+      name: 'ourOffers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our Tours`
+  String get ourTours {
+    return Intl.message(
+      'Our Tours',
+      name: 'ourTours',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Postal Code`
   String get postalCode {
     return Intl.message(

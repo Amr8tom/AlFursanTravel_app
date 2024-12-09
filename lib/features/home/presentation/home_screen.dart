@@ -26,6 +26,23 @@ class HomeScreen extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: AppSizes.space * 0.6),
+              Card(
+                elevation: 8,
+                child: Container(
+                  height: AppSizes.defaultSpace * 2,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.search),
+                      ),
+                      Spacer(),
+                    ],
+                  ),
+                ),
+              ),
+
               /// size
               SizedBox(height: AppSizes.space * 2),
 

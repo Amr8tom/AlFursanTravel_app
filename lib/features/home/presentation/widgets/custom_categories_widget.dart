@@ -24,7 +24,7 @@ class CustomCategoriesWidget extends StatelessWidget {
                 Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
                     arguments: {
                       "title": S.current.offers,
-                      "items": DummyLists.destinations
+                      "items": DummyLists.offers
                     });
               }
             }),
@@ -46,7 +46,7 @@ class CustomCategoriesWidget extends StatelessWidget {
                 Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
                     arguments: {
                       "title": S.current.visa,
-                      "items": DummyLists.destinations
+                      "items": DummyLists.flags
                     });
               }
             })

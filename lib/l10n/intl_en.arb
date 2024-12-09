@@ -96,6 +96,8 @@
   "noUserFound": "These credentials are not found",
   "yes": "Yes",
   "bestDestination":"Best destinations",
+  "ourOffers":"Our Offers",
+  "ourTours":"Our Tours",
   "postalCode": "Postal Code",
   "worktype": "Choose the type of your business",
   "addressListTitle": "You can add more than one address for more than branch",
