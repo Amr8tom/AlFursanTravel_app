@@ -1,12 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-
 import '../../../dummy/dummy_lists.dart';
-import '../../../generated/l10n.dart';
-import '../../../utils/constants/colors.dart';
 import 'widgets/custom_banner.dart';
 import 'widgets/custom_categories_widget.dart';
 import 'widgets/custom_destination_horizontal_list.dart';

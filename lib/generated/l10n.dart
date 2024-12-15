@@ -634,7 +634,7 @@ class S {
   String get categories {
     return Intl.message(
       'Categories',
-      name: 'categories',
+      name: 'tours',
       desc: '',
       args: [],
     );
@@ -2422,10 +2422,10 @@ class S {
     );
   }
 
-  /// `Stagnant categories`
+  /// `Stagnant tours`
   String get stagnantCategories {
     return Intl.message(
-      'Stagnant categories',
+      'Stagnant tours',
       name: 'stagnantCategories',
       desc: '',
       args: [],

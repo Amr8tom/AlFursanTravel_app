@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/login/login_screen.dart';
-import 'package:fursan_travel_app/features/categories/presentation/certain_category_screen.dart';
+import 'package:fursan_travel_app/features/tours/presentation/certain_category_screen.dart';
 import 'package:fursan_travel_app/features/language/select_language_screen.dart';
 import 'package:fursan_travel_app/features/search/presentation/search_screen.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';

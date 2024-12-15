@@ -34,6 +34,13 @@ class FursanApp extends StatelessWidget {
                   ? DRoutesName.langRoute
                   : DRoutesName.navigationMenuRoute,
 
+              localeListResolutionCallback: (locales, supportedLocales) {
+                return controller.currentLang ?? supportedLocales.first;
+              },
+              supportedLocales: [
+                Locale('en'), // English
+                Locale('ar'), // Arabic
+              ],
               locale: controller.currentLang,
               localizationsDelegates: [
                 S.delegate, // //

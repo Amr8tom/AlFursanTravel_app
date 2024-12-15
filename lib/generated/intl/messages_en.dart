@@ -80,7 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cash on Delivery Screen"),
         "cashOnDeliverydes": MessageLookupByLibrary.simpleMessage(
             "You will pay when you receive the order"),
-        "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "tours": MessageLookupByLibrary.simpleMessage("Categories"),
         "category": MessageLookupByLibrary.simpleMessage("Category"),
         "chatUs": MessageLookupByLibrary.simpleMessage("Chat US"),
         "checkOut": MessageLookupByLibrary.simpleMessage("Check Out"),
@@ -313,7 +313,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "speakToUs": MessageLookupByLibrary.simpleMessage(
             "you can speak to a specialist"),
         "stagnantCategories":
-            MessageLookupByLibrary.simpleMessage("Stagnant categories"),
+            MessageLookupByLibrary.simpleMessage("Stagnant tours"),
         "stagnantItems": MessageLookupByLibrary.simpleMessage(
             "Stagnant Items.......You can upload your stagnant items to your account and they will be rotated and resold on your behalf"),
         "status": MessageLookupByLibrary.simpleMessage("Status"),

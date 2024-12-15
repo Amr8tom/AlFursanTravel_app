@@ -1,3 +1,14 @@
+/////////////  12/15/2024
+
+
+- add dartz package
+- make tours model
+- make tourDetails model
+- make visa model
+- make visa details model
+- add data_connection_checker_tv package to check the networkInfo
+- add
+
 all works in UI till I get the API
 I used Dummy data to work
 - build home Screen UI no integrations

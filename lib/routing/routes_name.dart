@@ -13,7 +13,7 @@ class DRoutesName {
   static const String noConnectionRoute = 'no-connection-route';
   static const String webViewRoute = 'webView-route';
   static const String CartRoute = 'cartScreen-route';
-  static const String categoriesRoute = 'categories-route';
+  static const String categoriesRoute = 'tours-route';
 
   /// Navigation Bar
   static const String navigationMenuRoute = 'navigation-menu-route';

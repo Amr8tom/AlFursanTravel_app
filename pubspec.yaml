@@ -44,6 +44,7 @@ dependencies:
   get_it: ^8.0.2
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.16
+  data_connection_checker_tv: ^0.3.5-nullsafety
   internet_connection_checker: ^1.0.0+1
   dio: ^5.7.0
   cached_network_image: ^3.4.1
