@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,9 +13,9 @@ class DOutlinedButtonTheme {
       foregroundColor: Colors.black,
       side: const BorderSide(color: ColorRes.greenBlue),
       textStyle: TextStyle(
-          fontSize: 16.sp, color: Colors.black, fontWeight: FontWeight.w600),
-      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 20.w),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.r)),
+          fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
+      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     ),
   );
 
@@ -27,9 +26,9 @@ class DOutlinedButtonTheme {
       foregroundColor: Colors.white,
       side: const BorderSide(color: ColorRes.greenBlue),
       textStyle: TextStyle(
-          fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w600),
-      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 20.w),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.r)),
+          fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
+      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     ),
   );
 }

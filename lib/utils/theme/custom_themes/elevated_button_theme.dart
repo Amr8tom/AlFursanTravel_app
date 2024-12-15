@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/colors.dart';
 
@@ -13,13 +12,13 @@ class DElevatedButtonTheme {
       side: const BorderSide(color: ColorRes.primary),
       // elevation: 2,
       backgroundColor: ColorRes.primary,
-      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       textStyle: TextStyle(
           color: Colors.white,
           fontFamily: "Cairo",
-          fontSize: 21.sp,
+          fontSize: 21,
           fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
   );
 
@@ -30,13 +29,13 @@ class DElevatedButtonTheme {
       side: const BorderSide(color: ColorRes.primary),
       // elevation: 2,
       backgroundColor: ColorRes.primary,
-      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       textStyle: TextStyle(
           color: Colors.white,
           fontFamily: "Cairo",
-          fontSize: 21.sp,
+          fontSize: 21,
           fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
   );
 }

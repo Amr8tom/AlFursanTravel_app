@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/colors.dart';
 import '../../constants/sizes.dart';
@@ -14,11 +13,11 @@ class DAppBarTheme {
     backgroundColor: ColorRes.greenBlueLight,
     surfaceTintColor: ColorRes.greenBlueLight,
     shadowColor: ColorRes.greenBlueLight,
-    iconTheme: IconThemeData(color: ColorRes.greenBlue, size: AppSizes.iconMd),
-    actionsIconTheme:
-        IconThemeData(color: ColorRes.black, size: AppSizes.iconMd),
+    iconTheme: IconThemeData(color: ColorRes.greenBlue, size: 24),
+    actionsIconTheme: IconThemeData(color: ColorRes.black, size: 24),
     titleTextStyle: TextStyle(
-        fontSize: 32.sp,
+        fontSize: 32,
+        // fontSize: 32.sp,
         fontWeight: FontWeight.w700,
         color: ColorRes.greenBlue),
   );
@@ -30,10 +29,9 @@ class DAppBarTheme {
     backgroundColor: ColorRes.primary,
     surfaceTintColor: ColorRes.primary,
     shadowColor: ColorRes.primary,
-    iconTheme: IconThemeData(color: ColorRes.white, size: AppSizes.iconMd),
-    actionsIconTheme:
-        IconThemeData(color: ColorRes.white, size: AppSizes.iconMd),
+    iconTheme: IconThemeData(color: ColorRes.white, size: 24),
+    actionsIconTheme: IconThemeData(color: ColorRes.white, size: 24),
     titleTextStyle: TextStyle(
-        fontSize: 32.sp, fontWeight: FontWeight.w700, color: ColorRes.white),
+        fontSize: 32, fontWeight: FontWeight.w700, color: ColorRes.white),
   );
 }

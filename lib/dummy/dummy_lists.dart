@@ -1,20 +1,6 @@
 // dummy_lists.dart
 import 'package:fursan_travel_app/utils/constants/image_strings.dart';
 
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
-
 class DummyLists {
   // Dummy data for the grid (names and images)
   static final List<Map<String, String>> destinations = [
@@ -46,5 +32,14 @@ class DummyLists {
     {'name': 'Rome', 'image': AssetRes.facebook},
     {'name': 'Sydney', 'image': AssetRes.saudiArabia},
     {'name': 'Barcelona', 'image': AssetRes.russia},
+  ];
+
+  // Dummy notifications
+  static final List<Map<String, String>> notifications = [
+    {'title': 'New Offer', 'subtitle': '.notification massage'},
+    {'title': 'you win 100 points', 'subtitle': 'notification massage'},
+    {'title': 'Welcome in fursan', 'subtitle': ' notification massage'},
+    {'title': 'Promotion', 'subtitle': 'notification massage'},
+    {'title': 'System Update', 'subtitle': 'notification massage'},
   ];
 }

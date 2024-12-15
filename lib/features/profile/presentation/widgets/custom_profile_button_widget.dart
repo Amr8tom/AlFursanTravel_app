@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
+import 'package:iconsax/iconsax.dart';
+
+import '../../../../utils/constants/colors.dart';
 
 class CustomProfileButtonWidget extends StatelessWidget {
-  final Widget icon;
+  final IconData icon;
   final String title;
   final VoidCallback onTap;
-
   const CustomProfileButtonWidget({
     super.key,
     required this.icon,
@@ -15,18 +17,19 @@ class CustomProfileButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(AppSizes.productItemHeight),
+    return Directionality(
+      textDirection: TextDirection.ltr,
       child: Card(
         elevation: 4, // Adds a slight shadow to make it stand out
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // Rounded corners
+          borderRadius:
+              BorderRadius.circular(AppSizes.borderRadiusLg), // Rounded corners
         ),
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(12),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: EdgeInsets.symmetric(
+                horizontal: AppSizes.padding, vertical: AppSizes.padding),
             child: Row(
               mainAxisAlignment:
                   MainAxisAlignment.spaceBetween, // Spread out elements
@@ -34,22 +37,25 @@ class CustomProfileButtonWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    icon,
-                    SizedBox(width: 10), // Space between icon and text
+                    Icon(
+                      icon,
+                      color: ColorRes.primary,
+                    ),
+                    SizedBox(
+                        width: AppSizes.padding), // Space between icon and text
                     Text(
                       title,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: AppSizes.fontSizeSm,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black87, // Text color
+                        color: ColorRes.primary, // Text color
                       ),
                     ),
                   ],
                 ),
                 Icon(
                   Icons.arrow_forward_ios,
-                  size: 16, // Smaller icon for a subtle arrow
-                  color: Colors.grey, // Subtle icon color
+                  color: ColorRes.primary, // Subtle icon color
                 ),
               ],
             ),

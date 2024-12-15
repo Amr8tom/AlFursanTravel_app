@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestDestinations":
             MessageLookupByLibrary.simpleMessage("Best Destinations"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
+        "bookmarked": MessageLookupByLibrary.simpleMessage("bookmarked"),
         "buildingNumber":
             MessageLookupByLibrary.simpleMessage("Building Number"),
         "buyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
@@ -250,6 +251,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pound": MessageLookupByLibrary.simpleMessage("EGP"),
         "previousRequest":
             MessageLookupByLibrary.simpleMessage("Previous Requests"),
+        "previousTrips": MessageLookupByLibrary.simpleMessage("Previous Trips"),
         "priceAfterOffer":
             MessageLookupByLibrary.simpleMessage("Price After Offer"),
         "priceBeforeOffer":
@@ -337,6 +339,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verification_status": MessageLookupByLibrary.simpleMessage(
             "conect with us for varification "),
         "verified": MessageLookupByLibrary.simpleMessage("verified"),
+        "version": MessageLookupByLibrary.simpleMessage("Version"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
         "visa": MessageLookupByLibrary.simpleMessage("Visa"),
         "wallet": MessageLookupByLibrary.simpleMessage(

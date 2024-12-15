@@ -110,6 +110,7 @@
   "ourTours":"رحلاتنا",
   "pound":"ج.م",
             "points":"نقاط",
+            "bookmarked":"المحفـوظات",
             "bestDestination":"أفضل الوجهات",
             "point":"نقطة",
             "cashBack":"كاش باك",
@@ -140,7 +141,9 @@
 
   "address":"عنــوان الشحــن" ,
               "settings":"الاعدادات",
+              "previousTrips":"الرحلات السابقة",
             "yourCreditLimit": "الحد المتاح لك",
+            "version": "الاصدار",
   "saveChanges":"حفظ",
   "msgImage2":"الرجاء رفع صورة ",
   "addWorkName":" أدخــل أســم الـ ",

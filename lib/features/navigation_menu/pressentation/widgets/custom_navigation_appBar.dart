@@ -31,9 +31,7 @@ class CustomNavigationAppbar extends StatelessWidget
               color: ColorRes.primary,
             ),
             IconButton(
-                onPressed: () {
-                  controller.togggleLang();
-                },
+                onPressed: () {},
                 icon: Icon(
                   Iconsax.setting_2,
                   color: ColorRes.primary,

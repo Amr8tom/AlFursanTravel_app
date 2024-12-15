@@ -41,7 +41,7 @@ class SelectLanguageBody extends StatelessWidget {
                 isSvg: true,
                 hight: hight / 3,
                 onTab: () {
-                  controller.chnageLange(Locale("ar"));
+                  controller.chnageLange(Locale("en"));
                   PrefService.putString(key: CacheKeys.lang, value: "en");
                   Navigator.popAndPushNamed(
                       context, DRoutesName.navigationMenuRoute);

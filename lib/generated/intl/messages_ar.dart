@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestDestinations":
             MessageLookupByLibrary.simpleMessage("أفضل الوجهات"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("أفـضـل العٍــروض"),
+        "bookmarked": MessageLookupByLibrary.simpleMessage("المحفـوظات"),
         "buildingNumber": MessageLookupByLibrary.simpleMessage("رقم المبني"),
         "buyNow": MessageLookupByLibrary.simpleMessage("قُــم بالِشــراء الأن"),
         "callUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
@@ -172,6 +173,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pound": MessageLookupByLibrary.simpleMessage("ج.م"),
         "previousRequest":
             MessageLookupByLibrary.simpleMessage("الطلبات السابقة"),
+        "previousTrips":
+            MessageLookupByLibrary.simpleMessage("الرحلات السابقة"),
         "priceAfterOffer":
             MessageLookupByLibrary.simpleMessage("بعــد الخصــم"),
         "priceBeforeOffer":
@@ -239,6 +242,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verification_status": MessageLookupByLibrary.simpleMessage(
             "تَـواصـل مع الأدارة لتفعيل حٍسابـك"),
         "verified": MessageLookupByLibrary.simpleMessage("تم تفعيل الحساب"),
+        "version": MessageLookupByLibrary.simpleMessage("الاصدار"),
         "viewAll": MessageLookupByLibrary.simpleMessage("رؤية الكل"),
         "visa": MessageLookupByLibrary.simpleMessage("التـأشيرات"),
         "walletCacheDes":

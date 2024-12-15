@@ -1,4 +1,3 @@
-
 all works in UI till I get the API
 I used Dummy data to work
 - build home Screen UI no integrations
@@ -74,3 +73,98 @@ Some Details as i remember
 - I added splash Screen logo
 - implement loginScreen
 - implement navigationScreen
+
+
+-2 actor
+student
+
+instractor
+ (
+ -login
+ - sing in
+ - start meeting for speific time
+ - record lec and download it
+ - white board
+ - share screen
+ - camera
+ - audio
+ - chat
+ - after every meeting i send to back number of hours and number of student
+ - teacher can close camera and adio for any student
+ - teacher can ban student
+ - teacher can send stiker if the teacher answer will
+ - teacher can left the student to choose the answer or write it using pen
+ )
+
+student
+(
+login with code
+choose question
+chat
+rasie hand
+share screen
+open audio
+open camera
+
+)
+
+ (
+ - view all active teacher in meetings
+ - can enter the meeting without announcement to the users of meeting
+ - some summary and statistics  view teacher data
+ -
+ )
+
+ generate code
+tea
+
+ dash board
+  super admin
+
+
+            ====================================  mobile  web  =========================================
+
+
+1- admin login
+2- dashboard
+3- active meetings
+4- view meetings
+5- teacher details
+6- teacher report
+
+
+                          ================== mobile student app ==================
+
+1- student login using code one ==> sub screen ( if code not true)
+2- waiting screen till teacher accept or reject
+3- meeting screen  => actions  ( open camera - share screen - open audio - raise hand - quite )
+4- camera screen
+5- share system screen
+6- splash screen
+
+                   -----------------------  mobile APIS  ---------------------------
+
+1- login using code (code - student name)
+2- pusher push notification channel for check if the user accept the request from student
+3- APIS for Streaming&chat  (webSoket & agora)
+4- get meeting data
+
+
+                          ================== mobile teacher app ==================
+
+1- splash screen
+2- login (email password)
+3- dashboard Screen
+4- start meeting screen (choose time - data - generate code screen )
+5- meeting screen (record option - split screen to the number of users- open camera - audio )
+6- select students and add permission screen to choose questions
+7- white board screen
+8- download and save the record
+
+
+                          ----------------------- APIS ---------------------------
+1- login password and e mail
+2- generate meeting with code api
+3- APIS for Streaming (webSoket & agora)
+4- get meeting data
+5- permission api

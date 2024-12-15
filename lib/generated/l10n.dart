@@ -1020,11 +1020,31 @@ class S {
     );
   }
 
+  /// `bookmarked`
+  String get bookmarked {
+    return Intl.message(
+      'bookmarked',
+      name: 'bookmarked',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Our Tours`
   String get ourTours {
     return Intl.message(
       'Our Tours',
       name: 'ourTours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Previous Trips`
+  String get previousTrips {
+    return Intl.message(
+      'Previous Trips',
+      name: 'previousTrips',
       desc: '',
       args: [],
     );
@@ -1095,6 +1115,16 @@ class S {
     return Intl.message(
       'Hours',
       name: 'hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version`
+  String get version {
+    return Intl.message(
+      'Version',
+      name: 'version',
       desc: '',
       args: [],
     );

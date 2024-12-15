@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                   height: AppSizes.defaultSpace * 2,
                   child: Row(
                     children: [
-                      Padding(
+                      const Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.search),
                       ),

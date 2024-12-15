@@ -10,6 +10,47 @@ class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({super.key});
   @override
   Widget build(BuildContext context) {
+    final List<Widget> _items = [
+      Column(
+        children: [
+          const Icon(Iconsax.home, color: ColorRes.primary),
+          Text(
+            S.current.home,
+            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+          ),
+        ],
+      ),
+      Column(
+        children: [
+          const Icon(Iconsax.notification, color: ColorRes.primary),
+          Text(
+            S.current.notifications,
+            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+          ),
+        ],
+      ),
+      Column(
+        children: [
+          const Icon(Iconsax.heart, color: ColorRes.primary),
+          Text(
+            S.current.favorite,
+            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+          ),
+        ],
+      ),
+      Column(
+        children: [
+          const Icon(
+            Iconsax.profile_2user,
+            color: ColorRes.primary,
+          ),
+          Text(
+            S.current.profileInfo,
+            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+          ),
+        ],
+      ),
+    ];
     return Directionality(
       textDirection: TextDirection.ltr,
       child: AnimatedBottomNavigationBar.builder(
@@ -27,45 +68,3 @@ class CustomBottomNavigationBar extends StatelessWidget {
     );
   }
 }
-
-List<Widget> _items = [
-  Column(
-    children: [
-      Icon(Iconsax.home, color: ColorRes.primary),
-      Text(
-        S.current.home,
-        style: TextStyle(fontSize: 12, color: ColorRes.primary),
-      ),
-    ],
-  ),
-  Column(
-    children: [
-      Icon(Iconsax.notification, color: ColorRes.primary),
-      Text(
-        S.current.notifications,
-        style: TextStyle(fontSize: 12, color: ColorRes.primary),
-      ),
-    ],
-  ),
-  Column(
-    children: [
-      Icon(Iconsax.heart, color: ColorRes.primary),
-      Text(
-        S.current.favorite,
-        style: TextStyle(fontSize: 12, color: ColorRes.primary),
-      ),
-    ],
-  ),
-  Column(
-    children: [
-      Icon(
-        Iconsax.profile_2user,
-        color: ColorRes.primary,
-      ),
-      Text(
-        S.current.profileInfo,
-        style: TextStyle(fontSize: 12, color: ColorRes.primary),
-      ),
-    ],
-  ),
-];

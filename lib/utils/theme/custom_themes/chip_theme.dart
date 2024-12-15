@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/colors.dart';
 
@@ -10,7 +9,7 @@ class DChipTheme {
     disabledColor: Colors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: Colors.black),
     selectedColor: ColorRes.primary,
-    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
     checkmarkColor: Colors.white,
   );
 
@@ -18,7 +17,7 @@ class DChipTheme {
     disabledColor: Colors.grey,
     labelStyle: const TextStyle(color: Colors.white),
     selectedColor: ColorRes.primary,
-    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
     checkmarkColor: Colors.white,
   );
 }

@@ -28,17 +28,13 @@ class FursanApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               themeMode: ThemeMode.light,
               theme: DAppTheme.lightTheme(context),
-              darkTheme: DAppTheme.darkTheme(context),
+              // darkTheme: DAppTheme.darkTheme(context),
               onGenerateRoute: RouteGenerator.generateRoute,
-              initialRoute:
-                  // controller.changedLang == ''
-                  //     ? DRoutesName.langRoute
-                  //     :
-                  DRoutesName.navigationMenuRoute,
-              supportedLocales: S.delegate.supportedLocales,
-              localeResolutionCallback: (locale, supportedLocales) {
-                return controller.currentLang;
-              },
+              initialRoute: controller.changedLang == ''
+                  ? DRoutesName.langRoute
+                  : DRoutesName.navigationMenuRoute,
+
+              locale: controller.currentLang,
               localizationsDelegates: [
                 S.delegate, // //
                 GlobalMaterialLocalizations.delegate,
