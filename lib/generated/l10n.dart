@@ -634,7 +634,7 @@ class S {
   String get categories {
     return Intl.message(
       'Categories',
-      name: 'tours',
+      name: 'categories',
       desc: '',
       args: [],
     );
@@ -1030,10 +1030,10 @@ class S {
     );
   }
 
-  /// `Our Tours`
+  /// `Our tours`
   String get ourTours {
     return Intl.message(
-      'Our Tours',
+      'Our tours',
       name: 'ourTours',
       desc: '',
       args: [],
@@ -2222,10 +2222,10 @@ class S {
     );
   }
 
-  /// `Tours`
+  /// `tours`
   String get tours {
     return Intl.message(
-      'Tours',
+      'tours',
       name: 'tours',
       desc: '',
       args: [],
@@ -2422,10 +2422,10 @@ class S {
     );
   }
 
-  /// `Stagnant tours`
+  /// `Stagnant categories`
   String get stagnantCategories {
     return Intl.message(
-      'Stagnant tours',
+      'Stagnant categories',
       name: 'stagnantCategories',
       desc: '',
       args: [],

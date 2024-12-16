@@ -58,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "cashOnDeliverydes":
             MessageLookupByLibrary.simpleMessage("سوف تدفع عند استلام الطلب"),
-        "tours": MessageLookupByLibrary.simpleMessage("الاقسام"),
+        "categories": MessageLookupByLibrary.simpleMessage("الاقسام"),
         "category": MessageLookupByLibrary.simpleMessage("القسم"),
         "chatUs": MessageLookupByLibrary.simpleMessage("تحدث الينا "),
         "checkOut": MessageLookupByLibrary.simpleMessage("شراء"),

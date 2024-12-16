@@ -2,17 +2,17 @@ import 'package:dartz/dartz.dart';
 import 'package:fursan_travel_app/features/tours/data/data_sources/local_data_sources.dart';
 import 'package:fursan_travel_app/features/tours/data/data_sources/remote_data_sources.dart';
 import 'package:fursan_travel_app/features/tours/data/model/all_tours_model.dart';
-import 'package:fursan_travel_app/features/tours/data/model/all_visas_model.dart';
 import 'package:fursan_travel_app/features/tours/data/model/tour_details_model.dart';
-import 'package:fursan_travel_app/features/tours/data/model/visa_ditails_model.dart';
+import 'package:fursan_travel_app/features/visas/data/model/visa_reservation_model.dart';
 import 'package:fursan_travel_app/utils/error/failure.dart';
 
 import '../../../../utils/connection/checkNetwork.dart';
 import '../../domain/repositories/repositories.dart';
+import '../model/reservation_tour_model.dart';
 
 class ToursRepositoryImp extends ToursRepository {
-  final CategoriesLocalDataSources local;
-  final CategoriesRemoteDataSources remote;
+  final ToursLocalDataSources local;
+  final ToursRemoteDataSources remote;
   final NetworkInfo networkInfo;
   ToursRepositoryImp(
       {required this.local, required this.remote, required this.networkInfo});
@@ -55,6 +55,22 @@ class ToursRepositoryImp extends ToursRepository {
       } on CacheFailure {
         throw CacheFailure();
       }
+    }
+  }
+
+  @override
+  Future<Either<Failure, ReservationTourModel>> makeTourReservation(
+      {required Map<String, dynamic> params}) async {
+    if (await networkInfo.isConnected) {
+      try {
+        final makeReservationModel = await remote.makeReservationTour();
+        return right(makeReservationModel);
+      } on ServerFailure {
+        return left(
+            ServerFailure(message: "================== serverFailur========="));
+      }
+    } else {
+      return left(CacheFailure());
     }
   }
 }

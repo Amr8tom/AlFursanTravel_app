@@ -1,6 +1,7 @@
 class DRoutesName {
   /// Shared Screens (User)
   static const String langRoute = 'choose-language-route';
+  static const String allToursScreen = 'all-tours-screen';
   static const String test = 'test-route';
   static const String loginRoute = 'phone-login-route';
   static const String allDataLoginRoute = 'all-data-login-route';
@@ -22,7 +23,7 @@ class DRoutesName {
   static const String offersRoute = 'offers-route';
   static const String myScheduleOrderRoute = 'my-schedule-order-route';
   static const String currentOrdersRoute = 'current-orders-route';
-  static const String detailsTourRoute = 'details-tour-route';
+  static const String detailsTourRoute = 'details-tours-route';
   static const String certainCategoryRoute = 'certain-category-route';
   static const String giftRoute = 'gift-route';
   static const String searchRoute = 'search-route';

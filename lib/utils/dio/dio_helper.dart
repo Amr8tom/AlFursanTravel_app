@@ -13,7 +13,7 @@ import '../local_storage/cache_helper.dart';
 class DioHelper {
   Dio dio = Dio();
 
-  Future<Map<String, dynamic>?> getData(
+  Future getData(
       {required String URL,
       bool isHeader = true,
       Map<String, dynamic>? data}) async {
@@ -32,6 +32,7 @@ class DioHelper {
         data: data);
     print('After response');
     if (response.statusCode == 200) {
+      print(response.data);
       return response.data;
     } else {
       throw ServerFailure(message: 'server failure');

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:fursan_travel_app/features/tours/data/model/reservation_tour_model.dart';
 import 'package:fursan_travel_app/features/tours/data/model/tour_details_model.dart';
 import 'package:dartz/dartz.dart';
 import '../../../../utils/error/failure.dart';
@@ -7,7 +8,7 @@ import '../../../../utils/local_storage/cach_keys.dart';
 import '../../../../utils/local_storage/cache_helper.dart';
 import '../model/all_tours_model.dart';
 
-abstract class CategoriesLocalDataSources {
+abstract class ToursLocalDataSources {
   /// Tour Functions
   Future<Unit> cacheAllTours({required AllToursModel Tours});
   Future<Unit> cacheTourDetails({required TourDetailsModel tourDetails});
@@ -15,7 +16,7 @@ abstract class CategoriesLocalDataSources {
   Future<TourDetailsModel> getTourDetail();
 }
 
-class CategoriesLocalDataSourcesImp implements CategoriesLocalDataSources {
+class ToursLocalDataSourcesImp implements ToursLocalDataSources {
   @override
   Future<Unit> cacheAllTours({required AllToursModel Tours}) async {
     final cachedTours = jsonEncode(Tours);
@@ -36,7 +37,7 @@ class CategoriesLocalDataSourcesImp implements CategoriesLocalDataSources {
     final jsonString = await PrefService.getString(key: CacheKeys.allTours);
     if (jsonString != null) {
       final json = jsonDecode(jsonString!);
-      return AllToursModel.fromJson(json);
+      return AllToursModel.fromJsonList(json);
     } else {
       throw CacheFailure();
     }

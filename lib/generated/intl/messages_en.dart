@@ -80,7 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cash on Delivery Screen"),
         "cashOnDeliverydes": MessageLookupByLibrary.simpleMessage(
             "You will pay when you receive the order"),
-        "tours": MessageLookupByLibrary.simpleMessage("Categories"),
+        "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "category": MessageLookupByLibrary.simpleMessage("Category"),
         "chatUs": MessageLookupByLibrary.simpleMessage("Chat US"),
         "checkOut": MessageLookupByLibrary.simpleMessage("Check Out"),
@@ -230,7 +230,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "orederPlacedBody": MessageLookupByLibrary.simpleMessage(
             "Oreder Placed and we review it "),
         "ourOffers": MessageLookupByLibrary.simpleMessage("Our Offers"),
-        "ourTours": MessageLookupByLibrary.simpleMessage("Our Tours"),
+        "ourTours": MessageLookupByLibrary.simpleMessage("Our tours"),
         "packing": MessageLookupByLibrary.simpleMessage("packing"),
         "packingBody": MessageLookupByLibrary.simpleMessage(
             "we are packing your order and searching for nearest delivery"),
@@ -313,14 +313,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "speakToUs": MessageLookupByLibrary.simpleMessage(
             "you can speak to a specialist"),
         "stagnantCategories":
-            MessageLookupByLibrary.simpleMessage("Stagnant tours"),
+            MessageLookupByLibrary.simpleMessage("Stagnant categories"),
         "stagnantItems": MessageLookupByLibrary.simpleMessage(
             "Stagnant Items.......You can upload your stagnant items to your account and they will be rotated and resold on your behalf"),
         "status": MessageLookupByLibrary.simpleMessage("Status"),
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
-        "tours": MessageLookupByLibrary.simpleMessage("Tours"),
+        "tours": MessageLookupByLibrary.simpleMessage("tours"),
         "tryAgain":
             MessageLookupByLibrary.simpleMessage("Please try again or sign up"),
         "tryLater": MessageLookupByLibrary.simpleMessage("Please Try Later"),

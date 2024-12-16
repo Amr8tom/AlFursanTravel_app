@@ -1,5 +1,5 @@
-class VisaDitailsModel {
-  VisaDitailsModel({
+class VisaDetailsModel {
+  VisaDetailsModel({
     this.id,
     this.slug,
     this.titleEn,
@@ -25,7 +25,7 @@ class VisaDitailsModel {
     this.featuredImage,
   });
 
-  VisaDitailsModel.fromJson(dynamic json) {
+  VisaDetailsModel.fromJson(dynamic json) {
     id = json['id'];
     slug = json['slug'];
     titleEn = json['title_en'];

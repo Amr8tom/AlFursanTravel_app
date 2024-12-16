@@ -1,31 +1,24 @@
 import 'package:fursan_travel_app/features/tours/data/model/all_tours_model.dart';
 import 'package:fursan_travel_app/features/tours/data/model/tour_details_model.dart';
-import 'package:fursan_travel_app/features/tours/data/model/visa_ditails_model.dart';
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 
-import '../model/all_visas_model.dart';
+import '../../../visas/data/model/all_visas_model.dart';
+import '../model/reservation_tour_model.dart';
 
-abstract class CategoriesRemoteDataSources {
+abstract class ToursRemoteDataSources {
   Future<AllToursModel> getAllTours();
   Future<TourDetailsModel> getTourDetails();
-  Future<AllVisasModel> getAllVisas();
-  Future<VisaDitailsModel> getVisaDetails();
+  Future<ReservationTourModel> makeReservationTour();
 }
 
-class CategoriesRemoteDataSourcesImp implements CategoriesRemoteDataSources {
+class ToursRemoteDataSourcesImp implements ToursRemoteDataSources {
   final DioHelper dio;
-  CategoriesRemoteDataSourcesImp(this.dio);
+  ToursRemoteDataSourcesImp(this.dio);
   @override
   Future<AllToursModel> getAllTours() async {
     final response = await dio.getData(URL: URL.allTours);
-    return AllToursModel.fromJson(response);
-  }
-
-  @override
-  Future<AllVisasModel> getAllVisas() async {
-    final response = await dio.getData(URL: URL.allVisas);
-    return AllVisasModel.fromJson(response);
+    return AllToursModel.fromJsonList(response);
   }
 
   @override
@@ -35,8 +28,8 @@ class CategoriesRemoteDataSourcesImp implements CategoriesRemoteDataSources {
   }
 
   @override
-  Future<VisaDitailsModel> getVisaDetails() async {
-    final response = await dio.getData(URL: URL.visaDetails);
-    return VisaDitailsModel.fromJson(response);
+  Future<ReservationTourModel> makeReservationTour() async {
+    final response = await dio.getData(URL: URL.tourReservation);
+    return ReservationTourModel.fromJson(response);
   }
 }

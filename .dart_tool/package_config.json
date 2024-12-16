@@ -237,7 +237,7 @@
     },
     {
       "name": "get_it",
-      "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/get_it-8.0.2",
+      "rootUri": "file:///C:/Users/ALRWOAD%20LABTOB/AppData/Local/Pub/Cache/hosted/pub.dev/get_it-8.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -710,7 +710,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-15T15:26:50.830273Z",
+  "generated": "2024-12-16T09:44:40.200078Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter",

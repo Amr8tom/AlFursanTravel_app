@@ -29,11 +29,13 @@ class CustomCategoriesWidget extends StatelessWidget {
         _categoryIconButton(
             imagePath: AssetRes.planIcon,
             onTab: () {
-              Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
-                  arguments: {
-                    "title": S.current.tours,
-                    "items": DummyLists.destinations
-                  });
+              Navigator.pushNamed(
+                context, DRoutesName.allToursScreen,
+                // arguments: {
+                //   "title": S.current.tours,
+                //   "items": DummyLists.destinations
+                // }
+              );
             },
             tilte: S.current.tours),
         _categoryIconButton(

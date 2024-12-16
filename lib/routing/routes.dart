@@ -8,6 +8,7 @@ import 'package:page_transition/page_transition.dart';
 
 import '../features/authentication/presentation/singUp/signup_screen.dart';
 import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
+import '../features/tours/presentation/all_tours_screen.dart';
 
 class RouteGenerator {
   /// generate Route
@@ -33,6 +34,13 @@ class RouteGenerator {
             settings.arguments as Map<String, dynamic>;
         return PageTransition(
             child: CertainCategoryScreen(arg: arg),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// all Tours Screen
+      case DRoutesName.allToursScreen:
+        return PageTransition(
+            child: AllToursScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
