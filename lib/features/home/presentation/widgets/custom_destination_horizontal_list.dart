@@ -1,62 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:fursan_travel_app/utils/constants/sizes.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class CustomDestinationHorizontalList extends StatelessWidget {
   final List<Map<String, String>> items;
-
   const CustomDestinationHorizontalList({super.key, required this.items});
-
   @override
   Widget build(BuildContext context) {
     double WidthScreen = MediaQuery.sizeOf(context).width;
     double hightScreen = MediaQuery.sizeOf(context).height;
     return Container(
-      height: hightScreen / 4, // Set the container height based on AppSizes
-      child: ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal, // Enable horizontal scrolling
-        itemCount: items.length, // Specify the number of items
-        itemBuilder: (context, index) {
-          final destination = items[index];
-          return Padding(
-            padding: EdgeInsets.all(AppSizes.spaceBetweenIcon),
-            child: Card(
-              elevation: 4.0,
+      height: hightScreen / 2.9, // Set the container height based on AppSizes
+      child: CarouselSlider.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index, indexpage) {
+            final destination = items[index];
+            return Card(
+              elevation: 4.5,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              margin: EdgeInsets.symmetric(
-                  horizontal:
-                      AppSizes.iconPadding), // Adds spacing between cards
-              child: Column(
-                children: [
-                  ClipRRect(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(8.0)),
-                    child: Image.asset(
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                child: Stack(
+                  children: [
+                    Image.asset(
                       destination['image']!,
                       fit: BoxFit.cover,
-                      height: hightScreen / 5, // Set the height of the image
-                      width:
-                          WidthScreen / 1.7, // Set a fixed width for the image
+                      height: hightScreen / 2.5,
+                      width: WidthScreen / 1.2,
                     ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      destination['name']!,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
+                    Positioned(
+                      left: 30.w,
+                      bottom: 40.h,
+                      child: Text(
+                        destination['name']!,
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium
+                            ?.copyWith(color: Colors.white),
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          );
-        },
-      ),
+            );
+          },
+          options: CarouselOptions(
+            autoPlay: true,
+          )),
     );
   }
 }

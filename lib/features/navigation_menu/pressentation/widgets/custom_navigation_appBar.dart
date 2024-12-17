@@ -7,6 +7,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/contancts.dart';
 import '../../../../utils/device/device_utility.dart';
 
 class CustomNavigationAppbar extends StatelessWidget
@@ -21,32 +22,40 @@ class CustomNavigationAppbar extends StatelessWidget
       },
       builder: (context, state) {
         final controller = context.read<NavigationCubit>();
-        return AppBar(
-          actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, DRoutesName.langRoute);
-              },
-              icon: Icon(Iconsax.translate4),
-              color: ColorRes.primary,
+        return Directionality(
+          textDirection: TextDirection.rtl,
+          child: AppBar(
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, DRoutesName.langRoute);
+                },
+                icon: Icon(Iconsax.translate4),
+                color: ColorRes.primary,
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, DRoutesName.profileInfoRoute);
+                  },
+                  icon: Icon(
+                    Iconsax.profile_tick5,
+                    color: ColorRes.primary,
+                  )),
+            ],
+            title: Text(
+              _title[controller.indx],
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
-            IconButton(
-                onPressed: () {},
+            backgroundColor: Colors.white,
+            leading: IconButton(
+                onPressed: () async {
+                  await Contacts.makePhoneCall("+201024264021");
+                },
                 icon: Icon(
-                  Iconsax.setting_2,
+                  Iconsax.call,
                   color: ColorRes.primary,
                 )),
-          ],
-          title: Text(
-            _title[controller.indx],
-            style: Theme.of(context).textTheme.bodyLarge,
           ),
-          backgroundColor: Colors.white,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, DRoutesName.loginRoute);
-              },
-              icon: Icon(Iconsax.login4)),
         );
       },
     );

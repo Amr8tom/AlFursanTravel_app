@@ -9,31 +9,28 @@ import 'package:fursan_travel_app/utils/theme/theme.dart';
 import '../../generated/l10n.dart';
 import '../../utils/local_storage/cach_keys.dart';
 import '../../utils/local_storage/cache_helper.dart';
+import '../language/presentation/controller/language_cubit.dart';
 
 class FursanApp extends StatelessWidget {
   const FursanApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.read<NavigationCubit>();
+    final controller = context.read<LanguageCubit>();
 
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return BlocBuilder<NavigationCubit, NavigationState>(
+        return BlocBuilder<LanguageCubit, LanguageState>(
           builder: (context, state) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
               themeMode: ThemeMode.light,
               theme: DAppTheme.lightTheme(context),
-              // darkTheme: DAppTheme.darkTheme(context),
               onGenerateRoute: RouteGenerator.generateRoute,
-              initialRoute: controller.changedLang == ''
-                  ? DRoutesName.langRoute
-                  : DRoutesName.navigationMenuRoute,
-
+              initialRoute: DRoutesName.navigationMenuRoute,
               localeListResolutionCallback: (locales, supportedLocales) {
                 return controller.currentLang ?? supportedLocales.first;
               },

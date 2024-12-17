@@ -4,11 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/favourites/presentation/favourites_screen.dart';
 import 'package:fursan_travel_app/features/home/presentation/home_screen.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/widgets/custom_navigation_appBar.dart';
-import 'package:fursan_travel_app/features/navigation_menu/pressentation/widgets/custom_profile_app_bar.dart';
 import 'package:fursan_travel_app/features/notifications/presentation/notification_screen.dart';
-import 'package:fursan_travel_app/features/profile/presentation/profile_screen.dart';
 import '../../../common/widgets/custom_lottie_floating_avtion_bottom.dart';
 import '../../../common/widgets/navigationbar/bottom_navigation_bar.dart';
+import '../../service_locator/service_locator.dart';
 import 'controller/navigation_cubit.dart';
 
 class NavigatorMenuScreen extends StatelessWidget {
@@ -16,23 +15,21 @@ class NavigatorMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<NavigationCubit, NavigationState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
-      builder: (context, state) {
-        final controller = context.read<NavigationCubit>();
-        return Scaffold(
-          appBar: controller.indx == 3
-              ? const CustomProfileAppBar()
-              : const CustomNavigationAppbar(),
-          body: _buildScreen(controller.indx),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.miniCenterDocked,
-          floatingActionButton: const CustomLottieFloatingAvtionBottom(),
-          bottomNavigationBar: const CustomBottomNavigationBar(),
-        );
-      },
+    return BlocProvider(
+      create: (context) => serviceLocator<NavigationCubit>(),
+      child: BlocBuilder<NavigationCubit, NavigationState>(
+        builder: (context, state) {
+          final controller = context.read<NavigationCubit>();
+          return Scaffold(
+            appBar: const CustomNavigationAppbar(),
+            body: _buildScreen(controller.indx),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.miniCenterDocked,
+            floatingActionButton: const CustomLottieFloatingAvtionBottom(),
+            bottomNavigationBar: const CustomBottomNavigationBar(),
+          );
+        },
+      ),
     );
   }
 
@@ -44,8 +41,6 @@ class NavigatorMenuScreen extends StatelessWidget {
         return const NotificationScreen();
       case 2:
         return const FavouritesScreen();
-      case 3:
-        return const ProfileScreen();
       default:
         return HomeScreen();
     }

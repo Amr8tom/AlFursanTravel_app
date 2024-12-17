@@ -8,6 +8,7 @@ import 'package:page_transition/page_transition.dart';
 
 import '../features/authentication/presentation/singUp/signup_screen.dart';
 import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
+import '../features/profile/presentation/profile_screen.dart';
 import '../features/tours/presentation/all_tours_screen.dart';
 
 class RouteGenerator {
@@ -63,6 +64,13 @@ class RouteGenerator {
       case DRoutesName.signupRoute:
         return PageTransition(
             child: const DSignupScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// search Rourte
+      case DRoutesName.profileInfoRoute:
+        return PageTransition(
+            child: const ProfileScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 

@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
+import 'package:iconsax/iconsax.dart';
 import '../../../../dummy/dummy_lists.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 
 class CustomCategoriesWidget extends StatelessWidget {
   const CustomCategoriesWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         _categoryIconButton(
             tilte: S.current.offers,
-            imagePath: AssetRes.startIcon,
+            icon: Iconsax.dollar_circle,
             onTab: () {
               {
                 Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
@@ -27,20 +26,17 @@ class CustomCategoriesWidget extends StatelessWidget {
               }
             }),
         _categoryIconButton(
-            imagePath: AssetRes.planIcon,
+            icon: Icons.travel_explore_rounded,
             onTab: () {
               Navigator.pushNamed(
-                context, DRoutesName.allToursScreen,
-                // arguments: {
-                //   "title": S.current.tours,
-                //   "items": DummyLists.destinations
-                // }
+                context,
+                DRoutesName.allToursScreen,
               );
             },
             tilte: S.current.tours),
         _categoryIconButton(
             tilte: S.current.visa,
-            imagePath: AssetRes.rectangleIcon,
+            icon: Icons.contact_mail_outlined,
             onTab: () {
               {
                 Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
@@ -56,9 +52,9 @@ class CustomCategoriesWidget extends StatelessWidget {
 }
 
 Widget _categoryIconButton(
-    {required String imagePath,
-    required VoidCallback onTab,
-    required String tilte}) {
+    {required final IconData icon,
+    required final VoidCallback onTab,
+    required final String tilte}) {
   return InkWell(
     onTap: onTab,
     child: Column(
@@ -70,7 +66,11 @@ Widget _categoryIconButton(
                 borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXLg)),
             height: AppSizes.heightcontainerCategories,
             padding: EdgeInsets.all(AppSizes.iconPadding),
-            child: SvgPicture.asset(imagePath)),
+            // child: SvgPicture.asset(imagePath)),
+            child: Icon(
+              icon,
+              color: ColorRes.white,
+            )),
         Text(tilte)
       ],
     ),

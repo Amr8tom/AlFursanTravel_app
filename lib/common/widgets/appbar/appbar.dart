@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:fursan_travel_app/utils/helpers/navigation_extension.dart';
+import 'package:iconsax/iconsax.dart';
+import '../../../generated/l10n.dart';
 import '../../../utils/constants/colors.dart';
+import '../../../utils/constants/contancts.dart';
+import '../../../utils/constants/image_strings.dart';
 import '../../../utils/device/device_utility.dart';
 
 class DAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -32,33 +38,62 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      titleTextStyle: TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 32.sp,
-          fontFamily: "Cairo",
-          color: ColorRes.primary),
-      backgroundColor: bgColor ?? ColorRes.primaryBGAppBar,
-      automaticallyImplyLeading: false,
-      // leadingWidth: 85.w,
-      leading: showBackArrow
-          ? IconButton(
-              onPressed: () {
-                if (doSomeThing != null) {
-                  doSomeThing!();
-                }
-                context.pop();
-              },
-              icon: Icon(Icons.arrow_back_ios,
-                  color:
-                      arrowBackColor ? ColorRes.greenBlue : ColorRes.greenBlue))
-          : Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: leadingWidget,
-            ),
-      title: Text(title ?? ""),
-      centerTitle: centerTitle,
-      actions: actions,
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: AppBar(
+        titleTextStyle: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 32.sp,
+            fontFamily: "Cairo",
+            color: ColorRes.primary),
+        backgroundColor: bgColor ?? ColorRes.white,
+        automaticallyImplyLeading: false,
+        // leadingWidth: 85.w,
+        leading: showBackArrow
+            ? IconButton(
+                onPressed: () {
+                  if (doSomeThing != null) {
+                    doSomeThing!();
+                  }
+                  context.pop();
+                },
+                icon: Icon(Icons.arrow_back_ios,
+                    color:
+                        arrowBackColor ? ColorRes.primary : ColorRes.primary))
+            : Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: leadingWidget,
+              ),
+        title: Text(title ?? ""),
+        centerTitle: centerTitle,
+        actions: actions ??
+            [
+              IconButton(
+                onPressed: () {
+                  Contacts.makePhoneCall("+201024264021");
+                },
+                icon: const Icon(Iconsax.call, color: ColorRes.primary),
+                color: ColorRes.primary,
+              ),
+              SizedBox(
+                width: AppSizes.sm,
+              ),
+              InkWell(
+                onTap: () {
+                  Contacts.openWhatsAppChat(
+                      num: "201024264021", message: S.current.whatisNewOffers);
+                },
+                child: SvgPicture.asset(
+                  AssetRes.whatsappIconWhite,
+                  color: ColorRes.primary,
+                  height: 26.sp,
+                ),
+              ),
+              SizedBox(
+                width: AppSizes.padding * 1.4,
+              ),
+            ],
+      ),
     );
   }
 

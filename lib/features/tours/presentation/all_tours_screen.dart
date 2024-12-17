@@ -46,7 +46,6 @@ class AllToursScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           // Get the current destination item
                           final destination = items?[index];
-
                           return Card(
                             elevation: 4.0,
                             shape: RoundedRectangleBorder(
@@ -68,7 +67,7 @@ class AllToursScreen extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    "destination",
+                                    destination!.nameAr!.toString(),
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16.0,

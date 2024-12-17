@@ -5,13 +5,14 @@ class ColorRes {
 
   /// App Basic Colors
   // static const Color primary = Color(0xff007a8c);
-  static const Color primary = Color(0xff1a377d);
+  // static const Color primary = Color(0xff1a377d);
+  static const Color primary = Color(0xff044aa5);
   static const Color primarymed = Color(0x8000788a);
 
   ///50%
-  static const Color primaryLight = Color(0x4d007a8c);
+  static const Color primaryLight = Color(0x80044aa5);
   // static const Color primaryBGAppBar = Color(0x8353a1b2);
-  static const Color primaryBGAppBar = Color(0xff395bb2);
+  static const Color primaryBGAppBar = Color(0x99044aa5);
   // static const Color primaryBGAppBar = Color(0xff5fa5b8);
 
   ///30%

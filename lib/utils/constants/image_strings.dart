@@ -84,6 +84,8 @@ class AssetRes {
       'assets/images/pngs/social_images/google-logo.png';
   static const String facebook =
       'assets/images/pngs/social_images/facebook-logo.webp';
+  static const whatsAppWhite = "assets/images/svgs/whatsup.svg";
+  static const whatsAppGreen = "assets/images/svgs/whatsapp.svg";
 
   /// Companies
   static const String sanofiBrand = 'assets/images/pngs/sanofiBrand.png';
@@ -96,7 +98,6 @@ class AssetRes {
   /// -- Animations
   static const String productsIllustration =
       'assets/animations/sammy-line-workout.gif';
-  static const String duayaText = 'assets/images/GIF/duaya_text.gif';
   static const String productsSaleIllustration =
       'assets/animations/sammy-line-sale.png';
   static const String productsSuccessIllustration =
@@ -125,6 +126,7 @@ class AssetRes {
 
   /// Banners
   static const String homeBanner = 'assets/images/svgs/home_banner.png';
+  static const String homeBanner3 = 'assets/images/pngs/elplor2.png';
   static const String homeBanner2 =
       'assets/images/pngs/Explore the Beautiful world!_2.png';
   // static const String homeBanner = 'assets/images/svgs/banner.svg';

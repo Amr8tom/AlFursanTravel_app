@@ -115,7 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل ايميلك وسنقوم بارسال رسالة اليك بها كود تفعيل وتغير الباسورد"),
         "helper": MessageLookupByLibrary.simpleMessage("مسـاعده"),
         "history": MessageLookupByLibrary.simpleMessage("التاريخ"),
-        "home": MessageLookupByLibrary.simpleMessage("الرئيسة"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "hours": MessageLookupByLibrary.simpleMessage("ساعات"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("أوافق علي "),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
@@ -249,7 +249,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادفع من رصيد محفظتك"),
         "walletTitle": MessageLookupByLibrary.simpleMessage(
             "يمكنك استخدام رصيد محفظتك فى عمليات الشراء "),
-        "whatsUp": MessageLookupByLibrary.simpleMessage("أضف رقم الواتس"),
+        "whatisNewOffers":
+            MessageLookupByLibrary.simpleMessage("أريد معرفة أحدث العروض ؟"),
+        "whatsApp": MessageLookupByLibrary.simpleMessage("واتس أب"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "youHave": MessageLookupByLibrary.simpleMessage("  لديــك ")
       };

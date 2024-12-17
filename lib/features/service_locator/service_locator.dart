@@ -5,6 +5,7 @@ import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../utils/connection/checkNetwork.dart';
+import 'navigation_servise_locator.dart';
 
 final serviceLocator = GetIt.instance;
 
@@ -15,6 +16,9 @@ class DI {
     serviceLocator.registerLazySingleton(() => DataConnectionChecker());
     serviceLocator.registerLazySingleton<NetworkInfo>(
         () => NetworkInfoImpl(serviceLocator()));
+
+    /// navigation
+    await NavigationServiseLocator.execute(serviceLocator: serviceLocator);
 
     /// Visa
     await VisasServiceLocator.execute(serviceLocator: serviceLocator);

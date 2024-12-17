@@ -5,18 +5,17 @@ import 'package:fursan_travel_app/features/navigation_menu/pressentation/control
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/image_strings.dart';
 import 'package:fursan_travel_app/utils/device/device_utility.dart';
-import 'package:fursan_travel_app/utils/local_storage/cach_keys.dart';
-import 'package:fursan_travel_app/utils/local_storage/cache_helper.dart';
 import '../../../../generated/l10n.dart';
+import '../controller/language_cubit.dart';
 
 class SelectLanguageBody extends StatelessWidget {
   const SelectLanguageBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.read<NavigationCubit>();
+    final controller = context.read<LanguageCubit>();
     double hight = DDeviceUtils.getScreenHeight(context);
-    return BlocBuilder<NavigationCubit, NavigationState>(
+    return BlocBuilder<LanguageCubit, LanguageState>(
       builder: (context, state) {
         return GridView.count(
           crossAxisCount: 1,

@@ -1030,10 +1030,10 @@ class S {
     );
   }
 
-  /// `Our tours`
+  /// `Our Tours`
   String get ourTours {
     return Intl.message(
-      'Our tours',
+      'Our Tours',
       name: 'ourTours',
       desc: '',
       args: [],
@@ -2142,11 +2142,21 @@ class S {
     );
   }
 
-  /// ` Whats App Number`
-  String get whatsUp {
+  /// ` WhatsApp`
+  String get whatsApp {
     return Intl.message(
-      ' Whats App Number',
-      name: 'whatsUp',
+      ' WhatsApp',
+      name: 'whatsApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What are the latest offers ?`
+  String get whatisNewOffers {
+    return Intl.message(
+      'What are the latest offers ?',
+      name: 'whatisNewOffers',
       desc: '',
       args: [],
     );
@@ -2222,10 +2232,10 @@ class S {
     );
   }
 
-  /// `tours`
+  /// `Tours`
   String get tours {
     return Intl.message(
-      'tours',
+      'Tours',
       name: 'tours',
       desc: '',
       args: [],

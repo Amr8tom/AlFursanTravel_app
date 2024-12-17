@@ -13,7 +13,6 @@ class DRoutesName {
   static const String resetPasswordRoute = 'reset-password-route';
   static const String noConnectionRoute = 'no-connection-route';
   static const String webViewRoute = 'webView-route';
-  static const String CartRoute = 'cartScreen-route';
   static const String categoriesRoute = 'tours-route';
 
   /// Navigation Bar
@@ -21,12 +20,9 @@ class DRoutesName {
 
   /// Home
   static const String offersRoute = 'offers-route';
-  static const String myScheduleOrderRoute = 'my-schedule-order-route';
-  static const String currentOrdersRoute = 'current-orders-route';
   static const String detailsTourRoute = 'details-tours-route';
   static const String certainCategoryRoute = 'certain-category-route';
-  static const String giftRoute = 'gift-route';
-  static const String searchRoute = 'search-route';
+   static const String searchRoute = 'search-route';
 
   /// More
   static const String termsAndConditionRoute = 'terms-and-conditions-route';

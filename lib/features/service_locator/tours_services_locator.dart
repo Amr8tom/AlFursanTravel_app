@@ -2,10 +2,6 @@ import 'package:fursan_travel_app/features/tours/data/data_sources/local_data_so
 import 'package:fursan_travel_app/features/tours/data/data_sources/remote_data_sources.dart';
 import 'package:fursan_travel_app/features/tours/domain/repositories/repositories.dart';
 import 'package:fursan_travel_app/features/tours/domain/use_cases/get_all_tour_use_case.dart';
-import 'package:fursan_travel_app/features/visas/data/data_sources/local_data_sources.dart';
-import 'package:fursan_travel_app/features/visas/data/data_sources/remote_data_scources.dart';
-import 'package:fursan_travel_app/features/visas/data/repositories/repository.dart';
-import 'package:fursan_travel_app/features/visas/domain/repositories/repository.dart';
 import 'package:get_it/get_it.dart';
 
 import '../tours/data/repositories/repositories.dart';

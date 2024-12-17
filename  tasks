@@ -1,9 +1,58 @@
 /////////////  12/16/2024
 
-add get_it packages to make dependey_Injections
+-add get_it packages to make dependency Injections
+-make service locators for tours and visa
+-make repositoris and models files for
 
 
 
+////////////
+1- make MakeTourResevation model
+2- make MakeVisaResevation model
+3- make tour repository
+4- make visa repository
+- write tours use cases and its files
+1- get_all_tours_use_case
+2- get_tour_details_use_case
+3- make_reservation_use_case
+- write visa use cases and its files
+1- get_all_visas_use_case
+2- get_visa_details_use_case
+3- make_reservation_use_case for visa
+- make controllers (cubits files and state files )
+add 3 controllers for visas (6 files )
+add 3 controller for tours (6 files)
+
+
+
+
+/////////////  12/17/2024
+
+9:20 Am
+5:00 Pm
+
+
+
+- use url_launcher package to navigate to whatsApp
+- add whatsApp button to get the user to open whatsApp Application and go to chat with specific number
+- add carousel_slider: ^5.0.0 to scroll in collection of images
+- add Alexandria Font files and use it in themes
+- change in the style as the new requirements (offers, trips,visas ,profile)
+- add make a call logic and icons
+
+
+
+
+
+
+
+
+
+
+
+
+9:40 Am
+6:00 Pm
 /////////////  12/15/2024
 
 - remove cementtech products screen

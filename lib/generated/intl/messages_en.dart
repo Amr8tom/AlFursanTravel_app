@@ -230,7 +230,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "orederPlacedBody": MessageLookupByLibrary.simpleMessage(
             "Oreder Placed and we review it "),
         "ourOffers": MessageLookupByLibrary.simpleMessage("Our Offers"),
-        "ourTours": MessageLookupByLibrary.simpleMessage("Our tours"),
+        "ourTours": MessageLookupByLibrary.simpleMessage("Our Tours"),
         "packing": MessageLookupByLibrary.simpleMessage("packing"),
         "packingBody": MessageLookupByLibrary.simpleMessage(
             "we are packing your order and searching for nearest delivery"),
@@ -320,7 +320,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
-        "tours": MessageLookupByLibrary.simpleMessage("tours"),
+        "tours": MessageLookupByLibrary.simpleMessage("Tours"),
         "tryAgain":
             MessageLookupByLibrary.simpleMessage("Please try again or sign up"),
         "tryLater": MessageLookupByLibrary.simpleMessage("Please Try Later"),
@@ -350,7 +350,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "you can use the wallet balance to buy "),
         "welcomeMessage":
             MessageLookupByLibrary.simpleMessage("Welcome Doctor "),
-        "whatsUp": MessageLookupByLibrary.simpleMessage(" Whats App Number"),
+        "whatisNewOffers": MessageLookupByLibrary.simpleMessage(
+            "What are the latest offers ?"),
+        "whatsApp": MessageLookupByLibrary.simpleMessage(" WhatsApp"),
         "workName":
             MessageLookupByLibrary.simpleMessage("set your organization name"),
         "worktype": MessageLookupByLibrary.simpleMessage(
