@@ -9,6 +9,7 @@ class URL {
   static const gallery = baseUrl + "gallery";
   static const videos = baseUrl + "videos";
   static const about = baseUrl + "about";
+  static const gallary = baseUrl + "gallery";
   static const image = base + "public/image/";
 
   /// post APIs

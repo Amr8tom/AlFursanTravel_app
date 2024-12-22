@@ -32,20 +32,7 @@ class FursanApp extends StatelessWidget {
               themeMode: ThemeMode.light,
               theme: DAppTheme.lightTheme(context),
               onGenerateRoute: RouteGenerator.generateRoute,
-              // initialRoute: DRoutesName.navigationMenuRoute,
-              home: FutureBuilder(
-                  future: _ensureScreenSize(context),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return NavigatorMenuScreen();
-                    } else {
-                      return const Scaffold(
-                        body: Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                      );
-                    }
-                  }),
+              initialRoute: DRoutesName.navigationMenuRoute,
               localeListResolutionCallback: (locales, supportedLocales) {
                 return controller.currentLang ?? supportedLocales.first;
               },
@@ -65,14 +52,5 @@ class FursanApp extends StatelessWidget {
         );
       },
     );
-  }
-}
-
-Future<void> _ensureScreenSize(BuildContext context) async {
-  final screenSize = MediaQuery.of(context).size;
-  if (screenSize.isEmpty) {
-    await Future.delayed(const Duration(milliseconds: 10));
-    // ignore: use_build_context_synchronously
-    return _ensureScreenSize(context);
   }
 }

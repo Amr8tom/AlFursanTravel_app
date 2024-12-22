@@ -14,7 +14,8 @@ void main() async {
   await DI.execute();
   DDeviceUtils.setStatusBarColor(ColorRes.transparent);
   DDeviceUtils.initCacheHelper();
-  ScreenUtil.ensureScreenSize();
+  await ScreenUtil.ensureScreenSize();
+
   final controller = LanguageCubit();
   await controller.init();
   runApp(BlocProvider(

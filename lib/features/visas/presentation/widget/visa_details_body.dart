@@ -13,7 +13,7 @@
 //
 //   @override
 //   Widget build(BuildContext context) {
-//     final controller= context.read<VisaDetailsCubit>
+//     final controllers= context.read<VisaDetailsCubit>
 //     return
 //   }
 // }

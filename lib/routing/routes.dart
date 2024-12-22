@@ -22,21 +22,21 @@ class RouteGenerator {
     switch (settings.name) {
       case DRoutesName.langRoute:
         return PageTransition(
-            child: SelectLanguageScreen(),
+            child: const SelectLanguageScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// navigation
       case DRoutesName.navigationMenuRoute:
         return PageTransition(
-            child: NavigatorMenuScreen(),
+            child: const NavigatorMenuScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// contact Us
       case DRoutesName.contactUs:
         return PageTransition(
-            child: ContactUsScreen(),
+            child: const ContactUsScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
@@ -68,14 +68,14 @@ class RouteGenerator {
       /// all Tours Screen
       case DRoutesName.allToursScreen:
         return PageTransition(
-            child: AllToursScreen(),
+            child: const AllToursScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// all Visas Screen
       case DRoutesName.AllVisasScreen:
         return PageTransition(
-            child: AllVisasScreen(),
+            child: const AllVisasScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
@@ -83,28 +83,28 @@ class RouteGenerator {
 
       case DRoutesName.loginRoute:
         return PageTransition(
-            child: LoginScreen(),
+            child: const LoginScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// search Rourte
       case DRoutesName.searchRoute:
         return PageTransition(
-            child: SearchScreen(),
+            child: const SearchScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// search Rourte
       case DRoutesName.signupRoute:
         return PageTransition(
-            child: DSignupScreen(),
+            child: const DSignupScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
       /// search Rourte
       case DRoutesName.profileInfoRoute:
         return PageTransition(
-            child: ProfileScreen(),
+            child: const ProfileScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 
@@ -124,7 +124,7 @@ class RouteGenerator {
           ),
         ),
         body: Center(
-          child: Text(
+          child: const Text(
             '',
           ),
         ),
