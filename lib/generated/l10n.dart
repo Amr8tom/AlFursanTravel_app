@@ -260,6 +260,26 @@ class S {
     );
   }
 
+  /// `First Name `
+  String get firstName {
+    return Intl.message(
+      'First Name ',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name `
+  String get lastName {
+    return Intl.message(
+      'Last Name ',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Lowest Limit`
   String get limit {
     return Intl.message(
@@ -1212,11 +1232,41 @@ class S {
     );
   }
 
-  /// `Send Missing Items Notebook....Important`
-  String get sendNotebook {
+  /// `Visa Form data`
+  String get visaForm {
     return Intl.message(
-      'Send Missing Items Notebook....Important',
-      name: 'sendNotebook',
+      'Visa Form data',
+      name: 'visaForm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visa Details`
+  String get visaDetails {
+    return Intl.message(
+      'Visa Details',
+      name: 'visaDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tour Form data`
+  String get tourForm {
+    return Intl.message(
+      'Tour Form data',
+      name: 'tourForm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Additional Notes`
+  String get notes {
+    return Intl.message(
+      ' Additional Notes',
+      name: 'notes',
       desc: '',
       args: [],
     );

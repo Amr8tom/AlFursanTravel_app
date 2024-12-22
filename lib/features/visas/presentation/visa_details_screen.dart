@@ -8,6 +8,7 @@ import 'package:fursan_travel_app/features/visas/presentation/widget/visa_detail
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 
+import '../../../generated/l10n.dart';
 import '../../../routing/routes_name.dart';
 import '../../../utils/device/device_utility.dart';
 import '../../service_locator/service_locator.dart';
@@ -22,7 +23,8 @@ class VisaDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: DAppBar(
-        title: "Visa Details",
+        title: S.current.visaDetails,
+        fontSize: AppSizes.fontSizeMd,
         showBackArrow: true,
       ),
       body: BlocProvider(

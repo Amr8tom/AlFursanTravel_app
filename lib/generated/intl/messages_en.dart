@@ -153,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fawryCode": MessageLookupByLibrary.simpleMessage("Your Code To Pay"),
         "fawryDes":
             MessageLookupByLibrary.simpleMessage("use to code to payment"),
+        "firstName": MessageLookupByLibrary.simpleMessage("First Name "),
         "flashTodaySale": MessageLookupByLibrary.simpleMessage("Today Sale"),
         "followOeder": MessageLookupByLibrary.simpleMessage("Follow Order"),
         "followOrder": MessageLookupByLibrary.simpleMessage("Follow Order"),
@@ -183,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageDes": MessageLookupByLibrary.simpleMessage(
             "Change the language of the application"),
         "lastAddress": MessageLookupByLibrary.simpleMessage("Last Address"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Last Name "),
         "later": MessageLookupByLibrary.simpleMessage("Later"),
         "letsStart": MessageLookupByLibrary.simpleMessage("Welcome Again"),
         "limit": MessageLookupByLibrary.simpleMessage("Lowest Limit"),
@@ -222,6 +224,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "These credentials are not found"),
         "notVerified":
             MessageLookupByLibrary.simpleMessage("please verify your account"),
+        "notes": MessageLookupByLibrary.simpleMessage(" Additional Notes"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
@@ -300,8 +303,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectQuantitiy":
             MessageLookupByLibrary.simpleMessage("Select Quantitiy at First"),
         "selectRegion": MessageLookupByLibrary.simpleMessage("Select region"),
-        "sendNotebook": MessageLookupByLibrary.simpleMessage(
-            "Send Missing Items Notebook....Important"),
         "sendToWallet": MessageLookupByLibrary.simpleMessage("send to wallet "),
         "services": MessageLookupByLibrary.simpleMessage("services"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
@@ -323,6 +324,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "tourForm": MessageLookupByLibrary.simpleMessage("Tour Form data"),
         "tours": MessageLookupByLibrary.simpleMessage("Tours"),
         "tryAgain":
             MessageLookupByLibrary.simpleMessage("Please try again or sign up"),
@@ -345,6 +347,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "version": MessageLookupByLibrary.simpleMessage("Version"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
         "visa": MessageLookupByLibrary.simpleMessage("Visa"),
+        "visaDetails": MessageLookupByLibrary.simpleMessage("Visa Details"),
+        "visaForm": MessageLookupByLibrary.simpleMessage("Visa Form data"),
         "wallet": MessageLookupByLibrary.simpleMessage(
             "Wallet......Here you can get money and cashback to help you increase your profits"),
         "walletCacheDes": MessageLookupByLibrary.simpleMessage(

@@ -14,7 +14,7 @@ class URL {
 
   /// post APIs
   static const sendMsg = "send-message";
-  static const tourReservation = "tours/reservation";
-  static const visaReservation = "visa/reservation";
-  static const contactUs = "send-message";
+  static const tourReservation = baseUrl + "tours/reservation";
+  static const visaReservation = baseUrl + "visa/reservation";
+  static const contactUs = baseUrl + "send-message";
 }

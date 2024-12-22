@@ -20,6 +20,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.bgColor,
     this.arrowBackColor = false,
+    this.fontSize,
     this.showBackGroundColor = false,
     this.doSomeThing,
   });
@@ -28,6 +29,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showBackArrow;
   final bool showBackGroundColor;
   final bool centerTitle;
+  final double? fontSize;
   final bool arrowBackColor;
   // final IconData? leadingIcon;
   final List<Widget>? actions;
@@ -43,7 +45,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         titleTextStyle: TextStyle(
             fontWeight: FontWeight.w700,
-            fontSize: 32.sp,
+            fontSize: fontSize ?? 32.sp,
             fontFamily: "Cairo",
             color: ColorRes.primary),
         backgroundColor: bgColor ?? ColorRes.white,

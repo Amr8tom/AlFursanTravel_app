@@ -108,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "اصنافي المفضلة   ما ترغب في شرائه لاحقا"),
+        "firstName": MessageLookupByLibrary.simpleMessage("الأسم الأول"),
         "flashTodaySale":
             MessageLookupByLibrary.simpleMessage("عِـــروٌض الــيوم"),
         "followOrder": MessageLookupByLibrary.simpleMessage("تتبع الطلب"),
@@ -126,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageDes":
             MessageLookupByLibrary.simpleMessage("قُــم بـتغير لــغة التـطبيق"),
         "lastAddress": MessageLookupByLibrary.simpleMessage("العنوان الأخير"),
+        "lastName": MessageLookupByLibrary.simpleMessage("الأسم الأخير"),
         "later": MessageLookupByLibrary.simpleMessage("لاحقا"),
         "letsStart":
             MessageLookupByLibrary.simpleMessage("مـــرحبـاََ بـك مــجـدداََ "),
@@ -150,6 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noResult": MessageLookupByLibrary.simpleMessage("لا توٌجـد نتــائج"),
         "noUserFound": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على هذه البيانات"),
+        "notes": MessageLookupByLibrary.simpleMessage(" ملاحظات اضافية"),
         "notifications": MessageLookupByLibrary.simpleMessage("الاشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العـروض"),
         "onbordingMsg": MessageLookupByLibrary.simpleMessage(
@@ -228,6 +231,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("أسم الشارع"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
+        "tourForm": MessageLookupByLibrary.simpleMessage("بيانات الرحله"),
         "tours": MessageLookupByLibrary.simpleMessage("الرحـلات"),
         "tryAgain": MessageLookupByLibrary.simpleMessage(
             "  يُـرجى المُحاولة مرة أخرى أو التسجيل"),
@@ -248,6 +252,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "version": MessageLookupByLibrary.simpleMessage("الاصدار"),
         "viewAll": MessageLookupByLibrary.simpleMessage("رؤية الكل"),
         "visa": MessageLookupByLibrary.simpleMessage("التـأشيرات"),
+        "visaDetails": MessageLookupByLibrary.simpleMessage("تفاصيل التأشيرة"),
+        "visaForm": MessageLookupByLibrary.simpleMessage("بيانات التأشيرة"),
         "walletCacheDes":
             MessageLookupByLibrary.simpleMessage("ادفع من رصيد محفظتك"),
         "walletTitle": MessageLookupByLibrary.simpleMessage(
