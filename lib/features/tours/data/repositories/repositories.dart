@@ -39,10 +39,11 @@ class ToursRepositoryImp extends ToursRepository {
   }
 
   @override
-  Future<Either<Failure, TourDetailsModel>> getTourDetails() async {
+  Future<Either<Failure, TourDetailsModel>> getTourDetails(
+      {required String params}) async {
     if (await networkInfo.isConnected) {
       try {
-        final tourDetailsModel = await remote.getTourDetails();
+        final tourDetailsModel = await remote.getTourDetails(params: params);
         return right(tourDetailsModel);
       } on ServerFailure {
         throw ServerFailure(

@@ -9,8 +9,8 @@ class TourDetailsCubit extends Cubit<TourDetailsState> {
   final GetTourDetailsUseCase _getTourDetailsUseCase;
   TourDetailsCubit(this._getTourDetailsUseCase) : super(TourDetailsLoading());
 
-  Future getTourDetails() async {
-    final result = await _getTourDetailsUseCase.call();
+  Future getTourDetails({required String slugID}) async {
+    final result = await _getTourDetailsUseCase.call(params: slugID);
     return result.fold((l) => emit(TourDetailsFailure()),
         (tourDetailsModel) => emit(TourDetailsSuccess(tourDetailsModel)));
   }

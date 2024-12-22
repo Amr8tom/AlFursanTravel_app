@@ -3,6 +3,7 @@ import 'package:fursan_travel_app/features/authentication/presentation/login/log
 import 'package:fursan_travel_app/features/tours/presentation/certain_category_screen.dart';
 import 'package:fursan_travel_app/features/language/select_language_screen.dart';
 import 'package:fursan_travel_app/features/search/presentation/search_screen.dart';
+import 'package:fursan_travel_app/features/tours/presentation/make_toure_reservation_screen.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -11,6 +12,7 @@ import '../features/contact_us/persentation/contact_us_screen.dart';
 import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import '../features/tours/presentation/all_tours_screen.dart';
+import '../features/tours/presentation/tour_details_screen.dart';
 import '../features/visas/presentation/all_visas_screen.dart';
 import '../features/visas/presentation/make_reservation_screen.dart';
 import '../features/visas/presentation/visa_details_screen.dart';
@@ -66,9 +68,26 @@ class RouteGenerator {
             settings: settings);
 
       /// all Tours Screen
-      case DRoutesName.allToursScreen:
+      case DRoutesName.allToursRoute:
         return PageTransition(
             child: const AllToursScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// make tour reservation Screen
+      case DRoutesName.makeTourReservationRoute:
+        return PageTransition(
+            child: const MakeToureReservationScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// details Tours Screen
+      case DRoutesName.tourDetailsRoute:
+        final String slugId = settings.arguments as String;
+        return PageTransition(
+            child: TourDetailsScreen(
+              slugID: slugId,
+            ),
             type: PageTransitionType.fade,
             settings: settings);
 
@@ -125,7 +144,7 @@ class RouteGenerator {
         ),
         body: Center(
           child: const Text(
-            '',
+            'no data',
           ),
         ),
       ),

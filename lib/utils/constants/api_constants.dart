@@ -5,7 +5,7 @@ class URL {
   static const allVisas = baseUrl + "visas";
   static const visaDetails = baseUrl + "visa/"; //visa/united-arab-emirates
   static const allTours = baseUrl + "tours";
-  static const toursDetails = baseUrl + "tours/"; //tours/istanbul
+  static const toursDetails = baseUrl + "tour/"; //tours/istanbul
   static const gallery = baseUrl + "gallery";
   static const videos = baseUrl + "videos";
   static const about = baseUrl + "about";

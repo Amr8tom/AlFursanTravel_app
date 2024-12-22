@@ -1,7 +1,6 @@
 class DRoutesName {
   /// Shared Screens (User)
   static const String langRoute = 'choose-language-route';
-  static const String allToursScreen = 'all-tours-screen';
   static const String test = 'test-route';
   static const String loginRoute = 'phone-login-route';
   static const String allDataLoginRoute = 'all-data-login-route';
@@ -19,12 +18,17 @@ class DRoutesName {
   /// Navigation Bar
   static const String navigationMenuRoute = 'navigation-menu-route';
 
+  /// tour
+  static const String allToursRoute = 'all-tours-route';
+  static const String tourDetailsRoute = 'tour-details-route';
+  static const String makeTourReservationRoute = 'make-tour-reservation-route';
+
   /// Visa
   static const String visaDetailsRoute = 'visa-details-route';
   static const String makeVisaReservationRoute = 'visa-reservation-route';
 
   /// Home
-  static const String offersRoute = 'offers-route';
+  static const String offersRoute = 'explore_iraq-route';
   static const String detailsTourRoute = 'details-tours-route';
   static const String certainCategoryRoute = 'certain-category-route';
   static const String searchRoute = 'search-route';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-import 'package:iconsax/iconsax.dart';
 import '../../../../dummy/dummy_lists.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
@@ -14,26 +13,29 @@ class CustomCategoriesWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         _categoryIconButton(
-            tilte: S.current.offers,
-            icon: Iconsax.dollar_circle,
+            tilte: S.current.exploreIraq,
+            icon: Icons.travel_explore_rounded,
             onTab: () {
               {
                 Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
                     arguments: {
-                      "title": S.current.offers,
+                      "title": S.current.exploreIraq,
                       "items": DummyLists.offers
                     });
               }
             }),
         _categoryIconButton(
-            icon: Icons.travel_explore_rounded,
+            icon: Icons.card_travel,
             onTab: () {
               Navigator.pushNamed(
                 context,
-                DRoutesName.allToursScreen,
+                DRoutesName.allToursRoute,
               );
             },
             tilte: S.current.tours),
+        SizedBox(
+          width: AppSizes.padding / 2,
+        ),
         _categoryIconButton(
             tilte: S.current.visa,
             icon: Icons.contact_mail_outlined,

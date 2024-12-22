@@ -1232,6 +1232,16 @@ class S {
     );
   }
 
+  /// `explore Iraq`
+  String get exploreIraq {
+    return Intl.message(
+      'explore Iraq',
+      name: 'exploreIraq',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Visa Form data`
   String get visaForm {
     return Intl.message(
@@ -1247,6 +1257,16 @@ class S {
     return Intl.message(
       'Visa Details',
       name: 'visaDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tour Details`
+  String get tourDetails {
+    return Intl.message(
+      'Tour Details',
+      name: 'tourDetails',
       desc: '',
       args: [],
     );

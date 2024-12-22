@@ -6,7 +6,8 @@ import "../../data/model/all_tours_model.dart";
 
 abstract class ToursRepository {
   Future<Either<Failure, AllToursModel>> getAllTours();
-  Future<Either<Failure, TourDetailsModel>> getTourDetails();
+  Future<Either<Failure, TourDetailsModel>> getTourDetails(
+      {required String params});
 
   /// todo: change to VisaReservationModel to TourReservationModel
   Future<Either<Failure, ReservationTourModel>> makeTourReservation(

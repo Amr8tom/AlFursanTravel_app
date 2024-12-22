@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 
-class VisaReservationButton extends StatelessWidget {
+class TourReservationButton extends StatelessWidget {
   final VoidCallback onTap;
-  const VisaReservationButton({super.key, required this.onTap});
+  const TourReservationButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

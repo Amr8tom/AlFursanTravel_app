@@ -12,67 +12,13 @@ class CertainCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final List items = arg["items"];
     return Scaffold(
-      appBar: DAppBar(
-        showBackArrow: true,
-        title: arg["title"],
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: AppSizes.space,
-          ),
-          Text(arg["title"]),
-          SizedBox(
-            height: AppSizes.space,
-          ),
-          Expanded(
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 8.0,
-                mainAxisSpacing: 8.0,
-              ),
-              itemCount: items.length,
-              itemBuilder: (context, index) {
-                // Get the current destination item
-                final destination = items[index];
-
-                return Card(
-                  elevation: 4.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: Column(
-                    children: [
-                      ClipRRect(
-                        borderRadius:
-                            BorderRadius.vertical(top: Radius.circular(8.0)),
-                        child: Image.asset(
-                          destination['image']!,
-                          fit: BoxFit.cover,
-                          height: 120.0, // Adjust the height of the image
-                          width: double.infinity,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          destination['name']!,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16.0,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    );
+        appBar: DAppBar(
+          showBackArrow: true,
+          title: S.current.exploreIraq,
+          fontSize: AppSizes.fontSizeMd,
+        ),
+        body: Center(
+          child: Text(S.current.exploreIraq),
+        ));
   }
 }

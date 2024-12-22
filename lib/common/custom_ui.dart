@@ -11,7 +11,7 @@ class CustomUI {
       barrierDismissible: false,
       builder: (context) {
         return Center(
-            child: Lottie.asset(AssetRes.airplainLoading, width: 50.w));
+            child: Lottie.asset(AssetRes.airplainLoading, height: 30.h));
       },
     );
   }
@@ -49,9 +49,18 @@ class CustomUI {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(S.current.tryLater),
-          Lottie.asset(AssetRes.emptyProduct, width: 100.w),
+          Lottie.asset(AssetRes.airplainLoading, width: 100.w),
         ],
       )),
     );
+  }
+
+  static ScaffoldFeatureController<SnackBar, SnackBarClosedReason>
+      snackBarSuccess({required BuildContext context}) {
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(S.current.done),
+      backgroundColor: Colors.green,
+      behavior: SnackBarBehavior.floating,
+    ));
   }
 }

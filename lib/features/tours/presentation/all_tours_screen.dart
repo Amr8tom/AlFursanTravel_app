@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/service_locator/service_locator.dart';
 import 'package:fursan_travel_app/features/tours/presentation/controllers/tours/all_tours_cubit.dart';
+import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
 
 import '../../../common/custom_ui.dart';
@@ -44,38 +45,44 @@ class AllToursScreen extends StatelessWidget {
                         ),
                         itemCount: items?.length,
                         itemBuilder: (context, index) {
-                          // Get the current destination item
                           final destination = items?[index];
-                          return Card(
-                            elevation: 4.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Column(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(8.0)),
-                                  child: Image.network(
-                                    "${URL.image}${destination?.image?.imageFilename}",
-                                    fit: BoxFit.cover,
-                                    height:
-                                        120.0, // Adjust the height of the image
-                                    width: double.infinity,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    destination!.nameAr!.toString(),
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, DRoutesName.tourDetailsRoute,
+                                  arguments: destination.slug.toString());
+                            },
+                            child: Card(
+                              elevation: 4.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Column(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(8.0)),
+                                    child: Image.network(
+                                      "${URL.image}${destination?.image?.imageFilename}",
+                                      fit: BoxFit.cover,
+                                      height:
+                                          120.0, // Adjust the height of the image
+                                      width: double.infinity,
                                     ),
-                                    textAlign: TextAlign.center,
                                   ),
-                                ),
-                              ],
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      destination!.nameAr!.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           );
                         },

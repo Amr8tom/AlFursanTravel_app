@@ -8,7 +8,7 @@ import '../model/reservation_tour_model.dart';
 
 abstract class ToursRemoteDataSources {
   Future<AllToursModel> getAllTours();
-  Future<TourDetailsModel> getTourDetails();
+  Future<TourDetailsModel> getTourDetails({required String params});
   Future<ReservationTourModel> makeReservationTour();
 }
 
@@ -22,8 +22,12 @@ class ToursRemoteDataSourcesImp implements ToursRemoteDataSources {
   }
 
   @override
-  Future<TourDetailsModel> getTourDetails() async {
-    final response = await dio.getData(URL: URL.toursDetails);
+  Future<TourDetailsModel> getTourDetails({required String params}) async {
+    print("${URL.toursDetails}$params");
+    print("${URL.toursDetails}$params");
+    print("${URL.toursDetails}$params");
+    print("${URL.toursDetails}$params");
+    final response = await dio.getData(URL: "${URL.toursDetails}$params");
     return TourDetailsModel.fromJson(response);
   }
 

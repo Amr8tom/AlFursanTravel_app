@@ -146,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exitApp": MessageLookupByLibrary.simpleMessage("Exit App"),
         "expiredProducts": MessageLookupByLibrary.simpleMessage(
             "Expired Products or Expired Items.......Dispose of expired items by uploading expired or damaged products"),
+        "exploreIraq": MessageLookupByLibrary.simpleMessage("explore Iraq"),
         "favorite": MessageLookupByLibrary.simpleMessage("Favorites"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "My Favorite Items.....What you want to buy later"),
@@ -324,6 +325,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "tourDetails": MessageLookupByLibrary.simpleMessage("Tour Details"),
         "tourForm": MessageLookupByLibrary.simpleMessage("Tour Form data"),
         "tours": MessageLookupByLibrary.simpleMessage("Tours"),
         "tryAgain":

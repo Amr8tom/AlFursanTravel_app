@@ -6,7 +6,7 @@ import 'package:fursan_travel_app/utils/error/failure.dart';
 class GetTourDetailsUseCase {
   final ToursRepository repository;
   const GetTourDetailsUseCase(this.repository);
-  Future<Either<Failure, TourDetailsModel>> call() {
-    return repository.getTourDetails();
+  Future<Either<Failure, TourDetailsModel>> call({required String params}) {
+    return repository.getTourDetails(params: params);
   }
 }

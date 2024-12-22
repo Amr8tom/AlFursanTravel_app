@@ -105,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("هناك خطأ ما"),
         "exitApp":
             MessageLookupByLibrary.simpleMessage("الخٍـروُج من التَـطبيـق"),
+        "exploreIraq": MessageLookupByLibrary.simpleMessage("استكشف العراق "),
         "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "اصنافي المفضلة   ما ترغب في شرائه لاحقا"),
@@ -231,6 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "streetName": MessageLookupByLibrary.simpleMessage("أسم الشارع"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
+        "tourDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الرحلة"),
         "tourForm": MessageLookupByLibrary.simpleMessage("بيانات الرحله"),
         "tours": MessageLookupByLibrary.simpleMessage("الرحـلات"),
         "tryAgain": MessageLookupByLibrary.simpleMessage(
