@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fursan_travel_app/common/widgets/navigationbar/navigation_menu/navigation_menu_cubit.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
 import 'package:fursan_travel_app/routing/routes.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
@@ -10,6 +11,7 @@ import '../../generated/l10n.dart';
 import '../../utils/local_storage/cach_keys.dart';
 import '../../utils/local_storage/cache_helper.dart';
 import '../language/presentation/controller/language_cubit.dart';
+import '../navigation_menu/pressentation/navigator_menu_screen.dart';
 
 class FursanApp extends StatelessWidget {
   const FursanApp({super.key});
@@ -30,7 +32,20 @@ class FursanApp extends StatelessWidget {
               themeMode: ThemeMode.light,
               theme: DAppTheme.lightTheme(context),
               onGenerateRoute: RouteGenerator.generateRoute,
-              initialRoute: DRoutesName.navigationMenuRoute,
+              // initialRoute: DRoutesName.navigationMenuRoute,
+              home: FutureBuilder(
+                  future: _ensureScreenSize(context),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.done) {
+                      return NavigatorMenuScreen();
+                    } else {
+                      return const Scaffold(
+                        body: Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                      );
+                    }
+                  }),
               localeListResolutionCallback: (locales, supportedLocales) {
                 return controller.currentLang ?? supportedLocales.first;
               },
@@ -50,5 +65,14 @@ class FursanApp extends StatelessWidget {
         );
       },
     );
+  }
+}
+
+Future<void> _ensureScreenSize(BuildContext context) async {
+  final screenSize = MediaQuery.of(context).size;
+  if (screenSize.isEmpty) {
+    await Future.delayed(const Duration(milliseconds: 10));
+    // ignore: use_build_context_synchronously
+    return _ensureScreenSize(context);
   }
 }

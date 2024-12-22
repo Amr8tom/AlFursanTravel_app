@@ -47,14 +47,15 @@ class CustomNavigationAppbar extends StatelessWidget
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             backgroundColor: Colors.white,
-            leading: IconButton(
-                onPressed: () async {
-                  await Contacts.makePhoneCall("+201024264021");
-                },
-                icon: Icon(
-                  Iconsax.call,
-                  color: ColorRes.primary,
-                )),
+            // leading: IconButton(
+            //     onPressed: () async {
+            //       await Contacts.makePhoneCall("+201024264021");
+            //     },
+            //     icon: Icon(
+            //       Iconsax.call,
+            //       color: ColorRes.primary,
+            //     )),
+            automaticallyImplyLeading: false,
           ),
         );
       },

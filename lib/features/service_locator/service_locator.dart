@@ -3,8 +3,8 @@ import 'package:fursan_travel_app/features/service_locator/tours_services_locato
 import 'package:fursan_travel_app/features/service_locator/visas_service_locator.dart';
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../utils/connection/checkNetwork.dart';
+import 'contact_us_service_locator.dart';
 import 'navigation_servise_locator.dart';
 
 final serviceLocator = GetIt.instance;
@@ -20,10 +20,13 @@ class DI {
     /// navigation
     await NavigationServiseLocator.execute(serviceLocator: serviceLocator);
 
-    /// Visa
+    /// visa
     await VisasServiceLocator.execute(serviceLocator: serviceLocator);
 
     /// tours
     await ToursServicesLocator.execute(serviceLocator: serviceLocator);
+
+    /// contact us
+    await ContactUsServiceLocator.execute(serviceLocator);
   }
 }

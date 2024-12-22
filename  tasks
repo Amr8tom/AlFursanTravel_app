@@ -1,3 +1,7 @@
+/// handle loading screen 20/12
+/// make visa details  Screen
+/// handle loading screen 20/12
+/// make re
 /////////////  12/16/2024
 
 -add get_it packages to make dependency Injections
@@ -22,8 +26,6 @@
 - make controllers (cubits files and state files )
 add 3 controllers for visas (6 files )
 add 3 controller for tours (6 files)
-
-
 
 
 /////////////  12/17/2024

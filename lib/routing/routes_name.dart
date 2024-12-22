@@ -13,16 +13,21 @@ class DRoutesName {
   static const String resetPasswordRoute = 'reset-password-route';
   static const String noConnectionRoute = 'no-connection-route';
   static const String webViewRoute = 'webView-route';
+  static const String AllVisasScreen = 'All_Visas-route';
   static const String categoriesRoute = 'tours-route';
 
   /// Navigation Bar
   static const String navigationMenuRoute = 'navigation-menu-route';
 
+  /// Visa
+  static const String visaDetailsRoute = 'visa-details-route';
+  static const String makeVisaReservationRoute = 'visa-reservation-route';
+
   /// Home
   static const String offersRoute = 'offers-route';
   static const String detailsTourRoute = 'details-tours-route';
   static const String certainCategoryRoute = 'certain-category-route';
-   static const String searchRoute = 'search-route';
+  static const String searchRoute = 'search-route';
 
   /// More
   static const String termsAndConditionRoute = 'terms-and-conditions-route';
@@ -40,4 +45,5 @@ class DRoutesName {
   static const String addNewAddressFormRoute = 'add-new-address-form-route';
   static const String paymentRoute = 'payment-route';
   static const String companyDetailsRoute = 'company-route';
+  static const String contactUs = 'contact-us-route';
 }

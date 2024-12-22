@@ -8,8 +8,8 @@ part 'visa_details_state.dart';
 class VisaDetailsCubit extends Cubit<VisaDetailsState> {
   final GetVisaDetailUseCase _getVisaDetailUseCase;
   VisaDetailsCubit(this._getVisaDetailUseCase) : super(VisaDetailsLoading());
-  Future getVisaDetails() async {
-    final result = await _getVisaDetailUseCase.call();
+  Future getVisaDetails({required String slugId}) async {
+    final result = await _getVisaDetailUseCase.call(params: slugId);
     return result.fold((f) => emit(VisaDetailsFailure()),
         (visaDetailsModel) => emit(VisaDetailsSuccess(visaDetailsModel)));
   }

@@ -140,6 +140,26 @@ class S {
     );
   }
 
+  /// `Reservation`
+  String get reservation {
+    return Intl.message(
+      'Reservation',
+      name: 'reservation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book Now`
+  String get bookNow {
+    return Intl.message(
+      'Book Now',
+      name: 'bookNow',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Notifications`
   String get notifications {
     return Intl.message(
@@ -225,6 +245,16 @@ class S {
     return Intl.message(
       'Refund Reason',
       name: 'refundReason',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm `
+  String get confirm {
+    return Intl.message(
+      'Confirm ',
+      name: 'confirm',
       desc: '',
       args: [],
     );

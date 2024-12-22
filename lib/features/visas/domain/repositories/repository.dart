@@ -7,7 +7,8 @@ import '../../data/model/visa_details_model.dart';
 
 abstract class VisasRepository {
   Future<Either<Failure, AllVisasModel>> getAllVisas();
-  Future<Either<Failure, VisaDetailsModel>> getVisaDetails();
+  Future<Either<Failure, VisaDetailsModel>> getVisaDetails(
+      {required String params});
   Future<Either<Failure, VisaReservationModel>> makeVisaReservation(
       {required Map<String, dynamic> params});
 }

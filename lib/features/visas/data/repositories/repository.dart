@@ -39,10 +39,11 @@ class VisasRepositoryImp implements VisasRepository {
 
   /// get visa details
   @override
-  Future<Either<Failure, VisaDetailsModel>> getVisaDetails() async {
+  Future<Either<Failure, VisaDetailsModel>> getVisaDetails(
+      {required String params}) async {
     if (await networkInfo.isConnected) {
       try {
-        final visaDetailsModel = await remote.getVisaDetails();
+        final visaDetailsModel = await remote.getVisaDetails(params: params);
         return right(visaDetailsModel);
       } on ServerFailure {
         return left(ServerFailure(

@@ -23,30 +23,15 @@ class CustomLottieFloatingAvtionBottom extends StatelessWidget {
           child: Stack(
             children: [
               Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Spacer(),
-                    Text(
-                      S.current.searchTitle,
-                      style: TextStyle(fontSize: 16, color: ColorRes.white),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    )
-                  ],
+                child: SizedBox(
+                  width: 50,
+                  child: Transform.scale(
+                      scale: 2.1,
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      )),
                 ),
-              ),
-              Column(
-                children: [
-                  Spacer(),
-                  SizedBox(
-                    width: 50,
-                    child: Transform.scale(
-                        scale: 2.1, child: Lottie.asset(AssetRes.searchICon)),
-                  ),
-                ],
               ),
             ],
           ),

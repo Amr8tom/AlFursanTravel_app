@@ -61,6 +61,7 @@ class AssetRes {
   static const String normalLoading = 'assets/lotties/loading1.json';
   static const String circleLoading = 'assets/lotties/loadingCircle.json';
   static const String loadingSliders = 'assets/lotties/loadingSliders.json';
+  static const String airplainLoading = 'assets/lotties/airplainLoading.json';
 
   ///////////  flashSale
 

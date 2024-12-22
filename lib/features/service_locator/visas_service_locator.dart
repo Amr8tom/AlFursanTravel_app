@@ -18,7 +18,7 @@ class VisasServiceLocator {
     serviceLocator.registerLazySingleton<VisasRemoteDataSources>(
         () => VisasRemoteDataSourcesImp(dio: serviceLocator()));
 
-    /// register repository
+    /// register repositories
     serviceLocator.registerLazySingleton<VisasRepository>(() =>
         VisasRepositoryImp(
             networkInfo: serviceLocator(),

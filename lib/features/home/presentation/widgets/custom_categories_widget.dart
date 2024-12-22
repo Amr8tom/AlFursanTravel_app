@@ -39,11 +39,10 @@ class CustomCategoriesWidget extends StatelessWidget {
             icon: Icons.contact_mail_outlined,
             onTab: () {
               {
-                Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
-                    arguments: {
-                      "title": S.current.visa,
-                      "items": DummyLists.flags
-                    });
+                Navigator.pushNamed(
+                  context,
+                  DRoutesName.AllVisasScreen,
+                );
               }
             })
       ],

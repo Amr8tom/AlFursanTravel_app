@@ -34,14 +34,19 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ),
         ],
       ),
-      Column(
-        children: [
-          const Icon(Iconsax.heart, color: ColorRes.primary),
-          Text(
-            S.current.favorite,
-            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
-          ),
-        ],
+      InkWell(
+        onTap: () async {
+          await Contacts.makePhoneCall("+201024264021");
+        },
+        child: Column(
+          children: [
+            Icon(Iconsax.call, color: ColorRes.primary),
+            Text(
+              S.current.callUs,
+              style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+            ),
+          ],
+        ),
       ),
       InkWell(
         onTap: () {

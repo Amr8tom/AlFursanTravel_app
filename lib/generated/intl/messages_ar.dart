@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestDestinations":
             MessageLookupByLibrary.simpleMessage("أفضل الوجهات"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("أفـضـل العٍــروض"),
+        "bookNow": MessageLookupByLibrary.simpleMessage("أحجز الأن"),
         "bookmarked": MessageLookupByLibrary.simpleMessage("المحفـوظات"),
         "buildingNumber": MessageLookupByLibrary.simpleMessage("رقم المبني"),
         "buyNow": MessageLookupByLibrary.simpleMessage("قُــم بالِشــراء الأن"),
@@ -69,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "company": MessageLookupByLibrary.simpleMessage("الشركة"),
         "comparePrice":
             MessageLookupByLibrary.simpleMessage("قَـارٍن الخُصــوماَت"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تاكـيد "),
         "confirmAddress":
             MessageLookupByLibrary.simpleMessage("تـأكيـد العـنوان"),
         "confirmExitMessage": MessageLookupByLibrary.simpleMessage(
@@ -198,6 +200,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "remotePayment":
             MessageLookupByLibrary.simpleMessage("الدفع الالكترونى"),
+        "reservation": MessageLookupByLibrary.simpleMessage("الحـجز"),
         "reviews": MessageLookupByLibrary.simpleMessage("التقيمات"),
         "saudiArabia": MessageLookupByLibrary.simpleMessage("السعودية"),
         "saveAndPay": MessageLookupByLibrary.simpleMessage("حفظ والدفع"),

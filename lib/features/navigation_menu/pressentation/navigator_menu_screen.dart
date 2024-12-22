@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fursan_travel_app/features/favourites/presentation/favourites_screen.dart';
 import 'package:fursan_travel_app/features/home/presentation/home_screen.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/widgets/custom_navigation_appBar.dart';
 import 'package:fursan_travel_app/features/notifications/presentation/notification_screen.dart';
@@ -39,8 +38,6 @@ class NavigatorMenuScreen extends StatelessWidget {
         return const HomeScreen();
       case 1:
         return const NotificationScreen();
-      case 2:
-        return const FavouritesScreen();
       default:
         return HomeScreen();
     }

@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestDestinations":
             MessageLookupByLibrary.simpleMessage("Best Destinations"),
         "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
+        "bookNow": MessageLookupByLibrary.simpleMessage("Book Now"),
         "bookmarked": MessageLookupByLibrary.simpleMessage("bookmarked"),
         "buildingNumber":
             MessageLookupByLibrary.simpleMessage("Building Number"),
@@ -91,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "companies": MessageLookupByLibrary.simpleMessage("companies"),
         "company": MessageLookupByLibrary.simpleMessage("Company"),
         "comparePrice": MessageLookupByLibrary.simpleMessage("Compare Price"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm "),
         "confirmAddress":
             MessageLookupByLibrary.simpleMessage("Confirm Address"),
         "confirmExitMessage": MessageLookupByLibrary.simpleMessage(
@@ -275,6 +277,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refused": MessageLookupByLibrary.simpleMessage("Pending"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remotePayment": MessageLookupByLibrary.simpleMessage("Remote Payment"),
+        "reservation": MessageLookupByLibrary.simpleMessage("Reservation"),
         "returnOrder": MessageLookupByLibrary.simpleMessage(
             "Return Order....You can return an item within 3 days after receiving it"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),

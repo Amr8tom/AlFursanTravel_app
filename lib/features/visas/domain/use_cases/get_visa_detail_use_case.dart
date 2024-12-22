@@ -8,7 +8,7 @@ class GetVisaDetailUseCase {
   final VisasRepository _repository;
   const GetVisaDetailUseCase(this._repository);
 
-  Future<Either<Failure, VisaDetailsModel>> call() {
-    return _repository.getVisaDetails();
+  Future<Either<Failure, VisaDetailsModel>> call({required String params}) {
+    return _repository.getVisaDetails(params: params);
   }
 }

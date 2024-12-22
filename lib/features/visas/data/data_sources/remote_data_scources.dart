@@ -7,7 +7,7 @@ import '../model/visa_details_model.dart';
 
 abstract class VisasRemoteDataSources {
   Future<AllVisasModel> getAllVisas();
-  Future<VisaDetailsModel> getVisaDetails();
+  Future<VisaDetailsModel> getVisaDetails({required String params});
   Future<VisaReservationModel> makeVisaReservation(
       {required Map<String, dynamic> params});
 }
@@ -23,8 +23,8 @@ class VisasRemoteDataSourcesImp implements VisasRemoteDataSources {
   }
 
   @override
-  Future<VisaDetailsModel> getVisaDetails() async {
-    final response = await dio.getData(URL: URL.visaDetails);
+  Future<VisaDetailsModel> getVisaDetails({required String params}) async {
+    final response = await dio.getData(URL: "${URL.visaDetails}$params");
     return VisaDetailsModel.fromJson(response);
   }
 

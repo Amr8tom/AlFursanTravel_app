@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/service_locator/service_locator.dart';
 import 'package:fursan_travel_app/features/tours/presentation/controllers/tours/all_tours_cubit.dart';
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
-import 'package:fursan_travel_app/utils/constants/image_strings.dart';
 
+import '../../../common/custom_ui.dart';
 import '../../../common/widgets/appbar/appbar.dart';
 import '../../../generated/l10n.dart';
 import '../../../utils/constants/sizes.dart';
@@ -84,9 +84,9 @@ class AllToursScreen extends StatelessWidget {
                   ],
                 );
               } else if (state is AllToursLoading) {
-                return Text("loading");
+                return CustomUI.simpleLoader();
               } else {
-                return Text("error");
+                return CustomUI.tryLater();
               }
             },
           );

@@ -1,5 +1,21 @@
 class AllVisasModel {
-  AllVisasModel({
+  List<VisaModel>? visas;
+
+  AllVisasModel({this.visas});
+
+  // Parse the list of JSON objects into a list of Tour instances
+  AllVisasModel.fromJson(List<dynamic> jsonList) {
+    visas = jsonList.map((json) => VisaModel.fromJson(json)).toList();
+  }
+
+  // Convert the list of Tour instances back to JSON
+  List<Map<String, dynamic>> toJsonList() {
+    return visas?.map((tour) => tour.toJson()).toList() ?? [];
+  }
+}
+
+class VisaModel {
+  VisaModel({
     this.id,
     this.slug,
     this.titleEn,
@@ -25,7 +41,7 @@ class AllVisasModel {
     this.featuredImage,
   });
 
-  AllVisasModel.fromJson(dynamic json) {
+  VisaModel.fromJson(dynamic json) {
     id = json['id'];
     slug = json['slug'];
     titleEn = json['title_en'];

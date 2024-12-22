@@ -15,4 +15,5 @@ class URL {
   static const sendMsg = "send-message";
   static const tourReservation = "tours/reservation";
   static const visaReservation = "visa/reservation";
+  static const contactUs = "send-message";
 }
