@@ -13,6 +13,7 @@ class MakeReservationScreen extends StatelessWidget {
     return Scaffold(
       appBar: DAppBar(
         title: S.current.reservation,
+        showBackArrow: true,
       ),
       body: Stack(
         children: [

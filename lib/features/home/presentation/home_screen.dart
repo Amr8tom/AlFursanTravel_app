@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-import '../../../dummy/dummy_lists.dart';
 import 'widgets/custom_banner.dart';
 import 'widgets/custom_categories_widget.dart';
 import 'widgets/custom_destination_horizontal_list.dart';
@@ -24,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               const CustomBanner(),
 
               /// Best Destinations Horizontal Card List
-              CustomDestinationHorizontalList(items: DummyLists.destinations),
+              const CustomDestinationHorizontalList(),
 
               /// show all title
               const CustomShowAllButton(),

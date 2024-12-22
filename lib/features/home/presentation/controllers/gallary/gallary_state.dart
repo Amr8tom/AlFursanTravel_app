@@ -8,8 +8,8 @@ final class GallaryInitial extends GallaryState {}
 final class GallaryLoading extends GallaryState {}
 
 final class GallarySuccess extends GallaryState {
-  final GallaryModel _gallaryModel;
-  GallarySuccess(this._gallaryModel);
+  final GallaryModel gallaryModel;
+  GallarySuccess(this.gallaryModel);
 }
 
 final class GallaryFailure extends GallaryState {}

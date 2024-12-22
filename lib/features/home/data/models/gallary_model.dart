@@ -1,22 +1,21 @@
-import 'dart:convert';
-
-/// id : 148
-/// album_id : 3
-/// original_filename : "16e9c2a9-355e-444f-9040-f38a78e11d09.jpg"
-/// image_filename : "5e314e016b30740430c4bc3ecc2513289a4312be.jpg"
-/// thumb_filename : "thumb_5e314e016b30740430c4bc3ecc2513289a4312be.jpg"
-/// caption_en : ""
-/// caption_ar : ""
-/// created_at : "2018-10-01T11:20:05.000000Z"
-/// updated_at : "2018-10-01T11:20:05.000000Z"
-/// image_name : "https://alfursantravel.com/image/5e314e016b30740430c4bc3ecc2513289a4312be.jpg"
-
-GallaryModel gallaryModelFromJson(String str) =>
-    GallaryModel.fromJson(json.decode(str));
-String gallaryModelToJson(GallaryModel data) => json.encode(data.toJson());
-
 class GallaryModel {
-  GallaryModel({
+  List<Gallary>? data;
+
+  GallaryModel({this.data});
+
+  // Parse the list of JSON objects into a list of Gallary instances
+  GallaryModel.fromJson(List<dynamic> jsonList) {
+    data = jsonList.map((json) => Gallary.fromJson(json)).toList();
+  }
+
+  // Convert the list of Gallary instances back to JSON
+  List<Map<String, dynamic>> toJson() {
+    return data?.map((tour) => tour.toJson()).toList() ?? [];
+  }
+}
+
+class Gallary {
+  Gallary({
     num? id,
     num? albumId,
     String? originalFilename,
@@ -40,7 +39,7 @@ class GallaryModel {
     _imageName = imageName;
   }
 
-  GallaryModel.fromJson(dynamic json) {
+  Gallary.fromJson(dynamic json) {
     _id = json['id'];
     _albumId = json['album_id'];
     _originalFilename = json['original_filename'];
@@ -62,7 +61,7 @@ class GallaryModel {
   String? _createdAt;
   String? _updatedAt;
   String? _imageName;
-  GallaryModel copyWith({
+  Gallary copyWith({
     num? id,
     num? albumId,
     String? originalFilename,
@@ -74,7 +73,7 @@ class GallaryModel {
     String? updatedAt,
     String? imageName,
   }) =>
-      GallaryModel(
+      Gallary(
         id: id ?? _id,
         albumId: albumId ?? _albumId,
         originalFilename: originalFilename ?? _originalFilename,
