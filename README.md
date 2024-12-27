@@ -24,7 +24,7 @@ A user-friendly travel application designed to help you explore new destinations
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/fursan-travel-app.git
+   git clone https://github.com/Amr8tom/AlFursanTravel_app.git
    ```
 2. Navigate to the project directory:
    ```bash
