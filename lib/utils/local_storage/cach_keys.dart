@@ -10,6 +10,7 @@ enum CacheKeys {
   visaDetails,
   offers,
   profile,
+  notification,
   fullName,
   firstName,
   lastName,

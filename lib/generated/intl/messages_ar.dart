@@ -150,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يــوجد شـئ في الوقت الحـالي"),
         "noItemsInCart":
             MessageLookupByLibrary.simpleMessage("لا يوجد منتجات في العربة"),
+        "noPreviousTrips": MessageLookupByLibrary.simpleMessage(
+            "لا توجد رحلات سابقة حتي الان "),
         "noResult": MessageLookupByLibrary.simpleMessage("لا توٌجـد نتــائج"),
         "noUserFound": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على هذه البيانات"),
@@ -231,6 +233,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "status": MessageLookupByLibrary.simpleMessage("الحالة"),
         "streetName": MessageLookupByLibrary.simpleMessage("أسم الشارع"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
+        "thanksMassage": MessageLookupByLibrary.simpleMessage(
+            "شكرا لك لاستعمالك تطبيق الفرسان!"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
         "tourDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الرحلة"),
         "tourForm": MessageLookupByLibrary.simpleMessage("بيانات الرحله"),
@@ -263,6 +267,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatisNewOffers":
             MessageLookupByLibrary.simpleMessage("أريد معرفة أحدث العروض ؟"),
         "whatsApp": MessageLookupByLibrary.simpleMessage("واتس أب"),
+        "worktype":
+            MessageLookupByLibrary.simpleMessage("أختر نوع الخدمة المطلوبة"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "youHave": MessageLookupByLibrary.simpleMessage("  لديــك ")
       };

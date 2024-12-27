@@ -12,17 +12,34 @@ class LanguageCubit extends Cubit<LanguageState> {
   late String storedLang;
   Locale currentLang = Locale("ar");
   String? changedLang = PrefService.getString(key: CacheKeys.lang);
+  String ShowLand = "AR";
   Future<void> init() async {
     emit(LanguageLoading());
     storedLang = (changedLang == '' ? "ar" : changedLang)!;
     currentLang = Locale(storedLang);
     emit(LanguageSuccess());
   }
+
   void chnageLange(String lang) {
     emit(LanguageLoading());
-    print("object");
     currentLang = Locale(lang);
     PrefService.putString(key: CacheKeys.lang, value: lang);
+    print(currentLang);
+
+    emit(LanguageSuccess());
+  }
+
+  void toggleLand() {
+    emit(LanguageLoading());
+    if (currentLang == Locale("en")) {
+      currentLang = Locale("ar");
+      ShowLand = "AR";
+      PrefService.putString(key: CacheKeys.lang, value: "ar");
+    } else {
+      currentLang = Locale("en");
+      ShowLand = "EN";
+      PrefService.putString(key: CacheKeys.lang, value: "en");
+    }
     print(currentLang);
 
     emit(LanguageSuccess());

@@ -1,14 +1,32 @@
-///
-handel loading state in home screen
-integrate and get gallery data from the server for silders
-contact with amr to fix reqeuirment data from the server
 
+///
+finish visa reservation screen and its integration
+make tour details Screen
+domain layer in home screen (get home data useCase - repo )
+data layer in home screen (gallery model - home repository)
+add home service locator
+add home controllers (handle home loading state but still need handle more states)
+add explore iraq icon empty screen
+make modifications which amal asked
+splash screen and logo
+
+ /// make make form registration screen integration
+
+/// handle loading screen 20/12
+
+9:20 Am
+5:00 Pm
+
+
+10:00 Am
+5:00 Pm
 
 
 /// handle loading screen 20/12
 /// make visa details  Screen
 /// handle loading screen 20/12
 /// make re
+///
 /////////////  12/16/2024
 
 -add get_it packages to make dependency Injections

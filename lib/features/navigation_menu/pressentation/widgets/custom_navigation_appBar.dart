@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/features/language/presentation/controller/language_cubit.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
-
+import '../../../../common/custom_ui.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/contancts.dart';
 import '../../../../utils/device/device_utility.dart';
 
 class CustomNavigationAppbar extends StatelessWidget
@@ -16,58 +16,82 @@ class CustomNavigationAppbar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<NavigationCubit, NavigationState>(
+    return BlocListener<LanguageCubit, LanguageState>(
       listener: (context, state) {
-        // TODO: implement listener
+        if (state is LanguageLoading) {
+          CustomUI.showLoadingDialog(context);
+        } else if (state is LanguageSuccess) {
+          Navigator.popAndPushNamed(context, DRoutesName.navigationMenuRoute);
+        }
       },
-      builder: (context, state) {
-        final controller = context.read<NavigationCubit>();
-        return Directionality(
-          textDirection: TextDirection.rtl,
-          child: AppBar(
-            actions: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, DRoutesName.langRoute);
-                },
-                icon: Icon(Iconsax.translate4),
-                color: ColorRes.primary,
-              ),
-              IconButton(
+      child: BlocBuilder<NavigationCubit, NavigationState>(
+        builder: (context, state) {
+          final List<String> _title = [
+            S.current.home,
+            S.current.notifications,
+            S.current.favorite,
+            S.current.profileInfo
+          ];
+          final controller = context.read<NavigationCubit>();
+          return Directionality(
+            textDirection: TextDirection.rtl,
+            child: AppBar(
+              leading: Center(
+                child: IconButton(
                   onPressed: () {
                     Navigator.pushNamed(context, DRoutesName.profileInfoRoute);
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Iconsax.profile_tick5,
                     color: ColorRes.primary,
-                  )),
-            ],
-            title: Text(
-              _title[controller.indx],
-              style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              ),
+              actions: [
+                GestureDetector(
+                  onTap: () {
+                    context.read<LanguageCubit>().toggleLand();
+                  },
+                  child: Row(
+                    children: [
+                      Text(
+                        context.watch<LanguageCubit>().ShowLand,
+                        style: TextStyle(
+                          fontSize: AppSizes.fontSizeSm,
+                          color: ColorRes.primary,
+                        ),
+                      ),
+                      const SizedBox(width: 7),
+                      const Icon(
+                        Icons.language,
+                        color: ColorRes.primary,
+                      ),
+                    ],
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, DRoutesName.contactUs);
+                  },
+                  icon: const Icon(
+                    Icons.mark_as_unread_sharp,
+                    color: ColorRes.primary,
+                  ),
+                ),
+              ],
+              title: Text(
+                _title[controller.indx],
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+              backgroundColor: Colors.white,
+              automaticallyImplyLeading: false,
             ),
-            backgroundColor: Colors.white,
-            // leading: IconButton(
-            //     onPressed: () async {
-            //       await Contacts.makePhoneCall("+201024264021");
-            //     },
-            //     icon: Icon(
-            //       Iconsax.call,
-            //       color: ColorRes.primary,
-            //     )),
-            automaticallyImplyLeading: false,
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 
+  @override
   Size get preferredSize => Size.fromHeight(DDeviceUtils.getAppBarHeight());
 }
-
-List<String> _title = [
-  S.current.home,
-  S.current.notifications,
-  S.current.favorite,
-  S.current.profileInfo
-];

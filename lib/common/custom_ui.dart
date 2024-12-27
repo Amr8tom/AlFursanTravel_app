@@ -16,6 +16,16 @@ class CustomUI {
     );
   }
 
+  static void showLoadingDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+  }
+
   static Widget simpleLoader() {
     return Center(child: Lottie.asset(AssetRes.airplainLoading, width: 100.w));
   }
@@ -34,8 +44,10 @@ class CustomUI {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(S.current.noData),
-          Lottie.asset(AssetRes.emptyProduct, width: 100.w),
+          Text(
+            S.current.noData,
+          ),
+          // Lottie.asset(AssetRes.emptyProduct, width: 100.w),
         ],
       )),
     );
@@ -49,7 +61,7 @@ class CustomUI {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(S.current.tryLater),
-          Lottie.asset(AssetRes.airplainLoading, width: 100.w),
+          Lottie.asset(AssetRes.uploadImage, width: 100.w),
         ],
       )),
     );

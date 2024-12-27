@@ -40,14 +40,11 @@ class DRoutesName {
   /// address
   static const String AddressListRoute = 'AddressList-route';
 
-  /// Setting
-  static const String settingsRoute = 'settings-route';
+  /// Profile && Setting
   static const String profileInfoRoute = 'profile-info-route';
-  static const String addNewProductRoute = 'add-new-product-route';
-  static const String shippingInformationRoute = 'shipping-information-route';
-  static const String addressRoute = 'address-route';
-  static const String addNewAddressFormRoute = 'add-new-address-form-route';
-  static const String paymentRoute = 'payment-route';
-  static const String companyDetailsRoute = 'company-route';
+  static const String editProfileInfoRoute = 'edit-profile-info-route';
+  static const String bookmarkedRoute = 'bookmarked-route';
+  static const String previousToursRoute = 'previous-tours-route';
+  static const String versionRoute = 'version-route';
   static const String contactUs = 'contact-us-route';
 }

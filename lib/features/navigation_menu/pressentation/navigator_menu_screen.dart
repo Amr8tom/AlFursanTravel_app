@@ -39,7 +39,7 @@ class NavigatorMenuScreen extends StatelessWidget {
       case 1:
         return const NotificationScreen();
       default:
-        return HomeScreen();
+        return const HomeScreen();
     }
   }
 }

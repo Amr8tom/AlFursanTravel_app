@@ -13,7 +13,7 @@ class ContactUsRemoteDataSourcesImp implements ContactUsRemoteDataSources {
   @override
   Future<ContactUsModel> sendContactUsForm(
       {required Map<String, dynamic> params}) async {
-    final response = await dio.postData(URL: URL.contactUs);
+    final response = await dio.postData(URL: URL.contactUs, body: params);
     return ContactUsModel.fromJson(response);
   }
 }

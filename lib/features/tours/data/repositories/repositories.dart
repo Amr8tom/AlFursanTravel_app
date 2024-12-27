@@ -3,7 +3,6 @@ import 'package:fursan_travel_app/features/tours/data/data_sources/local_data_so
 import 'package:fursan_travel_app/features/tours/data/data_sources/remote_data_sources.dart';
 import 'package:fursan_travel_app/features/tours/data/model/all_tours_model.dart';
 import 'package:fursan_travel_app/features/tours/data/model/tour_details_model.dart';
-import 'package:fursan_travel_app/features/visas/data/model/visa_reservation_model.dart';
 import 'package:fursan_travel_app/utils/error/failure.dart';
 
 import '../../../../utils/connection/checkNetwork.dart';

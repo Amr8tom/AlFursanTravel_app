@@ -1110,10 +1110,10 @@ class S {
     );
   }
 
-  /// `Choose the type of your business`
+  /// `Choose The Type Of The Service`
   String get worktype {
     return Intl.message(
-      'Choose the type of your business',
+      'Choose The Type Of The Service',
       name: 'worktype',
       desc: '',
       args: [],
@@ -1200,11 +1200,31 @@ class S {
     );
   }
 
+  /// `No Previous Tours till now `
+  String get noPreviousTrips {
+    return Intl.message(
+      'No Previous Tours till now ',
+      name: 'noPreviousTrips',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `English`
   String get english {
     return Intl.message(
       'English',
       name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thank you for using our app!`
+  String get thanksMassage {
+    return Intl.message(
+      'Thank you for using our app!',
+      name: 'thanksMassage',
       desc: '',
       args: [],
     );
@@ -1232,10 +1252,10 @@ class S {
     );
   }
 
-  /// `explore Iraq`
+  /// `explore Iraq  `
   String get exploreIraq {
     return Intl.message(
-      'explore Iraq',
+      'explore Iraq  ',
       name: 'exploreIraq',
       desc: '',
       args: [],

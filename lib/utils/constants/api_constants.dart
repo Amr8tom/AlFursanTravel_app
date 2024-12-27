@@ -9,6 +9,12 @@ class URL {
   static const gallery = baseUrl + "gallery";
   static const videos = baseUrl + "videos";
   static const about = baseUrl + "about";
+
+  /// TODO: need to set the right endPoint for profile
+  static const profile = baseUrl + "profile";
+
+  /// TODO: need to set the right endPoint for notification
+  static const notification = baseUrl + "notification";
   static const gallary = baseUrl + "gallery";
   static const image = base + "public/image/";
 

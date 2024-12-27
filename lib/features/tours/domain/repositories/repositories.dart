@@ -9,7 +9,6 @@ abstract class ToursRepository {
   Future<Either<Failure, TourDetailsModel>> getTourDetails(
       {required String params});
 
-  /// todo: change to VisaReservationModel to TourReservationModel
   Future<Either<Failure, ReservationTourModel>> makeTourReservation(
       {required Map<String, dynamic> params});
 }

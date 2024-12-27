@@ -23,10 +23,6 @@ class ToursRemoteDataSourcesImp implements ToursRemoteDataSources {
 
   @override
   Future<TourDetailsModel> getTourDetails({required String params}) async {
-    print("${URL.toursDetails}$params");
-    print("${URL.toursDetails}$params");
-    print("${URL.toursDetails}$params");
-    print("${URL.toursDetails}$params");
     final response = await dio.getData(URL: "${URL.toursDetails}$params");
     return TourDetailsModel.fromJson(response);
   }

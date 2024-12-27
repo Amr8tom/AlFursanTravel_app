@@ -69,7 +69,7 @@ dev_dependencies:
 flutter_icons:
   android: "flutter_luancher"
   ios: true
-  image_path: "assets/images/pngs/travel_logo.png"
+  image_path: "assets/images/pngs/img.png"
 
 
   flutter_lints: ^4.0.0

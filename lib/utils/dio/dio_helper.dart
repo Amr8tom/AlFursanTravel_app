@@ -35,7 +35,8 @@ class DioHelper {
       print(response.data);
       return response.data;
     } else {
-      throw ServerFailure(message: 'server failure');
+      throw ServerFailure(
+          message: '================== server failure =============');
     }
   }
 
@@ -70,7 +71,10 @@ class DioHelper {
             "/////////////////// API Data Fetched Successfully ///////////////////////");
         print(response.data);
         return response.data;
-      } else if (response.statusCode == 403) {}
+      } else if (response.statusCode == 403) {
+        throw ServerFailure(
+            message: '================== server failure =============');
+      }
     } on DioError catch (error) {
       print("erro ========================================> $error");
       rethrow;

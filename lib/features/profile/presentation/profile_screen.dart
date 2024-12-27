@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -36,19 +37,22 @@ class ProfileScreen extends StatelessWidget {
               CustomProfileButtonWidget(
                 title: S.current.profileInfo,
                 icon: Iconsax.profile_add,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(
+                      context, DRoutesName.editProfileInfoRoute);
+                },
               ),
 
-              ///size
-              SizedBox(
-                height: AppSizes.spaceBetweenIcon,
-              ),
-
-              CustomProfileButtonWidget(
-                title: S.current.settings,
-                icon: Iconsax.setting_2,
-                onTap: () {},
-              ),
+              // ///size
+              // SizedBox(
+              //   height: AppSizes.spaceBetweenIcon,
+              // ),
+              //
+              // CustomProfileButtonWidget(
+              //   title: S.current.settings,
+              //   icon: Iconsax.setting_2,
+              //   onTap: () {},
+              // ),
 
               ///size
               SizedBox(
@@ -58,7 +62,9 @@ class ProfileScreen extends StatelessWidget {
               CustomProfileButtonWidget(
                 title: S.current.previousTrips,
                 icon: Iconsax.airplane,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, DRoutesName.previousToursRoute);
+                },
               ),
 
               ///size
@@ -69,7 +75,9 @@ class ProfileScreen extends StatelessWidget {
               CustomProfileButtonWidget(
                 title: S.current.bookmarked,
                 icon: Iconsax.bookmark,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, DRoutesName.bookmarkedRoute);
+                },
               ),
 
               ///size
@@ -80,7 +88,9 @@ class ProfileScreen extends StatelessWidget {
               CustomProfileButtonWidget(
                 title: S.current.version,
                 icon: Iconsax.bookmark,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, DRoutesName.versionRoute);
+                },
               ),
             ],
           ),

@@ -146,7 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exitApp": MessageLookupByLibrary.simpleMessage("Exit App"),
         "expiredProducts": MessageLookupByLibrary.simpleMessage(
             "Expired Products or Expired Items.......Dispose of expired items by uploading expired or damaged products"),
-        "exploreIraq": MessageLookupByLibrary.simpleMessage("explore Iraq"),
+        "exploreIraq": MessageLookupByLibrary.simpleMessage("explore Iraq  "),
         "favorite": MessageLookupByLibrary.simpleMessage("Favorites"),
         "favoriteItems": MessageLookupByLibrary.simpleMessage(
             "My Favorite Items.....What you want to buy later"),
@@ -220,6 +220,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "There is no data here till now"),
         "noItemsInCart":
             MessageLookupByLibrary.simpleMessage("there is no items in cart"),
+        "noPreviousTrips":
+            MessageLookupByLibrary.simpleMessage("No Previous Tours till now "),
         "noResult": MessageLookupByLibrary.simpleMessage("No results found"),
         "noUserFound": MessageLookupByLibrary.simpleMessage(
             "These credentials are not found"),
@@ -324,6 +326,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "status": MessageLookupByLibrary.simpleMessage("Status"),
         "streetName": MessageLookupByLibrary.simpleMessage("Street Name"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of use"),
+        "thanksMassage": MessageLookupByLibrary.simpleMessage(
+            "Thank you for using our app!"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "tourDetails": MessageLookupByLibrary.simpleMessage("Tour Details"),
         "tourForm": MessageLookupByLibrary.simpleMessage("Tour Form data"),
@@ -365,7 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "workName":
             MessageLookupByLibrary.simpleMessage("set your organization name"),
         "worktype": MessageLookupByLibrary.simpleMessage(
-            "Choose the type of your business"),
+            "Choose The Type Of The Service"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "youHave": MessageLookupByLibrary.simpleMessage("you have : ")
       };
