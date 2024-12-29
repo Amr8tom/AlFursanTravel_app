@@ -1,3 +1,11 @@
+remove backGround form the logo and make it better
+add login use case and signup use case
+abstract and implemented repositories for signUp and login
+add login and signup serviceLocators
+create guestState and userState and cache them in the app
+check on userState when the user open the app and get user data if there is
+add validation on each of book a tour and book a visa and user profile
+   ask user to login or signup new account when he enter any of that
 
 ///
 finish visa reservation screen and its integration

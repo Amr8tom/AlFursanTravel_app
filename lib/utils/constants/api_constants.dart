@@ -19,7 +19,8 @@ class URL {
   static const image = base + "public/image/";
 
   /// post APIs
-  static const sendMsg = "send-message";
+  static const login = baseUrl + "login";
+  static const signIn = baseUrl + "sginin";
   static const tourReservation = baseUrl + "tours/reservation";
   static const visaReservation = baseUrl + "visa/reservation";
   static const contactUs = baseUrl + "send-message";

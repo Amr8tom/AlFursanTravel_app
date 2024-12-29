@@ -5,6 +5,8 @@ enum CacheKeys {
   token,
   address,
   allTours,
+  loginData,
+  isGuest,
   tourDetails,
   allVisas,
   visaDetails,

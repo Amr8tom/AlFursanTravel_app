@@ -7,7 +7,9 @@ import 'package:fursan_travel_app/features/service_locator/visas_service_locator
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 import 'package:get_it/get_it.dart';
 import '../../utils/connection/checkNetwork.dart';
+import 'authentication_service_locator.dart';
 import 'contact_us_service_locator.dart';
+import 'language_service_locator.dart';
 import 'navigation_servise_locator.dart';
 
 final serviceLocator = GetIt.instance;
@@ -26,6 +28,9 @@ class DI {
     /// navigation
     await NavigationServiseLocator.execute(serviceLocator: serviceLocator);
 
+    /// language
+    await LanguageServiceLocator.execute(serviceLocator: serviceLocator);
+
     /// visa
     await VisasServiceLocator.execute(serviceLocator: serviceLocator);
 
@@ -40,5 +45,8 @@ class DI {
 
     /// notifications
     await NotificaitionServiceLocator.execute(serviceLocator: serviceLocator);
+
+    /// authentication
+    await AuthenticationServiceLocator.execute(serviceLocator: serviceLocator);
   }
 }
