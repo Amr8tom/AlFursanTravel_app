@@ -94,7 +94,6 @@ flutter:
     - assets/images/svgs/
     - assets/images/jpegs/
     - assets/images/pngs/social_images/
-    - assets/images/GIF/
 
   #-------------------- LOCAL FONTS --------------------#
   fonts:

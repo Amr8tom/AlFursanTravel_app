@@ -43,8 +43,8 @@ class CustomNavigationAppbar extends StatelessWidget
                     child: IconButton(
                       onPressed: () {
                         // if (state is LoginUser) {
-                        Navigator.pushNamed(
-                            context, DRoutesName.profileInfoRoute);
+                          Navigator.pushNamed(
+                              context, DRoutesName.profileInfoRoute);
                         // } else {
                         //   Navigator.pushNamed(context, DRoutesName.loginRoute);
                         // }

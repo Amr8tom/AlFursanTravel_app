@@ -14,7 +14,7 @@ class CustomShowAllButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: AppSizes.padding),
       child: Row(
         children: [
-          Text(S.current.bestDestination),
+          // Text(S.current.bestDestination),
           const Spacer(),
           InkWell(
               onTap: () {
