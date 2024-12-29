@@ -1,0 +1,481 @@
+[1mdiff --git a/ tasks b/ tasks[m
+[1mindex 4d9e9a5..3cd22fa 100644[m
+[1m--- a/ tasks[m	
+[1m+++ b/ tasks[m	
+[36m@@ -1,14 +1,32 @@[m
+[32m+[m
+ ///[m
+[31m-handel loading state in home screen[m
+[31m-integrate and get gallery data from the server for silders[m
+[31m-contact with amr to fix reqeuirment data from the server[m
+[32m+[m[32mfinish visa reservation screen and its integration[m
+[32m+[m[32mmake tour details Screen[m
+[32m+[m[32mdomain layer in home screen (get home data useCase - repo )[m
+[32m+[m[32mdata layer in home screen (gallery model - home repository)[m
+[32m+[m[32madd home service locator[m
+[32m+[m[32madd home controllers (handle home loading state but still need handle more states)[m
+[32m+[m[32madd explore iraq icon empty screen[m
+[32m+[m[32mmake modifications which amal asked[m
+[32m+[m[32msplash screen and logo[m
+[32m+[m
+[32m+[m[32m /// make make form registration screen integration[m
+[32m+[m
+[32m+[m[32m/// handle loading screen 20/12[m
+ [m
+[32m+[m[32m9:20 Am[m
+[32m+[m[32m5:00 Pm[m
+[32m+[m
+[32m+[m
+[32m+[m[32m10:00 Am[m
+[32m+[m[32m5:00 Pm[m
+ [m
+ [m
+ /// handle loading screen 20/12[m
+ /// make visa details  Screen[m
+ /// handle loading screen 20/12[m
+ /// make re[m
+[32m+[m[32m///[m
+ /////////////  12/16/2024[m
+ [m
+ -add get_it packages to make dependency Injections[m
+[1mdiff --git a/.dart_tool/package_config.json b/.dart_tool/package_config.json[m
+[1mindex 400f2ef..d28dd57 100644[m
+[1m--- a/.dart_tool/package_config.json[m
+[1m+++ b/.dart_tool/package_config.json[m
+[36m@@ -740,7 +740,7 @@[m
+       "languageVersion": "3.5"[m
+     }[m
+   ],[m
+[31m-  "generated": "2024-12-22T12:03:34.958327Z",[m
+[32m+[m[32m  "generated": "2024-12-23T14:14:25.319102Z",[m
+   "generator": "pub",[m
+   "generatorVersion": "3.5.4",[m
+   "flutterRoot": "file:///C:/Users/ALRWOAD%20LABTOB/flutter2/flutter",[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 905cdf9..fe6e56b 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,72 +1,16 @@[m
+[31m-# Fursan Travel App[m
+[32m+[m[32m# fursan_travel_app[m
+ [m
+[31m-A user-friendly travel application designed to help you explore new destinations, find tours, get a visa, and manage your travel itineraries seamlessly. Whether you're a frequent traveler or planning your first vacation, Fursan Travel App makes it easy and enjoyable to organize your journeys.[m
+[32m+[m[32mA new Flutter project.[m
+ [m
+[31m-## Table of Contents[m
+[31m-- [Features](#features)[m
+[31m-- [Installation](#installation)[m
+[31m-- [Usage](#usage)[m
+[31m-- [Technologies Used](#technologies-used)[m
+[31m-- [Screenshots](#screenshots)[m
+[31m-- [Video Demo](#video-demo)[m
+[31m-- [License](#license)[m
+[32m+[m[32m## Getting Started[m
+ [m
+[31m-## Features[m
+[31m-- **Find Tours**: Discover and book exciting tours tailored to your interests.[m
+[31m-- **Explore Destinations**: Access detailed guides and photos to help you plan your trip.[m
+[31m-- **Visa Assistance**: Get help with obtaining travel visas for your destinations.[m
+[31m-- **Explore Iraq**: Discover the rich culture and heritage of Iraq with curated experiences.[m
+[31m-- **Notifications**: Stay informed with real-time updates and reminders.[m
+[31m-- **Authentication**: Securely sign up, log in, and manage your account.[m
+[31m-- **Contact Us**: Easily reach out for support or inquiries.[m
+[32m+[m[32mThis project is a starting point for a Flutter application.[m
+ [m
+[31m-## Installation[m
+[32m+[m[32mA few resources to get you started if this is your first Flutter project:[m
+ [m
+[31m-1. Clone the repository:[m
+[31m-   ```bash[m
+[31m-   git clone https://github.com/Amr8tom/AlFursanTravel_app.git[m
+[31m-   ```[m
+[31m-2. Navigate to the project directory:[m
+[31m-   ```bash[m
+[31m-   cd fursan-travel-app[m
+[31m-   ```[m
+[31m-3. Install dependencies:[m
+[31m-   ```bash[m
+[31m-   flutter pub get[m
+[31m-   ```[m
+[31m-4. Run the application:[m
+[31m-   ```bash[m
+[31m-   flutter run[m
+[31m-   ```[m
+[31m-[m
+[31m-## Usage[m
+[31m-1. Sign up or log in to access your account.[m
+[31m-2. Find and book tours that suit your preferences.[m
+[31m-3. Explore popular destinations and add them to your favorites.[m
+[31m-4. Use the visa assistance feature to prepare for international travel.[m
+[31m-5. Receive notifications about your bookings and trip updates.[m
+[31m-6. Access curated information about exploring Iraq.[m
+[31m-7. Contact us for any assistance or inquiries.[m
+[31m-[m
+[31m-## Technologies Used[m
+[31m-- **Framework**: Flutter[m
+[31m-- **State Management**: Cubit[m
+[31m-- **Architecture**: Clean Architecture[m
+[31m-- **APIs**: Custom Laravel API[m
+[31m-- **UI Design**: Clean and high-performance, utilizing the ScreenUtil package for responsiveness[m
+[31m-[m
+[31m-## Screenshots[m
+[31m-![Home Screen](screenshots/home.png)[m
+[31m-![Tour Details](screenshots/tour-details.png)[m
+[31m-![Visa Assistance](screenshots/visa-assistance.png)[m
+[31m-[m
+[31m-## Video Demo[m
+[31m-Check out the video demo of the app: [Fursan Travel App Demo](https://www.youtube.com/watch?v=your-video-link)[m
+[31m-[m
+[31m-## License[m
+[31m-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.[m
+[31m-[m
+[31m----[m
+[31m-[m
+[31m-Happy traveling with Fursan Travel App! If you have any questions or suggestions, feel free to open an issue or reach out.[m
+[32m+[m[32m- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)[m
+[32m+[m[32m- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)[m
+ [m
+[32m+[m[32mFor help getting started with Flutter development, view the[m
+[32m+[m[32m[online documentation](https://docs.flutter.dev/), which offers tutorials,[m
+[32m+[m[32msamples, guidance on mobile development, and a full API reference.[m
+[1mdiff --git a/android/app/src/main/AndroidManifest.xml b/android/app/src/main/AndroidManifest.xml[m
+[1mindex 58eccef..e96421f 100644[m
+[1m--- a/android/app/src/main/AndroidManifest.xml[m
+[1m+++ b/android/app/src/main/AndroidManifest.xml[m
+[36m@@ -9,6 +9,7 @@[m
+         <activity[m
+             android:name=".MainActivity"[m
+             android:exported="true"[m
+[32m+[m[32m            android:enableOnBackInvokedCallback="true"[m
+             android:launchMode="singleTop"[m
+             android:taskAffinity=""[m
+             android:theme="@style/LaunchTheme"[m
+[1mdiff --git a/android/app/src/main/res/mipmap-hdpi/flutter_luancher.png b/android/app/src/main/res/mipmap-hdpi/flutter_luancher.png[m
+[1mindex f73951f..6fa9ea7 100644[m
+Binary files a/android/app/src/main/res/mipmap-hdpi/flutter_luancher.png and b/android/app/src/main/res/mipmap-hdpi/flutter_luancher.png differ
+[1mdiff --git a/android/app/src/main/res/mipmap-mdpi/flutter_luancher.png b/android/app/src/main/res/mipmap-mdpi/flutter_luancher.png[m
+[1mindex ede4a34..808c560 100644[m
+Binary files a/android/app/src/main/res/mipmap-mdpi/flutter_luancher.png and b/android/app/src/main/res/mipmap-mdpi/flutter_luancher.png differ
+[1mdiff --git a/android/app/src/main/res/mipmap-xhdpi/flutter_luancher.png b/android/app/src/main/res/mipmap-xhdpi/flutter_luancher.png[m
+[1mindex 346f595..9a22930 100644[m
+Binary files a/android/app/src/main/res/mipmap-xhdpi/flutter_luancher.png and b/android/app/src/main/res/mipmap-xhdpi/flutter_luancher.png differ
+[1mdiff --git a/android/app/src/main/res/mipmap-xxhdpi/flutter_luancher.png b/android/app/src/main/res/mipmap-xxhdpi/flutter_luancher.png[m
+[1mindex 2441982..c8317a0 100644[m
+Binary files a/android/app/src/main/res/mipmap-xxhdpi/flutter_luancher.png and b/android/app/src/main/res/mipmap-xxhdpi/flutter_luancher.png differ
+[1mdiff --git a/android/app/src/main/res/mipmap-xxxhdpi/flutter_luancher.png b/android/app/src/main/res/mipmap-xxxhdpi/flutter_luancher.png[m
+[1mindex 1a8b290..58c2469 100644[m
+Binary files a/android/app/src/main/res/mipmap-xxxhdpi/flutter_luancher.png and b/android/app/src/main/res/mipmap-xxxhdpi/flutter_luancher.png differ
+[1mdiff --git a/assets/images/pngs/img.png b/assets/images/pngs/img.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4ba7ffb[m
+Binary files /dev/null and b/assets/images/pngs/img.png differ
+[1mdiff --git a/assets/layout/call_us.jpeg b/assets/layout/call_us.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..85613eb[m
+Binary files /dev/null and b/assets/layout/call_us.jpeg differ
+[1mdiff --git a/assets/layout/notification.jpeg b/assets/layout/notification.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8bbf174[m
+Binary files /dev/null and b/assets/layout/notification.jpeg differ
+[1mdiff --git a/assets/layout/profile.jpeg b/assets/layout/profile.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a334c91[m
+Binary files /dev/null and b/assets/layout/profile.jpeg differ
+[1mdiff --git a/assets/layout/version.jpeg b/assets/layout/version.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ae39f2c[m
+Binary files /dev/null and b/assets/layout/version.jpeg differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png[m
+[1mindex a0706b4..f191a2c 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png[m
+[1mindex e2c31aa..614f45d 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png[m
+[1mindex 7a2e231..b361a4b 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png[m
+[1mindex db526a9..6294bed 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png[m
+[1mindex 62b0f9c..338fb43 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png[m
+[1mindex 077ff1a..46c13c6 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png[m
+[1mindex e352725..3c8f5fa 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png[m
+[1mindex 7a2e231..b361a4b 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png[m
+[1mindex 4349dc3..4e72e92 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png[m
+[1mindex 9bd721f..8cb25ff 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png[m
+[1mindex 15bd7b9..9b9d78a 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png[m
+[1mindex 9fa5a3f..f0ebf07 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png[m
+[1mindex 53a3129..e320e63 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png[m
+[1mindex 54793f6..5a63e57 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png[m
+[1mindex 9bd721f..8cb25ff 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png[m
+[1mindex f5b3506..6ee7d2e 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png[m
+[1mindex f73951f..6fa9ea7 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png[m
+[1mindex 2441982..c8317a0 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png[m
+[1mindex 332bf0c..1340fc9 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png[m
+[1mindex cc5cf84..340a990 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png differ
+[1mdiff --git a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png[m
+[1mindex efeeea7..c8709c5 100644[m
+Binary files a/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png and b/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png differ
+[1mdiff --git a/lib/common/custom_ui.dart b/lib/common/custom_ui.dart[m
+[1mindex 1d1d3d7..d4b0f87 100644[m
+[1m--- a/lib/common/custom_ui.dart[m
+[1m+++ b/lib/common/custom_ui.dart[m
+[36m@@ -16,6 +16,16 @@[m [mclass CustomUI {[m
+     );[m
+   }[m
+ [m
+[32m+[m[32m  static void showLoadingDialog(BuildContext context) {[m
+[32m+[m[32m    showDialog([m
+[32m+[m[32m      context: context,[m
+[32m+[m[32m      barrierDismissible: false,[m
+[32m+[m[32m      builder: (_) => Center([m
+[32m+[m[32m        child: CircularProgressIndicator(),[m
+[32m+[m[32m      ),[m
+[32m+[m[32m    );[m
+[32m+[m[32m  }[m
+[32m+[m
+   static Widget simpleLoader() {[m
+     return Center(child: Lottie.asset(AssetRes.airplainLoading, width: 100.w));[m
+   }[m
+[36m@@ -34,8 +44,10 @@[m [mclass CustomUI {[m
+         crossAxisAlignment: CrossAxisAlignment.center,[m
+         mainAxisAlignment: MainAxisAlignment.center,[m
+         children: [[m
+[31m-          Text(S.current.noData),[m
+[31m-          Lottie.asset(AssetRes.emptyProduct, width: 100.w),[m
+[32m+[m[32m          Text([m
+[32m+[m[32m            S.current.noData,[m
+[32m+[m[32m          ),[m
+[32m+[m[32m          // Lottie.asset(AssetRes.emptyProduct, width: 100.w),[m
+         ],[m
+       )),[m
+     );[m
+[36m@@ -49,7 +61,7 @@[m [mclass CustomUI {[m
+         mainAxisAlignment: MainAxisAlignment.center,[m
+         children: [[m
+           Text(S.current.tryLater),[m
+[31m-          Lottie.asset(AssetRes.airplainLoading, width: 100.w),[m
+[32m+[m[32m          Lottie.asset(AssetRes.uploadImage, width: 100.w),[m
+         ],[m
+       )),[m
+     );[m
+[1mdiff --git a/lib/features/contact_us/data/data_sources/remote_data_sources.dart b/lib/features/contact_us/data/data_sources/remote_data_sources.dart[m
+[1mindex 3a3ca0c..c08071d 100644[m
+[1m--- a/lib/features/contact_us/data/data_sources/remote_data_sources.dart[m
+[1m+++ b/lib/features/contact_us/data/data_sources/remote_data_sources.dart[m
+[36m@@ -13,7 +13,7 @@[m [mclass ContactUsRemoteDataSourcesImp implements ContactUsRemoteDataSources {[m
+   @override[m
+   Future<ContactUsModel> sendContactUsForm([m
+       {required Map<String, dynamic> params}) async {[m
+[31m-    final response = await dio.postData(URL: URL.contactUs);[m
+[32m+[m[32m    final response = await dio.postData(URL: URL.contactUs, body: params);[m
+     return ContactUsModel.fromJson(response);[m
+   }[m
+ }[m
+[1mdiff --git a/lib/features/contact_us/persentation/contact_us_screen.dart b/lib/features/contact_us/persentation/contact_us_screen.dart[m
+[1mindex caad7da..7b553ac 100644[m
+[1m--- a/lib/features/contact_us/persentation/contact_us_screen.dart[m
+[1m+++ b/lib/features/contact_us/persentation/contact_us_screen.dart[m
+[36m@@ -1,10 +1,52 @@[m
+ import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:flutter_bloc/flutter_bloc.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/features/contact_us/persentation/controllers/contact_us_cubit.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/features/contact_us/persentation/widgets/contact_us_form_body.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/features/service_locator/service_locator.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/routing/routes_name.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/utils/constants/sizes.dart';[m
+[32m+[m[32mimport '../../../generated/l10n.dart';[m
+[32m+[m[32mimport '../../visas/presentation/widget/custom_booking_button.dart';[m
+ [m
+ class ContactUsScreen extends StatelessWidget {[m
+   const ContactUsScreen({super.key});[m
+[31m-[m
+   @override[m
+   Widget build(BuildContext context) {[m
+[31m-    return Scaffold();[m
+[32m+[m[32m    final _formKey = GlobalKey<FormState>();[m
+[32m+[m
+[32m+[m[32m    return Scaffold([m
+[32m+[m[32m      appBar: DAppBar([m
+[32m+[m[32m        title: S.current.callUs,[m
+[32m+[m[32m        showBackArrow: true,[m
+[32m+[m[32m      ),[m
+[32m+[m[32m      body: BlocProvider([m
+[32m+[m[32m        create: (context) => serviceLocator<ContactUsCubit>(),[m
+[32m+[m[32m        child: Form([m
+[32m+[m[32m          key: _formKey,[m
+[32m+[m[32m          child: Padding([m
+[32m+[m[32m            padding: EdgeInsets.all(AppSizes.padding),[m
+[32m+[m[32m            child: Stack([m
+[32m+[m[32m              children: [[m
+[32m+[m[32m                const ContactUsFormBody(),[m
+[32m+[m[32m                Positioned([m
+[32m+[m[32m                    left: 0,[m
+[32m+[m[32m                    right: 0,[m
+[32m+[m[32m                    bottom: 0,[m
+[32m+[m[32m                    child: CustomBookingButton([m
+[32m+[m[32m                      onTab: () {[m
+[32m+[m[32m                        if (_formKey.currentState!.validate()) {[m
+[32m+[m[32m                          context.read<ContactUsCubit>().sendContactUsForm();[m
+[32m+[m[32m                          Navigator.popAndPushNamed([m
+[32m+[m[32m                              context, DRoutesName.contactUs);[m
+[32m+[m[32m                        }[m
+[32m+[m[32m                      },[m
+[32m+[m[32m                    ))[m
+[32m+[m[32m              ],[m
+[32m+[m[32m            ),[m
+[32m+[m[32m          ),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m      ),[m
+[32m+[m[32m    );[m
+   }[m
+ }[m
+[1mdiff --git a/lib/features/contact_us/persentation/controllers/contact_us_cubit.dart b/lib/features/contact_us/persentation/controllers/contact_us_cubit.dart[m
+[1mindex 5a0877d..cdc5eba 100644[m
+[1m--- a/lib/features/contact_us/persentation/controllers/contact_us_cubit.dart[m
+[1m+++ b/lib/features/contact_us/persentation/controllers/contact_us_cubit.dart[m
+[36m@@ -1,4 +1,5 @@[m
+ import 'package:bloc/bloc.dart';[m
+[32m+[m[32mimport 'package:flutter/cupertino.dart';[m
+ import 'package:fursan_travel_app/features/contact_us/data/models/contact_us_model.dart';[m
+ import 'package:fursan_travel_app/features/contact_us/domain/use_cases/send_contact_us_form_use_case.dart';[m
+ import 'package:meta/meta.dart';[m
+[36m@@ -6,12 +7,34 @@[m [mimport 'package:meta/meta.dart';[m
+ part 'contact_us_state.dart';[m
+ [m
+ class ContactUsCubit extends Cubit<ContactUsState> {[m
+[32m+[m[32m  final TextEditingController nameController = TextEditingController();[m
+[32m+[m[32m  final TextEditingController phoneController = TextEditingController();[m
+[32m+[m[32m  final TextEditingController eMailController = TextEditingController();[m
+[32m+[m[32m  final TextEditingController messageController = TextEditingController();[m
+[32m+[m[32m  final TextEditingController addressController = TextEditingController();[m
+[32m+[m
+   final SendContactUsFormUseCase _useCase;[m
+   ContactUsCubit(this._useCase) : super(ContactUsLoading());[m
+ [m
+[31m-  Future sendContactUsForm({required Map<String, dynamic> params}) async {[m
+[31m-    final result = await _useCase.call(params: params);[m
+[32m+[m[32m  Future sendContactUsForm() async {[m
+[32m+[m[32m    final result = await _useCase.call(params: {[m
+[32m+[m[32m      "sender_name": nameController.text,[m
+[32m+[m[32m      "sender_email_address": eMailController.text,[m
+[32m+[m[32m      "sender_phone_number": phoneController.text,[m
+[32m+[m[32m      "sender_address": addressController.text,[m
+[32m+[m[32m      "message": messageController.text,[m
+[32m+[m[32m    });[m
+     return result.fold((f) => emit(ContactUsFailure()),[m
+         (contactUsModel) => emit(ContactUsSuccess(contactUsModel)));[m
+   }[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  Future<void> close() {[m
+[32m+[m[32m    nameController.dispose();[m
+[32m+[m[32m    phoneController.dispose();[m
+[32m+[m[32m    eMailController.dispose();[m
+[32m+[m[32m    messageController.dispose();[m
+[32m+[m[32m    addressController.dispose();[m
+[32m+[m[32m    return super.close();[m
+[32m+[m[32m  }[m
+ }[m
+[1mdiff --git a/lib/features/contact_us/persentation/widgets/contact_us_form_body.dart b/lib/features/contact_us/persentation/widgets/contact_us_form_body.dart[m
+[1mnew file mode 100644[m
+[1mindex 0000000..efcbe87[m
+[1m--- /dev/null[m
+[1m+++ b/lib/features/contact_us/persentation/widgets/contact_us_form_body.dart[m
+[36m@@ -0,0 +1,79 @@[m
+[32m+[m[32mimport 'package:flutter/cupertino.dart';[m
+[32m+[m[32mimport 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:flutter_bloc/flutter_bloc.dart';[m
+[32m+[m[32mimport 'package:fursan_travel_app/features/contact_us/persentation/controllers/contact_us_cubit.dart';[m
+[32m+[m[32mimport '../../../../generated/l10n.dart';[m
+[32m+[m[32mimport '../../../../utils/constants/sizes.dart';[m
+[32m+[m[32mimport '../../../../utils/device/device_utility.dart';[m
+[32m+[m[32mimport '../../../visas/presentation/widget/Custom_Text_from_reservation.dart';[m
+[32m+[m
+[32m+[m[32mclass ContactUsFormBody extends StatelessWidget {[m
+[32m+[m[32m  const ContactUsFormBody({super.key});[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  Widget build(BuildContext context) {[m
+[32m+[m[32m    final controller = context.read<ContactUsCubit>();[m
+[32m+[m[32m    return Container([m
+[32m+[m[32m      height: DDeviceUtils.getScreenHeight(context),[m
+[32m+[m[32m      child: SingleChildScrollView([m
+[32m+[m[32m        child: Column([m
+[32m+[m[32m          crossAxisAlignment: CrossAxisAlignment.start,[m
+[32m+[m[32m          children: [[m
+[32m+[m[32m            SizedBox(height: AppSizes.spaceBtwItems),[m
+[32m+[m
+[32m+[m[32m            /// Name Field[m
+[32m+[m[32m            CustomTextFromReservation([m
+[32m+[m[32m              label: S.current.firstName,[m
+[32m+[m[32m              validateError: S.current.pleaseEndterValue,[m
+[32m+[m[32m              icon: Icons.person,[m
+[32m+[m[32m              controller: controller.nameController,[m
+[32m+[m[32m            ),[m
+[32m+[m[32m            SizedBox(height: AppSizes.spaceBtwItems),[m
+[32m+[m
+[32m+[m[32m            /// eMail[m
+[32m+[m[32m            CustomTextFromReservation([m
+[32m+[m[32m              isMail: true,[m
+[32m+[m[32m              label: S.current.eMail,[m
+[32m+[m[32m              validateError: S.current.pleaseEndterValue,[m
+[32m+[m[32m              icon: Icons.email,[m
+[32m+[m[32m              controller: controller.eMailController,[m
+[32m+[m[32m            ),[m
+[32m+[m[32m            SizedBox(height: AppSizes.spaceBtwItems),[m
+[32m+[m
+[32m+[m[32m            /// Phone Number Field[m
+[32m+[m[32m            CustomTextFromReservation([m
+[32m+[m[32m              isPhone: true,[m
+[32m+[m[32m              label: S.current.phoneNumber,[m
+[32m+[m[32m              validateError: S.current.pleaseEndterValue,[m
+[32m+[m[32m              icon: Icons.phone,[m
+[32m+[m[32m              controller: controller.phoneController,[m
+[32m+[m[32m            ),[m
+[32m+[m[32m            SizedBox(height: AppSizes.spaceBtwItems),[m
+[32m+[m
+[32m+[m[32m            /// Phone orderType Field[m
+[32m+[m[32m            CustomTextFromReservation([m
+[32m+[m[32m              label: S.current.worktype,[m
+[32m+[m[32m              validateError: S.current.pleaseEndterValue,[m
+[32m+[m[32m              icon: Icons.type_specimen_outlined,[m
+[32m+[m[32m              controller: controller.phoneController,[m
+[32m+[m[32m            ),[m
+[32m+[m[32m            SizedBox(height: AppSizes.spaceBtwItems),[m
+[32m+[m
+[32m+[m[32m            /// massage Field[m
+[32m+[m[32m            
