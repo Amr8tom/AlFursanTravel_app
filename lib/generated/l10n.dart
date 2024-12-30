@@ -1110,10 +1110,10 @@ class S {
     );
   }
 
-  /// `Choose The Type Of The Service`
+  /// `write more details like : Type Of The Service`
   String get worktype {
     return Intl.message(
-      'Choose The Type Of The Service',
+      'write more details like : Type Of The Service',
       name: 'worktype',
       desc: '',
       args: [],

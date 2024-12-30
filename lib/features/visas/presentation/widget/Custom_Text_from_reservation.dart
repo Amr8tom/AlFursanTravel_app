@@ -33,8 +33,7 @@ class CustomTextFromReservation extends StatelessWidget {
         if (isMail) {
           if (value == null || value.isEmpty) {
             return validateError;
-          } else if (!RegExp(
-                  r"^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
+          } else if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
               .hasMatch(value)) {
             return S.current.error;
           }

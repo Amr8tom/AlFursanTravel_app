@@ -11,7 +11,7 @@ class ContactUsCubit extends Cubit<ContactUsState> {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController eMailController = TextEditingController();
   final TextEditingController messageController = TextEditingController();
-  final TextEditingController addressController = TextEditingController();
+  // final TextEditingController addressController = TextEditingController();
 
   final SendContactUsFormUseCase _useCase;
   ContactUsCubit(this._useCase) : super(ContactUsLoading());
@@ -21,7 +21,7 @@ class ContactUsCubit extends Cubit<ContactUsState> {
       "sender_name": nameController.text,
       "sender_email_address": eMailController.text,
       "sender_phone_number": phoneController.text,
-      "sender_address": addressController.text,
+      "sender_address": " ",
       "message": messageController.text,
     });
     return result.fold((f) => emit(ContactUsFailure()),
@@ -34,7 +34,7 @@ class ContactUsCubit extends Cubit<ContactUsState> {
     phoneController.dispose();
     eMailController.dispose();
     messageController.dispose();
-    addressController.dispose();
+    // addressController.dispose();
     return super.close();
   }
 }

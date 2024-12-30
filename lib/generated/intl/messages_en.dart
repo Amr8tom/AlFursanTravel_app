@@ -370,7 +370,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "workName":
             MessageLookupByLibrary.simpleMessage("set your organization name"),
         "worktype": MessageLookupByLibrary.simpleMessage(
-            "Choose The Type Of The Service"),
+            "write more details like : Type Of The Service"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "youHave": MessageLookupByLibrary.simpleMessage("you have : ")
       };

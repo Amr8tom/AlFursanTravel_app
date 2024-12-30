@@ -270,8 +270,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatisNewOffers":
             MessageLookupByLibrary.simpleMessage("أريد معرفة أحدث العروض ؟"),
         "whatsApp": MessageLookupByLibrary.simpleMessage("واتس أب"),
-        "worktype":
-            MessageLookupByLibrary.simpleMessage("أختر نوع الخدمة المطلوبة"),
+        "worktype": MessageLookupByLibrary.simpleMessage(
+            "تفاصيل أكثر: كنوع الخدمة المطلوبة"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "youHave": MessageLookupByLibrary.simpleMessage("  لديــك ")
       };

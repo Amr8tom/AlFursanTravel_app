@@ -9,7 +9,6 @@ import '../../../visas/presentation/widget/Custom_Text_from_reservation.dart';
 
 class ContactUsFormBody extends StatelessWidget {
   const ContactUsFormBody({super.key});
-
   @override
   Widget build(BuildContext context) {
     final controller = context.read<ContactUsCubit>();
@@ -48,26 +47,18 @@ class ContactUsFormBody extends StatelessWidget {
               icon: Icons.phone,
               controller: controller.phoneController,
             ),
-            SizedBox(height: AppSizes.spaceBtwItems),
 
-            /// Phone orderType Field
-            CustomTextFromReservation(
-              label: S.current.worktype,
-              validateError: S.current.pleaseEndterValue,
-              icon: Icons.type_specimen_outlined,
-              controller: controller.phoneController,
-            ),
             SizedBox(height: AppSizes.spaceBtwItems),
 
             /// massage Field
             TextFormField(
               controller: controller.messageController,
               decoration: InputDecoration(
-                labelText: S.current.details,
+                labelText: S.current.worktype,
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.note),
               ),
-              maxLines: 5,
+              maxLines: 7,
             ),
             SizedBox(height: AppSizes.space * 2),
           ],

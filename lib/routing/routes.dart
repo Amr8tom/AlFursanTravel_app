@@ -7,7 +7,6 @@ import 'package:fursan_travel_app/features/search/presentation/search_screen.dar
 import 'package:fursan_travel_app/features/tours/presentation/make_toure_reservation_screen.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:page_transition/page_transition.dart';
-
 import '../features/authentication/presentation/singUp/signup_screen.dart';
 import '../features/contact_us/persentation/contact_us_screen.dart';
 import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
@@ -15,6 +14,7 @@ import '../features/profile/presentation/bookmarked/bookmarked_screen.dart';
 import '../features/profile/presentation/edit_profile/edit_profile_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import '../features/profile/presentation/version/version_screen.dart';
+import '../features/terms_conditions/presentation/terms_conditions_screen.dart';
 import '../features/tours/presentation/all_tours_screen.dart';
 import '../features/tours/presentation/tour_details_screen.dart';
 import '../features/visas/presentation/all_visas_screen.dart';
@@ -156,6 +156,13 @@ class RouteGenerator {
       case DRoutesName.versionRoute:
         return PageTransition(
             child: const VersionScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// terms and conditions Route
+      case DRoutesName.termsAndConditionRoute:
+        return PageTransition(
+            child: TermsConditionsScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 

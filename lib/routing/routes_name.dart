@@ -35,7 +35,6 @@ class DRoutesName {
 
   /// More
   static const String termsAndConditionRoute = 'terms-and-conditions-route';
-  static const String helpCenterRoute = 'help-center-route';
 
   /// address
   static const String AddressListRoute = 'AddressList-route';

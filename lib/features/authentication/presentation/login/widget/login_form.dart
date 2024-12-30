@@ -50,15 +50,27 @@ class DLoginForm extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        // SizedBox(height: AppSizes.spaceBtwInputFields),
+
+        /// sign up button
+
         TextButton(
-          // style: ElevatedButton.styleFrom(
-          //     backgroundColor: ColorRes.primaryBGAppBar),
           onPressed: () {
             Navigator.pushNamed(context, DRoutesName.signupRoute);
           },
           child: Text(
             "${S.current.dontHaveAccont} ${S.current.singUp}",
+            style: TextStyle(
+                color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
+          ),
+        ),
+
+        /// terms and conditions button
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, DRoutesName.termsAndConditionRoute);
+          },
+          child: Text(
+            "${S.current.termsOfUse} ",
             style: TextStyle(
                 color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
           ),
