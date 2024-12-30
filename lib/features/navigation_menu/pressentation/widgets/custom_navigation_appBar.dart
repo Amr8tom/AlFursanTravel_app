@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/features/language/presentation/controller/language_cubit.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
@@ -36,16 +37,25 @@ class CustomNavigationAppbar extends StatelessWidget
           return Directionality(
             textDirection: TextDirection.rtl,
             child: AppBar(
-              leading: Center(
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, DRoutesName.profileInfoRoute);
-                  },
-                  icon: const Icon(
-                    Iconsax.profile_tick5,
-                    color: ColorRes.primary,
-                  ),
-                ),
+              leading: BlocBuilder<LoginCubit, LoginState>(
+                builder: (context, state) {
+                  return Center(
+                    child: IconButton(
+                      onPressed: () {
+                        if (state is LoginUser) {
+                          Navigator.pushNamed(
+                              context, DRoutesName.profileInfoRoute);
+                        } else {
+                          Navigator.pushNamed(context, DRoutesName.loginRoute);
+                        }
+                      },
+                      icon: const Icon(
+                        Iconsax.profile_tick5,
+                        color: ColorRes.primary,
+                      ),
+                    ),
+                  );
+                },
               ),
               actions: [
                 GestureDetector(

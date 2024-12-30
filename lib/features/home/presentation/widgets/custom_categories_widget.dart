@@ -56,7 +56,8 @@ Widget _categoryIconButton(
     {required final IconData icon,
     required final VoidCallback onTab,
     required final String tilte}) {
-  return InkWell(
+  return GestureDetector(
+    excludeFromSemantics: true,
     onTap: onTab,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,

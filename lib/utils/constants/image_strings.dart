@@ -1,6 +1,6 @@
 class AssetRes {
   /// -- App Logos
-  static const String appLogo = 'assets/images/pngs/app_logo.png';
+  static const String appLogo = 'assets/images/pngs/img.png';
   static const String appIcon = 'assets/images/pngs/app-logo.png';
   static const String animationLogo = 'assets/animations/logoAnimation.gif';
   static const String profileLogo = 'assets/images/jpegs/profileLogo.jpeg';

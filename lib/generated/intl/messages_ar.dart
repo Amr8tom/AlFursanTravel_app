@@ -203,6 +203,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refundReason": MessageLookupByLibrary.simpleMessage("سبب الأرجاع"),
         "refunds": MessageLookupByLibrary.simpleMessage("المرتجعات"),
         "refused": MessageLookupByLibrary.simpleMessage("قــيد الأنتٍــظآر"),
+        "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "remotePayment":
             MessageLookupByLibrary.simpleMessage("الدفع الالكترونى"),
@@ -228,7 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "singIn": MessageLookupByLibrary.simpleMessage("تسجـيل الدخـول"),
-        "singUp": MessageLookupByLibrary.simpleMessage("حسـاب جـديد"),
+        "singUp": MessageLookupByLibrary.simpleMessage("تسجيـل حسـاب جـديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطـى"),
         "status": MessageLookupByLibrary.simpleMessage("الحالة"),
         "streetName": MessageLookupByLibrary.simpleMessage("أسم الشارع"),
@@ -264,6 +265,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادفع من رصيد محفظتك"),
         "walletTitle": MessageLookupByLibrary.simpleMessage(
             "يمكنك استخدام رصيد محفظتك فى عمليات الشراء "),
+        "welcomeMessage":
+            MessageLookupByLibrary.simpleMessage("استمتع برحلات الفرسان"),
         "whatisNewOffers":
             MessageLookupByLibrary.simpleMessage("أريد معرفة أحدث العروض ؟"),
         "whatsApp": MessageLookupByLibrary.simpleMessage("واتس أب"),

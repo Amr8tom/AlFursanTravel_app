@@ -4,13 +4,12 @@ import 'package:fursan_travel_app/common/custom_ui.dart';
 import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
 import 'package:fursan_travel_app/features/visas/presentation/widget/custom_booking_button.dart';
 import 'package:fursan_travel_app/features/visas/presentation/widget/custom_visa_card_widget.dart';
-import 'package:fursan_travel_app/features/visas/presentation/widget/visa_details_body.dart';
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-
 import '../../../generated/l10n.dart';
 import '../../../routing/routes_name.dart';
 import '../../../utils/device/device_utility.dart';
+import '../../authentication/presentation/controller/log_in/login_cubit.dart';
 import '../../service_locator/service_locator.dart';
 import 'controllers/visa_details/visa_details_cubit.dart';
 import 'widget/custom_visa_details.dart';
@@ -82,9 +81,15 @@ class VisaDetailsScreen extends StatelessWidget {
                           left: 0,
                           right: 0,
                           child: CustomBookingButton(onTab: () {
-                            Navigator.pushNamed(
-                                context, DRoutesName.makeVisaReservationRoute,
-                                arguments: "${state?.visaDetailsModel!.id}");
+                            final controller = context.read<LoginCubit>();
+                            controller.isGuest
+                                ? Navigator.pushNamed(
+                                    context, DRoutesName.loginRoute)
+                                : Navigator.pushNamed(context,
+                                    DRoutesName.makeVisaReservationRoute,
+                                    arguments:
+                                        "${state?.visaDetailsModel!.id}");
+                            ;
                           })),
                     ],
                   ),

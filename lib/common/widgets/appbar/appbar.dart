@@ -45,7 +45,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         titleTextStyle: TextStyle(
             fontWeight: FontWeight.w700,
-            fontSize: fontSize ?? 32.sp,
+            fontSize: fontSize ?? 24.sp,
             fontFamily: "Cairo",
             color: ColorRes.primary),
         backgroundColor: bgColor ?? ColorRes.white,

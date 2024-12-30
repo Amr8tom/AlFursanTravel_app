@@ -63,7 +63,6 @@ class DLoginForm extends StatelessWidget {
                 color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
           ),
         ),
-        SizedBox(height: AppSizes.spaceBtwInputFields),
       ],
     );
   }

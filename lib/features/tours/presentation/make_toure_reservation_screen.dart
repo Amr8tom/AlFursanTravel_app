@@ -4,7 +4,6 @@ import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
 import 'package:fursan_travel_app/features/service_locator/service_locator.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/custom_tour_reservation_form.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/tour_reservation_button.dart';
-import 'package:fursan_travel_app/features/visas/presentation/widget/custom_visa_reservation_form.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import '../../../generated/l10n.dart';
 import '../../../routing/routes_name.dart';

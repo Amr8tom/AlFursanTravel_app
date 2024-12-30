@@ -281,6 +281,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refundReason": MessageLookupByLibrary.simpleMessage("Refund Reason"),
         "refunds": MessageLookupByLibrary.simpleMessage("refunds"),
         "refused": MessageLookupByLibrary.simpleMessage("Pending"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remotePayment": MessageLookupByLibrary.simpleMessage("Remote Payment"),
         "reservation": MessageLookupByLibrary.simpleMessage("Reservation"),
@@ -362,7 +363,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "walletTitle": MessageLookupByLibrary.simpleMessage(
             "you can use the wallet balance to buy "),
         "welcomeMessage":
-            MessageLookupByLibrary.simpleMessage("Welcome Doctor "),
+            MessageLookupByLibrary.simpleMessage("Enjoy Fursan Tours"),
         "whatisNewOffers": MessageLookupByLibrary.simpleMessage(
             "What are the latest offers ?"),
         "whatsApp": MessageLookupByLibrary.simpleMessage(" WhatsApp"),

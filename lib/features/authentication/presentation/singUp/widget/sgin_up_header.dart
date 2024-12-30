@@ -5,8 +5,8 @@ import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../utils/constants/colors.dart';
 
-class LoginHeader extends StatelessWidget {
-  const LoginHeader({super.key});
+class SginUpHeader extends StatelessWidget {
+  const SginUpHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +21,9 @@ class LoginHeader extends StatelessWidget {
         SizedBox(
           height: AppSizes.spaceBtwItems,
         ),
-        Text(
-          S.current.appName,
-          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-                fontSize: AppSizes.fontSizeLg * 1.6,
-                color: ColorRes.primary,
-              ),
-        ),
 
-        SizedBox(height: AppSizes.spaceBtwItems * 1.5),
-        // Subtitle or Brief Message
         Text(
-          "${S.current.loginBody}",
+          "${S.current.welcomeMessage}",
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 color: ColorRes.primary,
               ),

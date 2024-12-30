@@ -1522,10 +1522,20 @@ class S {
     );
   }
 
-  /// `Welcome Doctor `
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy Fursan Tours`
   String get welcomeMessage {
     return Intl.message(
-      'Welcome Doctor ',
+      'Enjoy Fursan Tours',
       name: 'welcomeMessage',
       desc: '',
       args: [],

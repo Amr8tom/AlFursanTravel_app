@@ -56,9 +56,10 @@ A user-friendly travel application designed to help you explore new destinations
 - **UI Design**: Clean and high-performance, utilizing the ScreenUtil package for responsiveness
 
 ## Screenshots
-![Home Screen](screenshots/home.png)
-![Tour Details](screenshots/tour-details.png)
-![Visa Assistance](screenshots/visa-assistance.png)
+![Notifications](assets/layout/notification.jpeg)
+![Profile](assets/layout/profile.jpeg)
+![Call Us](assets/layout/call_us.jpeg)
+![Version](assets/layout/version.jpeg)
 
 ## Video Demo
 Check out the video demo of the app: [Fursan Travel App Demo](https://www.youtube.com/watch?v=your-video-link)

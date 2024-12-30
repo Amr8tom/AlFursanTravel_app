@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/custom_card_tour_widget.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/custom_tour_details.dart';
-
 import '../../../common/custom_ui.dart';
 import '../../../common/widgets/appbar/appbar.dart';
 import '../../../generated/l10n.dart';
@@ -82,8 +82,12 @@ class TourDetailsScreen extends StatelessWidget {
                           left: 0,
                           right: 0,
                           child: CustomBookingButton(onTab: () {
-                            Navigator.pushNamed(
-                                context, DRoutesName.makeTourReservationRoute);
+                            final controller = context.read<LoginCubit>();
+                            controller.isGuest
+                                ? Navigator.pushNamed(
+                                    context, DRoutesName.loginRoute)
+                                : Navigator.pushNamed(context,
+                                    DRoutesName.makeTourReservationRoute);
                           })),
                     ],
                   ),
