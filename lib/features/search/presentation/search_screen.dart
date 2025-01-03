@@ -6,7 +6,6 @@ import '../../../generated/l10n.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,9 +13,7 @@ class SearchScreen extends StatelessWidget {
         showBackArrow: true,
         title: S.current.searchTitle,
       ),
-      body: Container(
-        child: Text("SearchScreen"),
-      ),
+      body: Text("SearchScreen"),
     );
   }
 }

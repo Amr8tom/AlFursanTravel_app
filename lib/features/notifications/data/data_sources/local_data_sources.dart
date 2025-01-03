@@ -25,7 +25,8 @@ class NotificationLocalDataSourcesImp implements NotificationLocalDataSources {
   Future<NotificationModel> getNotificationData() async {
     final jsonString = await PrefService.getString(key: CacheKeys.notification);
     if (jsonString != null) {
-      return NotificationModel.fromJson(jsonString);
+      final json = await jsonDecode(jsonString);
+      return NotificationModel.fromJson(json);
     } else {
       throw CacheFailure();
     }

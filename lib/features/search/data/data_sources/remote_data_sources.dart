@@ -13,7 +13,7 @@ class SearchRemoteDataSourcesImp implements SearchRemoteDataSources {
   @override
   Future<SearchedItemListModel> getSearchItemList(
       {required String query}) async {
-    final response = _dio.postData(URL: URL.search);
+    final response = _dio.postData(URL: URL.search + query);
     return SearchedItemListModel.fromJson(response);
   }
 }

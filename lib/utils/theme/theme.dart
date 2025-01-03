@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fursan_travel_app/utils/theme/custom_themes/card_theme.dart';
 import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/bottom_sheet_theme.dart';
 import 'custom_themes/checkbox_theme.dart';
-import 'custom_themes/chip_theme.dart';
 import 'custom_themes/elevated_button_theme.dart';
 import 'custom_themes/outlined_button_theme.dart';
 import 'custom_themes/text_field_theme.dart';
@@ -15,7 +13,7 @@ class DAppTheme {
   DAppTheme._();
 
   static ThemeData lightTheme(BuildContext context) {
-    String fontFamily = 'Cairo';
+    String fontFamily = 'Alexandria';
 
     return ThemeData(
       useMaterial3: true,
@@ -39,13 +37,7 @@ class DAppTheme {
   }
 
   static ThemeData darkTheme(BuildContext context) {
-    String fontFamily =
-        // BlocProvider.of<LanguageCubit>(context).getSavedLanguage == true
-        //     ?
-        // 'Poppins';
-        // :
-        'Cairo';
-
+    String fontFamily = 'Alexandria';
     return ThemeData(
       useMaterial3: true,
       fontFamily: fontFamily,
