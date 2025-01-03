@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
-
 import '../../../../utils/device/device_utility.dart';
 
 class CustomProfileAppBar extends StatelessWidget

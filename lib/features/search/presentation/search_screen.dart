@@ -1,19 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
-
+import 'package:fursan_travel_app/features/search/presentation/widgets/custom_search_bar.dart';
+import '../../../common/widgets/appbar/appbar.dart';
 import '../../../generated/l10n.dart';
+import 'widgets/custom_searched_item_list.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: DAppBar(
-        showBackArrow: true,
-        title: S.current.searchTitle,
+        title: S.current.search,
       ),
-      body: Text("SearchScreen"),
+      body: const Column(
+        children: [
+          const CustomSearchBar(),
+          const CustomSearchedItemList(),
+
+        ],
+      ),
     );
   }
 }

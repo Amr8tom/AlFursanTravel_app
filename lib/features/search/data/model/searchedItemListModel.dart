@@ -1,9 +1,5 @@
 import 'dart:convert';
 
-/// name : "giza"
-/// id : 2
-/// price : "100$"
-
 SearchedItemListModel searchedItemListFromJson(String str) =>
     SearchedItemListModel.fromJson(json.decode(str));
 String searchedItemListToJson(SearchedItemListModel data) =>
