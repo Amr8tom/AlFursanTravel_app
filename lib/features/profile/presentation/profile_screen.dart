@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../generated/l10n.dart';
 import '../../navigation_menu/pressentation/widgets/custom_profile_app_bar.dart';
 import 'widgets/custom_profile_button_widget.dart';
@@ -11,7 +10,6 @@ import 'widgets/custom_profile_image_container.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

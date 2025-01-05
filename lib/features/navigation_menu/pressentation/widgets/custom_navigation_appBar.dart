@@ -42,12 +42,12 @@ class CustomNavigationAppbar extends StatelessWidget
                   return Center(
                     child: IconButton(
                       onPressed: () {
-                        if (state is LoginUser) {
-                          Navigator.pushNamed(
-                              context, DRoutesName.profileInfoRoute);
-                        } else {
-                          Navigator.pushNamed(context, DRoutesName.loginRoute);
-                        }
+                        // if (state is LoginUser) {
+                        Navigator.pushNamed(
+                            context, DRoutesName.profileInfoRoute);
+                        // } else {
+                        //   Navigator.pushNamed(context, DRoutesName.loginRoute);
+                        // }
                       },
                       icon: const Icon(
                         Iconsax.profile_tick5,

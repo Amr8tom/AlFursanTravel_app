@@ -17,7 +17,7 @@ class CustomDestinationHorizontalList extends StatelessWidget {
     return BlocProvider(
       create: (context) => serviceLocator<GallaryCubit>(),
       child: Builder(builder: (context) {
-        /// fetch Gallary data
+        /// fetch Gallery data
         context.read<GallaryCubit>().getGalaryData();
         return BlocBuilder<GallaryCubit, GallaryState>(
           builder: (context, state) {

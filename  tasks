@@ -4,8 +4,6 @@ make website for privacy policy
 add webview package access privacy policy website from the app
 
 
-
-remove backGround form the logo and make it better
 add login use case and signup use case
 abstract and implemented repositories for signUp and login
 add login and signup serviceLocators
