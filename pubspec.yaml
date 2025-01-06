@@ -66,7 +66,6 @@ dependencies:
 #-------------------- PACKAGES End --------------------#
 dev_dependencies:
   flutter_launcher_icons:
-  intl_utils:
 
 
   flutter_test:

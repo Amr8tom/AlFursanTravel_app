@@ -80,6 +80,6 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
           );
   },
 );}
-    );;
+    );
   }
 }
