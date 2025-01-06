@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-/// name : "amr"
-
 ProfileDataModel profileDataModelFromJson(String str) =>
     ProfileDataModel.fromJson(json.decode(str));
 String profileDataModelToJson(ProfileDataModel data) =>

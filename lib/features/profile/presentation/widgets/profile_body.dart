@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/controller/log/login_cubit.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../generated/l10n.dart';
@@ -12,6 +16,15 @@ class ProfileBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final logController=context.read<LoginCubit>();
+    return BlocConsumer<LoginCubit, LoginState>(
+  listener: (context, state) {
+    if(state is LogOutSuccess){
+      Navigator.popAndPushNamed(context, DRoutesName.navigationMenuRoute);
+
+    }
+  },
+  builder: (context, state) {
     return Center(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSizes.padding),
@@ -89,6 +102,7 @@ class ProfileBody extends StatelessWidget {
               title: S.current.logOut,
               icon: Iconsax.logout,
               onTap: () {
+                logController.logOut();
                 Navigator.popAndPushNamed(context, DRoutesName.navigationMenuRoute);
               },
             ),
@@ -96,5 +110,7 @@ class ProfileBody extends StatelessWidget {
         ),
       ),
     );
+  },
+);
   }
 }

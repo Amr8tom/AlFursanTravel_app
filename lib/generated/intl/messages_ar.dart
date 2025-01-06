@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accepted": MessageLookupByLibrary.simpleMessage("مقبــوُل"),
         "acceptedBody":
             MessageLookupByLibrary.simpleMessage("تمت الموافقة علي الطلب"),
+        "accountDeleted":
+            MessageLookupByLibrary.simpleMessage("تم حذف الحساب "),
         "addNewAddress": MessageLookupByLibrary.simpleMessage("أَضـف عنـوان"),
         "addProduct": MessageLookupByLibrary.simpleMessage("أضافة منتج"),
         "addToCart": MessageLookupByLibrary.simpleMessage("أضـف للعـربة"),
@@ -39,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("المبلغ"),
         "appName": MessageLookupByLibrary.simpleMessage("الفـرسان"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربيه"),
+        "askDelete": MessageLookupByLibrary.simpleMessage(
+            "هل آنت متاكد انك تريد حذف حسابك"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("العودة إلى الرئيسية"),
         "bestDestination": MessageLookupByLibrary.simpleMessage("أفضل الوجهات"),
@@ -93,6 +97,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ادفع باستخدام بطاقتك الائتمانية"),
         "delayedCash": MessageLookupByLibrary.simpleMessage("الدفع المؤجل"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("احذف حسابي"),
+        "deleteBody": MessageLookupByLibrary.simpleMessage(
+            "هذا الإجراء لا رجعة فيه. ستفقد جميع بياناتك، ولن تتمكن من استعادتها."),
         "description": MessageLookupByLibrary.simpleMessage("الـوصـف"),
         "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "discont": MessageLookupByLibrary.simpleMessage("خَصــم"),

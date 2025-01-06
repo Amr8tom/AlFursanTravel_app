@@ -4,9 +4,11 @@
   "skip": "skip",
   "home": "home",
     "deleteAccount": "Delete My Account",
-
+  "deleteBody":"This action is irreversible. All your data will be lost, and you will not be able to recover it.",
+  "askDelete":"Are you sure you want to delete your account?",
   "orderNumber": "Order Number ",
   "cost": "The Cost",
+  "accountDeleted": "Account Deleted",
   "history": "history",
   "update": "Update",
   "cancleOrder": "Cancle The Order",

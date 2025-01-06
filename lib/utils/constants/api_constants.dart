@@ -26,4 +26,5 @@ class URL {
   static const tourReservation = baseUrl + "tours/reservation";
   static const visaReservation = baseUrl + "visa/reservation";
   static const contactUs = baseUrl + "send-message";
+  static const deleteAccount = baseUrl + "account/delete";
 }

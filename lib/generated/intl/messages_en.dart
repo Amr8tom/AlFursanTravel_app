@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accepted": MessageLookupByLibrary.simpleMessage("Accepted"),
         "acceptedBody":
             MessageLookupByLibrary.simpleMessage("Your order is Accepted"),
+        "accountDeleted":
+            MessageLookupByLibrary.simpleMessage("Account Deleted"),
         "addNewAddress": MessageLookupByLibrary.simpleMessage("Add Address"),
         "addProduct": MessageLookupByLibrary.simpleMessage("Add product"),
         "addToCart": MessageLookupByLibrary.simpleMessage("Add To Cart"),
@@ -52,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("The amount"),
         "appName": MessageLookupByLibrary.simpleMessage("Fursan"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "askDelete": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete your account?"),
         "avaiableToLoan":
             MessageLookupByLibrary.simpleMessage("avaliable to loan"),
         "avaliableItemCount":
@@ -129,6 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have 30 days to repay the debt"),
         "deleteAccount":
             MessageLookupByLibrary.simpleMessage("Delete My Account"),
+        "deleteBody": MessageLookupByLibrary.simpleMessage(
+            "This action is irreversible. All your data will be lost, and you will not be able to recover it."),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
         "discont": MessageLookupByLibrary.simpleMessage("discont"),

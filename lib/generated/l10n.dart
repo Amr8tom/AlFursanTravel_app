@@ -90,6 +90,26 @@ class S {
     );
   }
 
+  /// `This action is irreversible. All your data will be lost, and you will not be able to recover it.`
+  String get deleteBody {
+    return Intl.message(
+      'This action is irreversible. All your data will be lost, and you will not be able to recover it.',
+      name: 'deleteBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete your account?`
+  String get askDelete {
+    return Intl.message(
+      'Are you sure you want to delete your account?',
+      name: 'askDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Order Number `
   String get orderNumber {
     return Intl.message(
@@ -105,6 +125,16 @@ class S {
     return Intl.message(
       'The Cost',
       name: 'cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account Deleted`
+  String get accountDeleted {
+    return Intl.message(
+      'Account Deleted',
+      name: 'accountDeleted',
       desc: '',
       args: [],
     );

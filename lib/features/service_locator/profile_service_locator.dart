@@ -6,6 +6,8 @@ import 'package:fursan_travel_app/features/profile/presentation/controllers/prof
 import 'package:get_it/get_it.dart';
 
 import '../profile/data/data_sources/loca_data_sources.dart';
+import '../profile/domain/use_cases/delete_account_use_case.dart';
+import '../profile/presentation/controllers/delete_account/delete_account_cubit.dart';
 
 class ProfileServiceLocator {
   static Future<void> execute({required GetIt serviceLocator}) async {
@@ -26,8 +28,12 @@ class ProfileServiceLocator {
 
     serviceLocator.registerLazySingleton<GetProfileDataUseCase>(
         () => GetProfileDataUseCase(serviceLocator()));
+    serviceLocator.registerLazySingleton<DeleteAccountUseCase>(
+        () => DeleteAccountUseCase(serviceLocator()));
 
     /// register cubits
+    serviceLocator.registerFactory<DeleteAccountCubit>(
+        () => DeleteAccountCubit(serviceLocator()));
     serviceLocator.registerFactory<GetProfileDataCubit>(
         () => GetProfileDataCubit(serviceLocator()));
   }
