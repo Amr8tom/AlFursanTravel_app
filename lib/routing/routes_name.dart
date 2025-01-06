@@ -2,8 +2,8 @@ class DRoutesName {
   /// Shared Screens (User)
   static const String langRoute = 'choose-language-route';
   static const String test = 'test-route';
-  static const String loginRoute = 'phone-log_in-route';
-  static const String allDataLoginRoute = 'all-data-log_in-route';
+  static const String loginRoute = 'phone-log-route';
+  static const String allDataLoginRoute = 'all-data-log-route';
   static const String signupRoute = 'signup-route';
   static const String nextPageInSignupRoute = 'next_page_in-signup-route';
   static const String verifyEmailRoute = 'verify-email-route';

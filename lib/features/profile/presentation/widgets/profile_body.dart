@@ -79,6 +79,18 @@ class ProfileBody extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, DRoutesName.deleteAccountRoute);
               },
+            ),    ///size
+            SizedBox(
+              height: AppSizes.spaceBetweenIcon ,
+            ),
+
+            /// logOut profile
+            CustomProfileButtonWidget(
+              title: S.current.logOut,
+              icon: Iconsax.logout,
+              onTap: () {
+                Navigator.popAndPushNamed(context, DRoutesName.navigationMenuRoute);
+              },
             ),
           ],
         ),

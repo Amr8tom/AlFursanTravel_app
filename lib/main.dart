@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fursan_travel_app/features/app/app.dart';
-import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
+import 'features/authentication/presentation/controller/log/login_cubit.dart';
 import 'features/language/presentation/controller/language_cubit.dart';
 import 'features/service_locator/service_locator.dart';
 import 'utils/constants/colors.dart';

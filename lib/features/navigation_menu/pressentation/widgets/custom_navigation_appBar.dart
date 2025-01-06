@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/features/language/presentation/controller/language_cubit.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
@@ -10,6 +9,7 @@ import '../../../../common/custom_ui.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/device/device_utility.dart';
+import '../../../authentication/presentation/controller/log/login_cubit.dart';
 
 class CustomNavigationAppbar extends StatelessWidget
     implements PreferredSizeWidget {

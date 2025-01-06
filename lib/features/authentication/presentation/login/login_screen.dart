@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/common/custom_ui.dart';
 import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
-import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/login/widget/custom_login_body.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/login/widget/login_header.dart';
 import 'package:fursan_travel_app/features/profile/presentation/profile_screen.dart';
@@ -10,6 +9,7 @@ import 'package:fursan_travel_app/features/service_locator/service_locator.dart'
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import '../../../../generated/l10n.dart';
+import '../controller/log/login_cubit.dart';
 import 'widget/login_form.dart';
 
 class LoginScreen extends StatelessWidget {

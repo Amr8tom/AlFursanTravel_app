@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:fursan_travel_app/features/authentication/data/data_sources/remote_data_sources.dart';
+import 'package:fursan_travel_app/features/authentication/data/models/log_out_model.dart';
 import 'package:fursan_travel_app/features/authentication/data/models/user_login_model.dart';
 import 'package:fursan_travel_app/utils/connection/checkNetwork.dart';
 import 'package:fursan_travel_app/utils/error/failure.dart';
@@ -52,5 +53,15 @@ class AuthenticationRepositoryImp implements AuthenticationRepository {
         return left(CacheFailure());
       }
     }
+  }
+
+  @override
+  Future<Either<Failure, LogOutModel>> logOut() async{
+  if(await networkInfo.isConnected){
+    final logoutModel=await remote.logOut();
+    return right(logoutModel);
+  }else{
+    return left(CacheFailure());
+  }
   }
 }

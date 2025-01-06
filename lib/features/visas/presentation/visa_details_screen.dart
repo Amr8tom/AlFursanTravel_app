@@ -9,7 +9,7 @@ import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import '../../../generated/l10n.dart';
 import '../../../routing/routes_name.dart';
 import '../../../utils/device/device_utility.dart';
-import '../../authentication/presentation/controller/log_in/login_cubit.dart';
+import '../../authentication/presentation/controller/log/login_cubit.dart';
 import '../../service_locator/service_locator.dart';
 import 'controllers/visa_details/visa_details_cubit.dart';
 import 'widget/custom_visa_details.dart';

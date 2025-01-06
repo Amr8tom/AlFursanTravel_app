@@ -10,7 +10,7 @@ import 'package:fursan_travel_app/utils/theme/theme.dart';
 import '../../generated/l10n.dart';
 import '../../utils/local_storage/cach_keys.dart';
 import '../../utils/local_storage/cache_helper.dart';
-import '../authentication/presentation/controller/log_in/login_cubit.dart';
+import '../authentication/presentation/controller/log/login_cubit.dart';
 import '../language/presentation/controller/language_cubit.dart';
 import '../navigation_menu/pressentation/navigator_menu_screen.dart';
 import '../service_locator/service_locator.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/custom_card_tour_widget.dart';
 import 'package:fursan_travel_app/features/tours/presentation/widgets/custom_tour_details.dart';
 import '../../../common/custom_ui.dart';
@@ -10,6 +9,7 @@ import '../../../routing/routes_name.dart';
 import '../../../utils/constants/api_constants.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/device/device_utility.dart';
+import '../../authentication/presentation/controller/log/login_cubit.dart';
 import '../../service_locator/service_locator.dart';
 import '../../visas/presentation/widget/custom_booking_button.dart';
 import 'controllers/tour_details/tour_details_cubit.dart';

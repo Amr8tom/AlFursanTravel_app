@@ -12,7 +12,6 @@ import '../features/authentication/presentation/singUp/signup_screen.dart';
 import '../features/contact_us/persentation/contact_us_screen.dart';
 import '../features/navigation_menu/pressentation/navigator_menu_screen.dart';
 import '../features/profile/presentation/bookmarked/bookmarked_screen.dart';
-import '../features/profile/presentation/edit_profile/edit_profile_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import '../features/profile/presentation/version/version_screen.dart';
 import '../features/terms_conditions/presentation/terms_conditions_screen.dart';
@@ -139,12 +138,6 @@ class RouteGenerator {
             type: PageTransitionType.fade,
             settings: settings);
 
-      /// edit profile Route
-      case DRoutesName.editProfileInfoRoute:
-        return PageTransition(
-            child: const EditProfileScreen(),
-            type: PageTransitionType.fade,
-            settings: settings);
 
       /// edit profile Route
       case DRoutesName.deleteAccountRoute:
