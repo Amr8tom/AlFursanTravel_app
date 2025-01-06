@@ -49,7 +49,7 @@ class DI {
 
     /// authentication
     await AuthenticationServiceLocator.execute(serviceLocator: serviceLocator);
-    /// authentication
+    /// search
     await SearchServiceLocator.execute(serviceLocator: serviceLocator);
   }
 }

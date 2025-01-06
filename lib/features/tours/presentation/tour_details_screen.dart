@@ -53,11 +53,11 @@ class TourDetailsScreen extends StatelessWidget {
                               SizedBox(height: AppSizes.space),
 
                               /// informations
-                              const CustomTourDetails(
+                               CustomTourDetails(
                                 icon: Icons.short_text_rounded,
                                 title: "informations",
                                 body:
-                                    "Fursan company offered you awesome trips ",
+                                    "${state.tourDetailsModel.infoAr}",
                               ),
 
                               /// size

@@ -54,10 +54,10 @@ class CustomSginUpFrom extends StatelessWidget {
             /// Phone Number Field
             CustomTextFromReservation(
               isPhone: true,
-              label: S.current.phoneNumber,
+              label: S.current.password,
               validateError: S.current.pleaseEndterValue,
               icon: Icons.phone,
-              controller: controller.phoneController,
+              controller: controller.passwordController,
             ),
 
             SizedBox(height: AppSizes.space * 2),

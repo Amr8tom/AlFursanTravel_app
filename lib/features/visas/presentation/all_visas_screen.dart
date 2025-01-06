@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/visas/presentation/controllers/all_visas/get_all_visas_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
+import 'package:fursan_travel_app/utils/constants/colors.dart';
 
 import '../../../common/custom_ui.dart';
 import '../../../common/widgets/appbar/appbar.dart';
@@ -29,9 +30,7 @@ class AllVisasScreen extends StatelessWidget {
                 final items = state.allVisasMode;
                 return Column(
                   children: [
-                    SizedBox(
-                      height: AppSizes.space,
-                    ),
+
                     SizedBox(
                       height: AppSizes.space,
                     ),
@@ -66,19 +65,24 @@ class AllVisasScreen extends StatelessWidget {
                                       "${URL.image}${destination?.featuredImage?.imageFilename}",
                                       fit: BoxFit.cover,
                                       height:
-                                          120.0, // Adjust the height of the image
+                                         AppSizes.spaceBtwSections*4, // Adjust the height of the image
                                       width: double.infinity,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      destination!.titleEn!.toString(),
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
+                                  Expanded(
+                                    child: Container(
+                                      width: double.infinity,
+                                      color:ColorRes.grey,
+                                      child: Center(
+                                        child: Text(
+                                          destination!.titleEn!.toString(),
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16.0,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
                                       ),
-                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ],

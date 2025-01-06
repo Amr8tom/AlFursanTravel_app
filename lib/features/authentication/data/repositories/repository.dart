@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:fursan_travel_app/features/authentication/data/data_sources/remote_data_sources.dart';
 import 'package:fursan_travel_app/features/authentication/data/models/user_login_model.dart';
-import 'package:fursan_travel_app/features/authentication/data/models/user_sgin_in_model.dart';
 import 'package:fursan_travel_app/utils/connection/checkNetwork.dart';
 import 'package:fursan_travel_app/utils/error/failure.dart';
 import '../../domain/repositories/repository.dart';
 import '../data_sources/local_data_sources.dart';
+import '../models/user_sgin_up_model.dart';
 
 class AuthenticationRepositoryImp implements AuthenticationRepository {
   final AuthLocalDataSources local;

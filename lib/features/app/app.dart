@@ -10,8 +10,10 @@ import 'package:fursan_travel_app/utils/theme/theme.dart';
 import '../../generated/l10n.dart';
 import '../../utils/local_storage/cach_keys.dart';
 import '../../utils/local_storage/cache_helper.dart';
+import '../authentication/presentation/controller/log_in/login_cubit.dart';
 import '../language/presentation/controller/language_cubit.dart';
 import '../navigation_menu/pressentation/navigator_menu_screen.dart';
+import '../service_locator/service_locator.dart';
 
 class FursanApp extends StatelessWidget {
   const FursanApp({super.key});
@@ -19,7 +21,8 @@ class FursanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = context.read<LanguageCubit>();
-
+    /// check and get the user login data if user or just a guest
+    serviceLocator<LoginCubit>().checkIsGuestOrUser();
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,

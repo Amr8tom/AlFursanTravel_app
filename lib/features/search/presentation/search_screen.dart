@@ -28,7 +28,6 @@ class SearchScreen extends StatelessWidget {
             historyController.getSearchHistory();
             return BlocBuilder<SearchHistoryCubit,SearchHistoryState>(
                 builder: (context,state) {
-
                   return FloatingSearchBar(
                     backgroundColor:Colors.white,
                     height: AppSizes.appBarHeight,

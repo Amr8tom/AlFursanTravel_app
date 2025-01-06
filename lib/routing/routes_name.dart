@@ -46,4 +46,5 @@ class DRoutesName {
   static const String previousToursRoute = 'previous-tours-route';
   static const String versionRoute = 'version-route';
   static const String contactUs = 'contact-us-route';
+  static const String deleteAccountRoute = 'delete-account-route';
 }

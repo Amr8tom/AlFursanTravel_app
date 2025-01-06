@@ -10,23 +10,22 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SearchCubit,SearchState>(
-      builder: (context,state){
-        final controller = context.read<SearchHistoryCubit>();
-        return
-          BlocBuilder<SearchHistoryCubit, SearchHistoryState>(
-  builder: (context, state) {
-    return ClipRRect(
+    return BlocBuilder<SearchCubit, SearchState>(builder: (context, state) {
+      final controller = context.read<SearchHistoryCubit>();
+      final searchController = context.read<SearchCubit>();
+      return BlocBuilder<SearchHistoryCubit, SearchHistoryState>(
+        builder: (context, state) {
+          return ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Material(
               color: Colors.white,
               elevation: 4,
               child: Builder(
                 builder: (context) {
-                  if (controller.filteredSearchHistory.length==0  &&
-                      controller.searchQuery.trim()=='') {
+                  if (controller.filteredSearchHistory.length == 0 &&
+                      controller.searchQuery.trim() == '') {
                     return Container(
-                      height: AppSizes.heightcontainer*1.3,
+                      height: AppSizes.heightcontainer * 1.3,
                       width: double.infinity,
                       alignment: Alignment.center,
                       child: Text(
@@ -36,41 +35,43 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                     );
-                  }
-                  else if (controller.filteredSearchHistory.length==0) {
+                  } else if (controller.filteredSearchHistory.length == 0) {
                     return ListTile(
-                                          title: Text(controller.searchQuery),
-                                          leading: const Icon(Icons.search),
-                                          onTap: () {
-                                            controller.selectedTerm=controller.searchQuery;
-                                            controller.addSearchTerm(controller.searchQuery);
-                                          },
-                                        );
-                  }
-                  else {
+                      title: Text(controller.searchQuery),
+                      leading: const Icon(Icons.search),
+                      onTap: () {
+                        controller.selectedTerm = controller.searchQuery;
+                        controller.addSearchTerm(controller.searchQuery);
+                        searchController.seach(query: controller.searchQuery);
+                      },
+                    );
+                  } else {
                     return Column(
                       mainAxisSize: MainAxisSize.min,
                       children: controller.filteredSearchHistory
                           .map(
                             (term) => ListTile(
-                          title: Text(
-                            term,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          leading:   Icon(Icons.history),
-                          trailing: IconButton(
-                            icon:   Icon(Icons.clear),
-                            onPressed: () {
-                              controller.deleteSearchTerm(term);
-                            },
-                          ),
-                          onTap: () {
+                              title: Text(
+                                term,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              leading: Icon(Icons.history),
+                              trailing: IconButton(
+                                icon: Icon(Icons.clear),
+                                onPressed: () {
+                                  controller.deleteSearchTerm(term);
+                                },
+                              ),
+                              onTap: () {
+                                controller.selectedTerm =
+                                    term;
 
-                            controller.close();
-                          },
-                        ),
-                      )
+                                searchController.seach(
+                                    query:term);
+                              },
+                            ),
+                          )
                           .toList(),
                     );
                   }
@@ -78,8 +79,8 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
               ),
             ),
           );
-  },
-);}
-    );
+        },
+      );
+    });
   }
 }

@@ -27,35 +27,34 @@ class CustomNavigationAppbar extends StatelessWidget
       },
       child: BlocBuilder<NavigationCubit, NavigationState>(
         builder: (context, state) {
+          final controller = context.read<NavigationCubit>();
+          final loginController = context.read<LoginCubit>();
           final List<String> _title = [
             S.current.home,
             S.current.notifications,
             S.current.favorite,
             S.current.profileInfo
           ];
-          final controller = context.read<NavigationCubit>();
+
           return Directionality(
             textDirection: TextDirection.rtl,
             child: AppBar(
-              leading: BlocBuilder<LoginCubit, LoginState>(
-                builder: (context, state) {
-                  return Center(
-                    child: IconButton(
-                      onPressed: () {
-                        // if (state is LoginUser) {
-                          Navigator.pushNamed(
-                              context, DRoutesName.profileInfoRoute);
-                        // } else {
-                        //   Navigator.pushNamed(context, DRoutesName.loginRoute);
-                        // }
-                      },
-                      icon: const Icon(
-                        Iconsax.profile_tick5,
-                        color: ColorRes.primary,
-                      ),
-                    ),
-                  );
-                },
+              leading: Center(
+                child: IconButton(
+                  onPressed: () {
+                    print(loginController.isGuest);
+                    if (loginController.isGuest) {
+                      Navigator.pushNamed(context, DRoutesName.loginRoute);
+                    } else {
+                      Navigator.pushNamed(
+                          context, DRoutesName.profileInfoRoute);
+                    }
+                  },
+                  icon: const Icon(
+                    Iconsax.profile_tick5,
+                    color: ColorRes.primary,
+                  ),
+                ),
               ),
               actions: [
                 GestureDetector(

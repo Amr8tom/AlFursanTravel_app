@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:fursan_travel_app/features/authentication/domain/repositories/repository.dart';
 
 import '../../../../utils/error/failure.dart';
-import '../../data/models/user_sgin_in_model.dart';
+import '../../data/models/user_sgin_up_model.dart';
 
 class SignUpUseCase {
   final AuthenticationRepository _repository;

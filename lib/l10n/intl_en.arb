@@ -3,6 +3,8 @@
   "appName": "Fursan",
   "skip": "skip",
   "home": "home",
+    "deleteAccount": "Delete My Account",
+
   "orderNumber": "Order Number ",
   "cost": "The Cost",
   "history": "history",

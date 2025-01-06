@@ -33,7 +33,7 @@ class AuthenticationServiceLocator {
     /// register controllers
     /// here its as singleton to detect the user state around the whole app
     serviceLocator
-        .registerLazySingleton<LoginCubit>(() => LoginCubit(serviceLocator()));
+        .registerFactory<LoginCubit>(()=> LoginCubit(serviceLocator()));
     serviceLocator
         .registerFactory<SingUpCubit>(() => SingUpCubit(serviceLocator()));
   }

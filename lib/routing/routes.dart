@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/login/login_screen.dart';
+import 'package:fursan_travel_app/features/profile/presentation/delete_my_account/delete_my_account_screen.dart';
 import 'package:fursan_travel_app/features/profile/presentation/previous_tours/presentation/previous_tours_screen.dart';
 import 'package:fursan_travel_app/features/tours/presentation/certain_category_screen.dart';
 import 'package:fursan_travel_app/features/language/select_language_screen.dart';
@@ -142,6 +143,13 @@ class RouteGenerator {
       case DRoutesName.editProfileInfoRoute:
         return PageTransition(
             child: const EditProfileScreen(),
+            type: PageTransitionType.fade,
+            settings: settings);
+
+      /// edit profile Route
+      case DRoutesName.deleteAccountRoute:
+        return PageTransition(
+            child: const DeleteMyAccountScreen(),
             type: PageTransitionType.fade,
             settings: settings);
 

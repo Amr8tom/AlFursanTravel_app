@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/common/custom_ui.dart';
 import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/controller/sing_up/sing_up_cubit.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/singUp/widget/custom_sgin_up_button.dart';
 import 'package:fursan_travel_app/features/authentication/presentation/singUp/widget/custom_sgin_up_from.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/singUp/widget/sing_up_body.dart';
 import 'package:fursan_travel_app/features/service_locator/service_locator.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 
@@ -24,18 +26,13 @@ class DSignupScreen extends StatelessWidget {
         create: (context) => serviceLocator<SingUpCubit>(),
         child: BlocBuilder<SingUpCubit, SingUpState>(
           builder: (context, state) {
-            return Padding(
-              padding: EdgeInsets.all(AppSizes.padding),
-              child: Stack(
-                alignment: AlignmentDirectional.center,
-                children: [
-                  CustomSginUpFrom(),
-                  Positioned(
-                      bottom: AppSizes.spaceBtwItems,
-                      child: const CustomSginUpButton())
-                ],
-              ),
-            );
+            if (state is SingUpLoading) {
+              return CustomUI.simpleLoader();
+            } else if (state is SingUpFailure) {
+              return CustomUI.simpleFailure();
+            } else {
+              return const SingUpBody();
+            }
           },
         ),
       ),

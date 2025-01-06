@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fursan_travel_app/features/authentication/presentation/controller/log_in/login_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 
@@ -10,72 +12,82 @@ class DLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        /// defult Space
-        SizedBox(
-          height: AppSizes.defaultSpace * 14,
-        ),
-
-        /// Email Field
-        TextField(
-          decoration: InputDecoration(
-            labelText: S.current.eMail,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+    final controller= context.read<LoginCubit>();
+    return BlocBuilder<LoginCubit, LoginState>(
+      builder: (context, state) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            /// default Space
+            SizedBox(
+              height: AppSizes.defaultSpace * 14,
             ),
-          ),
-        ),
-        SizedBox(height: AppSizes.spaceBtwInputFields),
 
-        /// Password Field
-        TextField(
-          obscureText: true,
-          decoration: InputDecoration(
-            suffixIcon: Icon(Icons.remove_red_eye),
-            labelText: S.current.password,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+            /// Email Field
+            TextField(
+              controller: controller.emailController,
+              decoration: InputDecoration(
+                labelText: S.current.eMail,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+                ),
+              ),
             ),
-          ),
-        ),
-        SizedBox(height: AppSizes.defaultSpace),
+            SizedBox(height: AppSizes.spaceBtwInputFields),
 
-        /// Login Button
-        ElevatedButton(
-          onPressed: () {},
-          child: Text(
-            S.current.singIn,
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+            /// Password Field
+            TextField(
+            controller:controller.passwordController,
+              obscureText: true,
+              decoration: InputDecoration(
+                suffixIcon: Icon(Icons.remove_red_eye),
+                labelText: S.current.password,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+                ),
+              ),
+            ),
+            SizedBox(height: AppSizes.defaultSpace),
 
-        /// sign up button
+            /// Login Button
+            ElevatedButton(
+              onPressed: () {
+                controller.login();
+              },
+              child: Text(
+                S.current.singIn,
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
 
-        TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, DRoutesName.signupRoute);
-          },
-          child: Text(
-            "${S.current.dontHaveAccont} ${S.current.singUp}",
-            style: TextStyle(
-                color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
-          ),
-        ),
+            /// sign up button
 
-        /// terms and conditions button
-        TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, DRoutesName.termsAndConditionRoute);
-          },
-          child: Text(
-            "${S.current.termsOfUse} ",
-            style: TextStyle(
-                color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
-          ),
-        ),
-      ],
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, DRoutesName.signupRoute);
+              },
+              child: Text(
+                "${S.current.dontHaveAccont} ${S.current.singUp}",
+                style: TextStyle(
+                    color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
+              ),
+            ),
+
+            /// terms and conditions button
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, DRoutesName.termsAndConditionRoute);
+              },
+              child: Text(
+                "${S.current.termsOfUse} ",
+                style: TextStyle(
+                    color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

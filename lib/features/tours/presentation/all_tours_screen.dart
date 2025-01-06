@@ -4,6 +4,7 @@ import 'package:fursan_travel_app/features/service_locator/service_locator.dart'
 import 'package:fursan_travel_app/features/tours/presentation/controllers/tours/all_tours_cubit.dart';
 import 'package:fursan_travel_app/routing/routes_name.dart';
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
+import 'package:fursan_travel_app/utils/constants/colors.dart';
 
 import '../../../common/custom_ui.dart';
 import '../../../common/widgets/appbar/appbar.dart';
@@ -30,9 +31,7 @@ class AllToursScreen extends StatelessWidget {
                 final items = state.allToursModel.tours;
                 return Column(
                   children: [
-                    SizedBox(
-                      height: AppSizes.space,
-                    ),
+
                     SizedBox(
                       height: AppSizes.space,
                     ),
@@ -70,15 +69,20 @@ class AllToursScreen extends StatelessWidget {
                                       width: double.infinity,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      destination!.nameAr!.toString(),
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
+                                  Expanded(
+                                    child: Container(
+                                      width: double.infinity,
+                                      color: ColorRes.grey,
+                                      child: Center(
+                                        child: Text(
+                                          destination!.nameAr!.toString(),
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16.0,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
                                       ),
-                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ],

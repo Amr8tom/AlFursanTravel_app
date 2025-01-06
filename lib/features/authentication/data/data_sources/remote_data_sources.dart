@@ -1,8 +1,8 @@
 import 'package:fursan_travel_app/features/authentication/data/models/user_login_model.dart';
-import 'package:fursan_travel_app/features/authentication/data/models/user_sgin_in_model.dart';
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 
 import '../../../../utils/constants/api_constants.dart';
+import '../models/user_sgin_up_model.dart';
 
 abstract class AuthRemoteDataSources {
   Future<UserLoginModel> login({required Map<String, dynamic> params});
@@ -21,7 +21,8 @@ class AuthRemoteDataSourcesImp implements AuthRemoteDataSources {
 
   @override
   Future<UserLoginModel> login({required Map<String, dynamic> params}) async {
-    final response = await _dio.postData(URL: URL.login, body: params);
+    final response = await _dio.postData(URL: URL.login+"?email=a4343@gmail.com&password=123456");
+    print(response);
     return UserLoginModel.fromJson(response);
   }
 

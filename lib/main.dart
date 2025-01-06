@@ -20,8 +20,8 @@ void main() async {
   /// get the cached language
   await serviceLocator<LanguageCubit>().init();
 
-  /// check and get the user login data if user or just a guest
-  await serviceLocator<LoginCubit>().checkIsGuestOrUser();
+
+
 
   runApp(MultiBlocProvider(
     providers: [
