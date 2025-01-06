@@ -2,6 +2,7 @@ import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:fursan_travel_app/features/service_locator/home_service_locator.dart';
 import 'package:fursan_travel_app/features/service_locator/notificaition_service_locator.dart';
 import 'package:fursan_travel_app/features/service_locator/profile_service_locator.dart';
+import 'package:fursan_travel_app/features/service_locator/search_service_locator.dart';
 import 'package:fursan_travel_app/features/service_locator/tours_services_locator.dart';
 import 'package:fursan_travel_app/features/service_locator/visas_service_locator.dart';
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
@@ -48,5 +49,7 @@ class DI {
 
     /// authentication
     await AuthenticationServiceLocator.execute(serviceLocator: serviceLocator);
+    /// authentication
+    await SearchServiceLocator.execute(serviceLocator: serviceLocator);
   }
 }

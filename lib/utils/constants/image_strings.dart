@@ -31,14 +31,14 @@ class AssetRes {
   ///////// rebots Image
   static const String rebot1 = 'assets/lotties/rebot1.json';
 
-  ///////// shorComingBook
-  static const String shortComingBook = 'assets/lotties/shortComingBook.json';
-  static const String shortComingBook2 = 'assets/lotties/book.json';
+/// search images
+
 
   ///////// splash Image
 
   static const String splashLottie = 'assets/lotties/lastSplash.json';
   static const String search = 'assets/lotties/search.json';
+  static const String noData = 'assets/lotties/no_data.json';
 
   //// Logo like gif images
   static const String gif1 = 'assets/images/svgs/Untitled (1).svg';

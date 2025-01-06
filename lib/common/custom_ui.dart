@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:lottie/lottie.dart';
 import '../generated/l10n.dart';
 import '../utils/constants/image_strings.dart';
@@ -28,7 +29,18 @@ class CustomUI {
 
   static Widget simpleLoader() {
     return Center(child: Lottie.asset(AssetRes.airplainLoading, width: 100.w));
-  }
+  }  static Widget simpleFailure() {
+   return Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Lottie.asset(AssetRes.noData, height:AppSizes.productItemHeight),
+            SizedBox(height: AppSizes.spaceBtwItems,),
+            Text(S.current.error),
+
+          ],
+        ));  }
 
   static Widget searchWidget() {
     return Padding(
@@ -37,34 +49,28 @@ class CustomUI {
     );
   }
 
-  static Widget noData() {
-    return SingleChildScrollView(
-      child: Center(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            S.current.noData,
-          ),
-          // Lottie.asset(AssetRes.emptyProduct, width: 100.w),
-        ],
-      )),
-    );
-  }
-
   static Widget tryLater() {
-    return SingleChildScrollView(
-      child: Center(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(S.current.tryLater),
-          Lottie.asset(AssetRes.uploadImage, width: 100.w),
-        ],
-      )),
-    );
+    return Center(
+        child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(S.current.tryLater),
+        Lottie.asset(AssetRes.normalLoading, width: 100.w),
+      ],
+    ));
+  } static Widget noData() {
+    return Center(
+        child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Lottie.asset(AssetRes.noData, height:AppSizes.productItemHeight),
+        SizedBox(height: AppSizes.spaceBtwItems,),
+        Text(S.current.noData),
+
+      ],
+    ));
   }
 
   static ScaffoldFeatureController<SnackBar, SnackBarClosedReason>

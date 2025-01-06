@@ -10,6 +10,6 @@ final class SearchLoading extends SearchState {}
 final class SearchFailure extends SearchState {}
 
 final class SearchSuccess extends SearchState {
-  final SearchedItemListModel searchedItemListModel;
+  final AllSearchItemsModel searchedItemListModel;
   SearchSuccess(this.searchedItemListModel);
 }

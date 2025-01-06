@@ -47,10 +47,12 @@ dependencies:
   data_connection_checker_tv: ^0.3.5-nullsafety
   internet_connection_checker: ^1.0.0+1
   dio: ^5.7.0
+  material_floating_search_bar_2: ^0.5.0
   cached_network_image: ^3.4.1
   url_launcher: ^6.3.1
   lottie: ^3.1.3
   dartz: ^0.10.1
+  flutter_intl:
   in_app_update: ^4.2.3
   iconsax: ^0.0.8
   flutter_bloc: ^8.1.6
@@ -64,6 +66,8 @@ dependencies:
 #-------------------- PACKAGES End --------------------#
 dev_dependencies:
   flutter_launcher_icons:
+  intl_utils:
+
 
   flutter_test:
     sdk: flutter

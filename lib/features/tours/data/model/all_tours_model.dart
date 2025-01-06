@@ -25,7 +25,7 @@ class Tour {
   int? imageId;
   String? createdAt;
   String? updatedAt;
-  Image? image;
+  List<Images>? images;
 
   Tour({
     this.id,
@@ -38,7 +38,7 @@ class Tour {
     this.imageId,
     this.createdAt,
     this.updatedAt,
-    this.image,
+    this.images,
   });
 
   // Parse a single JSON object into a Tour instance
@@ -53,8 +53,12 @@ class Tour {
     imageId = json['image_id'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
-    image = json['image'] != null ? Image.fromJson(json['image']) : null;
-  }
+    if (json['images'] != null) {
+      images = [];
+      json['images'].forEach((v) {
+        images?.add(Images.fromJson(v));
+      });
+    }  }
 
   // Convert a Tour instance back to JSON
   Map<String, dynamic> toJson() {
@@ -69,25 +73,15 @@ class Tour {
     map['image_id'] = imageId;
     map['created_at'] = createdAt;
     map['updated_at'] = updatedAt;
-    if (image != null) {
-      map['image'] = image!.toJson();
+    if (images != null) {
+      map['images'] = images?.map((v) => v.toJson()).toList();
     }
     return map;
   }
 }
 
-class Image {
-  int? id;
-  dynamic albumId;
-  String? originalFilename;
-  String? imageFilename;
-  String? thumbFilename;
-  String? captionEn;
-  String? captionAr;
-  String? createdAt;
-  String? updatedAt;
-
-  Image({
+class Images {
+  Images({
     this.id,
     this.albumId,
     this.originalFilename,
@@ -97,10 +91,10 @@ class Image {
     this.captionAr,
     this.createdAt,
     this.updatedAt,
+    this.pivot,
   });
 
-  // Parse a single JSON object into an Image instance
-  Image.fromJson(Map<String, dynamic> json) {
+  Images.fromJson(dynamic json) {
     id = json['id'];
     albumId = json['album_id'];
     originalFilename = json['original_filename'];
@@ -110,9 +104,19 @@ class Image {
     captionAr = json['caption_ar'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
+    pivot = json['pivot'] != null ? Pivot.fromJson(json['pivot']) : null;
   }
+  num? id;
+  dynamic albumId;
+  String? originalFilename;
+  String? imageFilename;
+  String? thumbFilename;
+  String? captionEn;
+  String? captionAr;
+  String? createdAt;
+  String? updatedAt;
+  Pivot? pivot;
 
-  // Convert an Image instance back to JSON
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['id'] = id;
@@ -124,9 +128,42 @@ class Image {
     map['caption_ar'] = captionAr;
     map['created_at'] = createdAt;
     map['updated_at'] = updatedAt;
+    if (pivot != null) {
+      map['pivot'] = pivot?.toJson();
+    }
     return map;
   }
 }
+
+class Pivot {
+  Pivot({
+    this.productId,
+    this.imageId,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  Pivot.fromJson(dynamic json) {
+    productId = json['product_id'];
+    imageId = json['image_id'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
+  }
+  num? productId;
+  num? imageId;
+  String? createdAt;
+  String? updatedAt;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['product_id'] = productId;
+    map['image_id'] = imageId;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
+    return map;
+  }
+}
+
 
 
 

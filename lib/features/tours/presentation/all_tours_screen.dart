@@ -63,7 +63,7 @@ class AllToursScreen extends StatelessWidget {
                                     borderRadius: BorderRadius.vertical(
                                         top: Radius.circular(8.0)),
                                     child: Image.network(
-                                      "${URL.image}${destination?.image?.imageFilename}",
+                                      "${URL.image}${destination?.images?[0].imageFilename}",
                                       fit: BoxFit.cover,
                                       height:
                                           120.0, // Adjust the height of the image

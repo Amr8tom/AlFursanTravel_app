@@ -8,7 +8,7 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return    Padding(
+    return Padding(
       padding:  EdgeInsets.all(AppSizes.padding),
       child: TextField(
         onChanged: (s){

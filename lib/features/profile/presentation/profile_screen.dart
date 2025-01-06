@@ -41,16 +41,7 @@ class ProfileScreen extends StatelessWidget {
                 },
               ),
 
-              // ///size
-              // SizedBox(
-              //   height: AppSizes.spaceBetweenIcon,
-              // ),
-              //
-              // CustomProfileButtonWidget(
-              //   title: S.current.settings,
-              //   icon: Iconsax.setting_2,
-              //   onTap: () {},
-              // ),
+
 
               ///size
               SizedBox(

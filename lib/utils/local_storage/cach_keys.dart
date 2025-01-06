@@ -12,6 +12,7 @@ enum CacheKeys {
   visaDetails,
   offers,
   profile,
+  searchHistory,
   notification,
   fullName,
   firstName,
