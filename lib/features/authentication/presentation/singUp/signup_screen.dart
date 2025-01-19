@@ -22,20 +22,7 @@ class DSignupScreen extends StatelessWidget {
         title: S.current.singUp,
         fontSize: AppSizes.fontSizeSm * 1.15,
       ),
-      body: BlocProvider(
-        create: (context) => serviceLocator<SingUpCubit>(),
-        child: BlocBuilder<SingUpCubit, SingUpState>(
-          builder: (context, state) {
-            if (state is SingUpLoading) {
-              return CustomUI.simpleLoader();
-            } else if (state is SingUpFailure) {
-              return CustomUI.simpleFailure();
-            } else {
-              return const SingUpBody();
-            }
-          },
-        ),
-      ),
+      body: const SingUpBody()
     );
   }
 }

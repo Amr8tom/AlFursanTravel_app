@@ -129,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "hours": MessageLookupByLibrary.simpleMessage("ساعات"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("أوافق علي "),
+        "information": MessageLookupByLibrary.simpleMessage("المعلومات"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             " أدخـل بـريد الكــتروني صَحـيح "),
         "language": MessageLookupByLibrary.simpleMessage("الـلغة"),
@@ -211,9 +212,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "refunds": MessageLookupByLibrary.simpleMessage("المرتجعات"),
         "refused": MessageLookupByLibrary.simpleMessage("قــيد الأنتٍــظآر"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
+        "registerSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تسـجيل حســابك بنجــاح"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "remotePayment":
             MessageLookupByLibrary.simpleMessage("الدفع الالكترونى"),
+        "requirements": MessageLookupByLibrary.simpleMessage("المتطلبات"),
         "reservation": MessageLookupByLibrary.simpleMessage("الحـجز"),
         "reviews": MessageLookupByLibrary.simpleMessage("التقيمات"),
         "saudiArabia": MessageLookupByLibrary.simpleMessage("السعودية"),

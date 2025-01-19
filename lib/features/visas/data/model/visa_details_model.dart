@@ -7,6 +7,7 @@ class VisaDetailsModel {
     this.offerTitleEn,
     this.offerTitleAr,
     this.price,
+    this.mobInfoAr,
     this.order,
     this.rquirementsAr,
     this.rquirementsEn,
@@ -34,6 +35,7 @@ class VisaDetailsModel {
     offerTitleAr = json['offer_title_ar'];
     price = json['price'];
     order = json['order'];
+    mobInfoAr = json['mob_info_ar'];
     rquirementsAr = json['rquirements_ar'];
     rquirementsEn = json['rquirements_en'];
     descriptionEn = json['description_en'];
@@ -62,6 +64,7 @@ class VisaDetailsModel {
   num? order;
   String? rquirementsAr;
   String? rquirementsEn;
+  String? mobInfoAr;
   String? descriptionEn;
   String? descriptionAr;
   num? featuredImageId;
@@ -86,6 +89,7 @@ class VisaDetailsModel {
     map['offer_title_ar'] = offerTitleAr;
     map['price'] = price;
     map['order'] = order;
+    map['mob_info_ar'] = mobInfoAr;
     map['rquirements_ar'] = rquirementsAr;
     map['rquirements_en'] = rquirementsEn;
     map['description_en'] = descriptionEn;

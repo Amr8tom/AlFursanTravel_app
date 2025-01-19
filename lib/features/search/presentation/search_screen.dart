@@ -28,12 +28,13 @@ class SearchScreen extends StatelessWidget {
             historyController.getSearchHistory();
             return BlocBuilder<SearchHistoryCubit,SearchHistoryState>(
                 builder: (context,state) {
-                  return FloatingSearchBar(
-                    backgroundColor:Colors.white,
+                  return FloatingSearchBar(backgroundColor:Colors.white,
+
                     height: AppSizes.appBarHeight,
                     onSubmitted: (query){
                       historyController.addSearchTerm(historyController.searchQuery);
                       searchController.seach(query: query);
+                      historyController.searchController.close();
                     },
                     onQueryChanged: (query) {
                       historyController.updateSearchQuery(query); // Update query in the cubit

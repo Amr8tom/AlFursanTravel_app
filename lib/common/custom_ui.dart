@@ -74,10 +74,18 @@ class CustomUI {
   }
 
   static ScaffoldFeatureController<SnackBar, SnackBarClosedReason>
-      snackBarSuccess({required BuildContext context}) {
+      snackBarSuccess({required BuildContext context,String? Msg}) {
     return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(S.current.done),
+      content: Text(Msg??S.current.done),
       backgroundColor: Colors.green,
+      behavior: SnackBarBehavior.floating,
+    ));
+  }
+  static ScaffoldFeatureController<SnackBar, SnackBarClosedReason>
+      snackBarFailure({required BuildContext context,String? Msg}) {
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(Msg??S.current.error),
+      backgroundColor: Colors.red,
       behavior: SnackBarBehavior.floating,
     ));
   }

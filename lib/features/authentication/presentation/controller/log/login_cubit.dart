@@ -38,7 +38,7 @@ class LoginCubit extends Cubit<LoginState> {
       } else {
         isGuest = true;
         PrefService.putBoolean(key: CacheKeys.isGuest, value: isGuest);
-        emit(LoginInit());
+        emit(LoginSuccess(model));
       }
     });
   }

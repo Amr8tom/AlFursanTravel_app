@@ -3,6 +3,8 @@ import 'package:fursan_travel_app/features/profile/data/models/profile_data_mode
 import 'package:fursan_travel_app/utils/constants/api_constants.dart';
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 
+import '../../../../utils/error/failure.dart';
+
 abstract class ProfileRemoteDataSources {
   Future<ProfileDataModel> getProfileData();
 
@@ -16,13 +18,19 @@ class ProfileRemoteDataSourcesImp implements ProfileRemoteDataSources {
 
   @override
   Future<ProfileDataModel> getProfileData() async {
-    final response = await _dio.getData(URL: URL.profile);
-    return ProfileDataModel.fromJson(response);
+ try{   final response = await _dio.getData(URL: URL.profile);
+ return ProfileDataModel.fromJson(response);}on ServerFailure{
+   throw ServerFailure(message: "Server Failure");
+
+ }
   }
 
   @override
   Future<DeleteAccountModel> deleteAccount() async {
-    final response = await _dio.postData(URL: URL.deleteAccount);
-    return DeleteAccountModel.fromJson(response);
+   try{ final response = await _dio.postData(URL: URL.deleteAccount);
+   return DeleteAccountModel.fromJson(response);}
+    on ServerFailure {
+      throw ServerFailure(message: "Server Failure");
+    }
   }
 }

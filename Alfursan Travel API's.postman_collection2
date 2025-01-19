@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "9090efec-76d5-4183-96d3-61348d3dbcd7",
+		"name": "Alfursan Travel API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20857423"
+	},
+	"item": [
+		{
+			"name": "All Visas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/visas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"visas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visa Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/visa/united-arab-emirates",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"visa",
+						"united-arab-emirates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Reservation ( Visa )",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_name",
+							"value": "amr ",
+							"type": "text"
+						},
+						{
+							"key": "sender_last_name",
+							"value": "elsayed",
+							"type": "text"
+						},
+						{
+							"key": "sender_phone_number",
+							"value": "00000000",
+							"type": "text"
+						},
+						{
+							"key": "sender_email_address",
+							"value": "test@t.com",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "sender_address",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "visa_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v2/visa/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"visa",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Tours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/tours",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tour Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/tour/istanbul",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"tour",
+						"istanbul"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Reservation ( Tour )",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_name",
+							"value": "amr ",
+							"type": "text"
+						},
+						{
+							"key": "sender_last_name",
+							"value": "elsayed",
+							"type": "text"
+						},
+						{
+							"key": "sender_phone_number",
+							"value": "00000000",
+							"type": "text"
+						},
+						{
+							"key": "sender_email_address",
+							"value": "test@t.com",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "sender_address",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "visa_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v2/visa/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"visa",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gallery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/gallery",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/videos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/about",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact Us",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "sender_email_address",
+							"value": "test@t.com",
+							"type": "text"
+						},
+						{
+							"key": "sender_phone_number",
+							"value": "0000000000",
+							"type": "text"
+						},
+						{
+							"key": "sender_address",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v2/send-message",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"send-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v2/notifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/search?q=n",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/register?first_name=amr&last_name=elsayed&email=a@a.com&password=123456",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"register"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "amr"
+						},
+						{
+							"key": "last_name",
+							"value": "elsayed"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/login?email=test@example.com&password=123456",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@example.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|j3EIYQQTCOEWSoAf3EvsvhyNdEUOZSbfot3ejPIp533ee66d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|eqaKpru3uV1GBT0Rhadej53y9uvQ8sk0ZMFKnJkK32c10c6a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|fpCVYboQ9aUdJuyLOOcdQ0Sj8pNEkLJM3oRCpt97b6ad8b78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v2/account/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"account",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "visa_slug",
+			"value": "istanbul"
+		}
+	]
+}

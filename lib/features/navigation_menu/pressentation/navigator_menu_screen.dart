@@ -11,6 +11,7 @@ import 'controller/navigation_cubit.dart';
 
 class NavigatorMenuScreen extends StatelessWidget {
   const NavigatorMenuScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

@@ -17,8 +17,6 @@ class CustomDestinationHorizontalList extends StatelessWidget {
     return BlocProvider(
       create: (context) => serviceLocator<GallaryCubit>(),
       child: Builder(builder: (context) {
-        /// fetch Gallery data
-        context.read<GallaryCubit>().getGalaryData();
         return BlocBuilder<GallaryCubit, GallaryState>(
           builder: (context, state) {
             if (state is GallarySuccess) {
@@ -26,46 +24,54 @@ class CustomDestinationHorizontalList extends StatelessWidget {
               return Container(
                 height: hightScreen /
                     2.9, // Set the container height based on AppSizes
-                child: CarouselSlider.builder(
-                    itemCount: items?.length,
-                    itemBuilder: (context, index, indexpage) {
-                      final destination = items?[index];
-                      return Card(
-                        elevation: 4.5,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                          child: Stack(
-                            children: [
-                              CachedNetworkImage(
-                                  fit: BoxFit.fill,
-                                  // height: hightScreen / 2.5,
-                                  width: WidthScreen,
-                                  scale: 1,
-                                  imageUrl:
-                                      "${URL.image}${destination?.imageFilename}"),
-                              Positioned(
-                                left: 30.w,
-                                bottom: 40.h,
-                                child: Text(
-                                  "",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .labelMedium
-                                      ?.copyWith(color: Colors.white),
-                                ),
-                              )
-                            ],
+                child: RepaintBoundary(
+                  child: CarouselSlider.builder(
+                      itemCount: items?.length,
+                      itemBuilder: (context, index, indexpage) {
+                        final destination = items?[index];
+                        return RepaintBoundary(
+                          child: Card(
+                            elevation: 4.5,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                              child: Stack(
+                                children: [
+                                  CachedNetworkImage(
+                                      fit: BoxFit.fill,
+                                      // height: hightScreen / 2.5,
+                                      width: WidthScreen,
+                                      scale: 1,
+                                      imageUrl:
+                                          "${URL.image}${destination?.imageFilename}",
+                                    errorWidget: (context, url, error) => const Icon(
+                                      Icons.error,
+                                      color: Colors.red,
+                                    ),),
+                                  Positioned(
+                                    left: 30.w,
+                                    bottom: 40.h,
+                                    child: Text(
+                                      "",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .labelMedium
+                                          ?.copyWith(color: Colors.white),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                    options: CarouselOptions(
-                      // aspectRatio: 1.2,
-                      autoPlay: true,
-                    )),
+                        );
+                      },
+                      options: CarouselOptions(
+                        // aspectRatio: 1.2,
+                        autoPlay: true,
+                      )),
+                ),
               );
             } else {
               return SizedBox(

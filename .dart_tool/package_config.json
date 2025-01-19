@@ -758,10 +758,10 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-01-06T10:55:16.819722Z",
+  "generated": "2025-01-16T15:21:53.938375Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///Users/eng.amralaa/development/flutter",
-  "flutterVersion": "3.27.0",
+  "flutterVersion": "3.27.1",
   "pubCache": "file:///Users/eng.amralaa/.pub-cache"
 }

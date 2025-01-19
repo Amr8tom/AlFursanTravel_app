@@ -18,11 +18,12 @@ class CustomShowAllButton extends StatelessWidget {
           const Spacer(),
           InkWell(
               onTap: () {
-                Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
-                    arguments: {
-                      "title": S.current.bestDestination,
-                      "items": DummyLists.destinations
-                    });
+                // Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
+                //     arguments: {
+                //       "title": S.current.bestDestination,
+                //       "items": DummyLists.destinations
+                //     });
+                Navigator.pushNamed(context,DRoutesName.AllVisasScreen);
               },
               child: Text(S.current.viewAll))
         ],

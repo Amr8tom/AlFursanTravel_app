@@ -42,7 +42,9 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
                       onTap: () {
                         controller.selectedTerm = controller.searchQuery;
                         controller.addSearchTerm(controller.searchQuery);
-                        searchController.seach(query: controller.searchQuery);
+                        searchController..seach(query: controller.searchQuery);
+                        controller.searchController.close();
+
                       },
                     );
                   } else {
@@ -69,6 +71,7 @@ class CustomHistorySuggesstionsResults extends StatelessWidget {
 
                                 searchController.seach(
                                     query:term);
+                                controller.searchController.close();
                               },
                             ),
                           )

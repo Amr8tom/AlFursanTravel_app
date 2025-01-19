@@ -16,6 +16,7 @@ import 'widget/custom_visa_details.dart';
 
 class VisaDetailsScreen extends StatelessWidget {
   final String slugId;
+
   const VisaDetailsScreen({super.key, required this.slugId});
 
   @override
@@ -52,10 +53,11 @@ class VisaDetailsScreen extends StatelessWidget {
                               SizedBox(height: AppSizes.space),
 
                               /// informations
-                              const CustomVisaDetails(
+                              CustomVisaDetails(
                                 icon: Icons.short_text_rounded,
                                 title: "informations",
-                                body: "60\$",
+                                body: state.visaDetailsModel.mobInfoAr ??
+                                    S.current.noData,
                               ),
 
                               /// size
@@ -64,13 +66,10 @@ class VisaDetailsScreen extends StatelessWidget {
                               ),
 
                               /// requirements
-                              const CustomVisaDetails(
+                              CustomVisaDetails(
                                 icon: Icons.playlist_add_check_rounded,
-                                title: "requirements",
-                                body:
-                                    "amr alaa ali fursan_app 21/12/2024 egypt cairo giza haram "
-                                    "123 "
-                                    ".......... sssss.........aaaaaaaaa........aaaa...kjknm ",
+                                title: S.current.requirements,
+                                body: S.current.noData,
                               ),
                             ],
                           ),

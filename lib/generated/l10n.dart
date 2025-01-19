@@ -130,6 +130,26 @@ class S {
     );
   }
 
+  /// `requirements`
+  String get requirements {
+    return Intl.message(
+      'requirements',
+      name: 'requirements',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ّInformation`
+  String get information {
+    return Intl.message(
+      'ّInformation',
+      name: 'information',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Account Deleted`
   String get accountDeleted {
     return Intl.message(
@@ -175,6 +195,16 @@ class S {
     return Intl.message(
       'Later',
       name: 'later',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your account is registered successfully`
+  String get registerSuccessfully {
+    return Intl.message(
+      'Your account is registered successfully',
+      name: 'registerSuccessfully',
       desc: '',
       args: [],
     );

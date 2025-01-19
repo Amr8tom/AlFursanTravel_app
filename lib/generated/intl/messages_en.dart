@@ -177,6 +177,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("home"),
         "hours": MessageLookupByLibrary.simpleMessage("Hours"),
         "iAgreeTo": MessageLookupByLibrary.simpleMessage("I agree to "),
+        "information": MessageLookupByLibrary.simpleMessage("ّInformation"),
         "installmentWithSouhoola":
             MessageLookupByLibrary.simpleMessage("Installment with souhoola"),
         "installmentWithValu":
@@ -290,8 +291,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "refunds": MessageLookupByLibrary.simpleMessage("refunds"),
         "refused": MessageLookupByLibrary.simpleMessage("Pending"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "registerSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Your account is registered successfully"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember Me"),
         "remotePayment": MessageLookupByLibrary.simpleMessage("Remote Payment"),
+        "requirements": MessageLookupByLibrary.simpleMessage("requirements"),
         "reservation": MessageLookupByLibrary.simpleMessage("Reservation"),
         "returnOrder": MessageLookupByLibrary.simpleMessage(
             "Return Order....You can return an item within 3 days after receiving it"),

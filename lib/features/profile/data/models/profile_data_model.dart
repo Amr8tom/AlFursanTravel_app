@@ -1,32 +1,75 @@
-import 'dart:convert';
-
-ProfileDataModel profileDataModelFromJson(String str) =>
-    ProfileDataModel.fromJson(json.decode(str));
-String profileDataModelToJson(ProfileDataModel data) =>
-    json.encode(data.toJson());
-
 class ProfileDataModel {
   ProfileDataModel({
-    String? name,
-  }) {
-    _name = name;
-  }
+      this.status, 
+      this.profile,});
 
   ProfileDataModel.fromJson(dynamic json) {
-    _name = json['name'];
+    status = json['status'];
+    profile = json['profile'] != null ? Profile.fromJson(json['profile']) : null;
   }
-  String? _name;
-  ProfileDataModel copyWith({
-    String? name,
-  }) =>
-      ProfileDataModel(
-        name: name ?? _name,
-      );
-  String? get name => _name;
+  String? status;
+  Profile? profile;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['name'] = _name;
+    map['status'] = status;
+    if (profile != null) {
+      map['profile'] = profile?.toJson();
+    }
     return map;
   }
+
+}
+
+class Profile {
+  Profile({
+      this.id, 
+      this.firstName, 
+      this.lastName, 
+      this.email, 
+      this.status, 
+      this.featuredImageId, 
+      this.role, 
+      this.deletedAt, 
+      this.createdAt, 
+      this.updatedAt,});
+
+  Profile.fromJson(dynamic json) {
+    id = json['id'];
+    firstName = json['first_name'];
+    lastName = json['last_name'];
+    email = json['email'];
+    status = json['status'];
+    featuredImageId = json['featured_image_id'];
+    role = json['role'];
+    deletedAt = json['deleted_at'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
+  }
+  num? id;
+  String? firstName;
+  String? lastName;
+  String? email;
+  String? status;
+  dynamic featuredImageId;
+  String? role;
+  dynamic deletedAt;
+  String? createdAt;
+  String? updatedAt;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['first_name'] = firstName;
+    map['last_name'] = lastName;
+    map['email'] = email;
+    map['status'] = status;
+    map['featured_image_id'] = featuredImageId;
+    map['role'] = role;
+    map['deleted_at'] = deletedAt;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
+    return map;
+  }
+
 }

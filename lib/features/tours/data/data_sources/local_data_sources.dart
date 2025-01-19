@@ -11,24 +11,24 @@ import '../model/all_tours_model.dart';
 abstract class ToursLocalDataSources {
   /// Tour Functions
   Future<Unit> cacheAllTours({required AllToursModel Tours});
-  Future<Unit> cacheTourDetails({required TourDetailsModel tourDetails});
+  Future<Unit> cacheTourDetails({required TourDetailsModel tourDetails, required String Params});
   Future<AllToursModel> getAllTours();
-  Future<TourDetailsModel> getTourDetail();
+  Future<TourDetailsModel> getTourDetail( {required String Params});
 }
 
 class ToursLocalDataSourcesImp implements ToursLocalDataSources {
   @override
   Future<Unit> cacheAllTours({required AllToursModel Tours}) async {
-    final cachedTours = jsonEncode(Tours);
+    final String cachedTours = await jsonEncode(Tours.toJsonList());
     await PrefService.putString(key: CacheKeys.allTours, value: cachedTours);
     return Future.value(unit);
   }
 
   @override
-  Future<Unit> cacheTourDetails({required TourDetailsModel tourDetails}) async {
-    final cachedTDetails = jsonEncode(tourDetails);
-    await PrefService.putString(
-        key: CacheKeys.tourDetails, value: cachedTDetails);
+  Future<Unit> cacheTourDetails({required TourDetailsModel tourDetails , required String Params}) async {
+    final String cachedTDetails = jsonEncode(tourDetails.toJson());
+    await PrefService.putStringbyString(
+        key: CacheKeys.tourDetails.name+Params, value: cachedTDetails);
     return Future.value(unit);
   }
 
@@ -37,6 +37,7 @@ class ToursLocalDataSourcesImp implements ToursLocalDataSources {
     final jsonString = await PrefService.getString(key: CacheKeys.allTours);
     if (jsonString != null) {
       final json = jsonDecode(jsonString!);
+      print(json);
       return AllToursModel.fromJsonList(json);
     } else {
       throw CacheFailure();
@@ -44,9 +45,10 @@ class ToursLocalDataSourcesImp implements ToursLocalDataSources {
   }
 
   @override
-  Future<TourDetailsModel> getTourDetail() async {
-    final jsonString = await PrefService.getString(key: CacheKeys.tourDetails);
+  Future<TourDetailsModel> getTourDetail({ required String Params}) async {
+    final jsonString = await PrefService.getStringByString(key: CacheKeys.tourDetails.name+Params);
     if (jsonString != null) {
+
       final jsons = await json.decode(jsonString!);
       return TourDetailsModel.fromJson(jsons);
     } else {

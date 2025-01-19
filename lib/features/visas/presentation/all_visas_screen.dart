@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/visas/presentation/controllers/all_visas/get_all_visas_cubit.dart';
@@ -59,14 +60,16 @@ class AllVisasScreen extends StatelessWidget {
                               child: Column(
                                 children: [
                                   ClipRRect(
-                                    borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(8.0)),
-                                    child: Image.network(
-                                      "${URL.image}${destination?.featuredImage?.imageFilename}",
-                                      fit: BoxFit.cover,
-                                      height:
-                                         AppSizes.spaceBtwSections*4, // Adjust the height of the image
-                                      width: double.infinity,
+                                    borderRadius: BorderRadius.vertical(top: Radius.circular(8.0)),
+                                    child: CachedNetworkImage(
+                                      imageUrl: "${URL.image}${destination?.featuredImage?.imageFilename}",  // Image URL
+                                      fit: BoxFit.cover,  // BoxFit to cover the available space
+                                      height: AppSizes.spaceBtwSections * 4,  // Adjust height
+                                      width: double.infinity,  // Full width
+                                      placeholder: (context, url) => Center(
+                                        child: CircularProgressIndicator(),  // Placeholder while loading
+                                      ),
+                                      errorWidget: (context, url, error) => Icon(Icons.error),  // Error widget if image fails to load
                                     ),
                                   ),
                                   Expanded(

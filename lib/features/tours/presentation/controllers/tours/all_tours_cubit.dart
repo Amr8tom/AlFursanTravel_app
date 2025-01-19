@@ -7,7 +7,9 @@ part 'all_tours_state.dart';
 
 class AllToursCubit extends Cubit<AllToursState> {
   final GetAllTourUseCase _getAllTourUseCase;
-  AllToursCubit(this._getAllTourUseCase) : super(AllToursLoading());
+  AllToursCubit(this._getAllTourUseCase) : super(AllToursLoading()){
+    getAllTours();
+  }
 
   Future getAllTours() async {
     final result = await _getAllTourUseCase.call();

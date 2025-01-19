@@ -55,9 +55,9 @@ class TourDetailsScreen extends StatelessWidget {
                               /// informations
                                CustomTourDetails(
                                 icon: Icons.short_text_rounded,
-                                title: "informations",
+                                title: S.current.information,
                                 body:
-                                    "${state.tourDetailsModel.infoAr}",
+                                    state.tourDetailsModel.infoAr??S.current.noData,
                               ),
 
                               /// size
@@ -66,12 +66,10 @@ class TourDetailsScreen extends StatelessWidget {
                               ),
 
                               /// requirements
-                              const CustomTourDetails(
+                              CustomTourDetails(
                                 icon: Icons.playlist_add_check_rounded,
-                                title: "requirements",
-                                body: "one person many activities   "
-                                    "1500\$  -- 2 meals "
-                                    "no animals no childern no dogs no food  ",
+                                title: S.current.requirements,
+                                body:S.current.noData,
                               ),
                             ],
                           ),

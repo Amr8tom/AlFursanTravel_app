@@ -10,6 +10,7 @@ import '../../../common/custom_ui.dart';
 import '../../../common/widgets/appbar/appbar.dart';
 import '../../../generated/l10n.dart';
 import '../../../utils/constants/sizes.dart';
+import 'widgets/custom_all_tours_screen_body.dart';
 
 class AllToursScreen extends StatelessWidget {
   const AllToursScreen({super.key});
@@ -23,85 +24,17 @@ class AllToursScreen extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => serviceLocator<AllToursCubit>(),
-        child: Builder(builder: (context) {
-          context.read<AllToursCubit>().getAllTours();
-          return BlocBuilder<AllToursCubit, AllToursState>(
-            builder: (context, state) {
-              if (state is AllToursSuccess) {
-                final items = state.allToursModel.tours;
-                return Column(
-                  children: [
-
-                    SizedBox(
-                      height: AppSizes.space,
-                    ),
-                    Expanded(
-                      child: GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 8.0,
-                          mainAxisSpacing: 8.0,
-                        ),
-                        itemCount: items?.length,
-                        itemBuilder: (context, index) {
-                          final destination = items?[index];
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.pushNamed(
-                                  context, DRoutesName.tourDetailsRoute,
-                                  arguments: destination.slug.toString());
-                            },
-                            child: Card(
-                              elevation: 4.0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              child: Column(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(8.0)),
-                                    child: Image.network(
-                                      "${URL.image}${destination?.images?[0].imageFilename}",
-                                      fit: BoxFit.cover,
-                                      height:
-                                          120.0, // Adjust the height of the image
-                                      width: double.infinity,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      width: double.infinity,
-                                      color: ColorRes.grey,
-                                      child: Center(
-                                        child: Text(
-                                          destination!.nameAr!.toString(),
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16.0,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                );
-              } else if (state is AllToursLoading) {
-                return CustomUI.simpleLoader();
-              } else {
-                return CustomUI.tryLater();
-              }
-            },
-          );
-        }),
+        child: BlocBuilder<AllToursCubit, AllToursState>(
+          builder: (context, state) {
+            if (state is AllToursSuccess) {
+              return const CustomAllToursScreenBody();
+            } else if (state is AllToursLoading) {
+              return CustomUI.simpleLoader();
+            } else {
+              return CustomUI.tryLater();
+            }
+          },
+        ),
       ),
     );
   }

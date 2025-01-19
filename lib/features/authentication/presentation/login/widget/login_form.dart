@@ -12,80 +12,105 @@ class DLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller= context.read<LoginCubit>();
+    final _formKey = GlobalKey<FormState>(); // Initialize the form key
+    final controller =
+        context.read<LoginCubit>();
+
     return BlocBuilder<LoginCubit, LoginState>(
       builder: (context, state) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            /// default Space
-            SizedBox(
-              height: AppSizes.defaultSpace * 14,
-            ),
+        return Form(
+          key: _formKey, // Attach the form key
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              /// Default Space
+              SizedBox(height: AppSizes.defaultSpace * 14),
 
-            /// Email Field
-            TextField(
-              controller: controller.emailController,
-              decoration: InputDecoration(
-                labelText: S.current.eMail,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+              /// Email Field
+              TextFormField(
+                controller: controller.emailController,
+                decoration: InputDecoration(
+                  labelText: S.current.eMail,
+                  border: OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.circular(AppSizes.borderRadiusMd),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return S.current.pleaseEndterValue;
+                  } else if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+                      .hasMatch(value)) {
+                    return S.current.error; // Invalid email format
+                  }
+                  return null; // Return null if the email is valid
+                },
+              ),
+              SizedBox(height: AppSizes.spaceBtwInputFields),
+
+              /// Password Field
+              TextFormField(
+                controller: controller.passwordController,
+                obscureText: true, // Text is obscured (password field)
+                decoration: InputDecoration(
+                  labelText: S.current.password,
+                  border: OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.circular(AppSizes.borderRadiusMd),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return S.current.pleaseEndterValue;
+                  }
+                  return null; // Return null if the password is valid
+                },
+              ),
+              SizedBox(height: AppSizes.defaultSpace),
+
+              /// Login Button
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    // Proceed with login if the form is valid
+                    controller.login();
+                  }
+                },
+                child: Text(
+                  S.current.singIn,
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-            ),
-            SizedBox(height: AppSizes.spaceBtwInputFields),
 
-            /// Password Field
-            TextField(
-            controller:controller.passwordController,
-              obscureText: true,
-              decoration: InputDecoration(
-                suffixIcon: Icon(Icons.remove_red_eye),
-                labelText: S.current.password,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+              /// Sign Up Button
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, DRoutesName.signupRoute);
+                },
+                child: Text(
+                  "${S.current.dontHaveAccont} ${S.current.singUp}",
+                  style: TextStyle(
+                      color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
                 ),
               ),
-            ),
-            SizedBox(height: AppSizes.defaultSpace),
 
-            /// Login Button
-            ElevatedButton(
-              onPressed: () {
-                controller.login();
-              },
-              child: Text(
-                S.current.singIn,
-                style: TextStyle(color: Colors.white),
+              /// Terms and Conditions Button
+              TextButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    // Navigate only if form is valid
+                    Navigator.pushNamed(
+                        context, DRoutesName.termsAndConditionRoute);
+                  }
+                },
+                child: Text(
+                  "${S.current.termsOfUse} ",
+                  style: TextStyle(
+                      color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
+                ),
               ),
-            ),
-
-            /// sign up button
-
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, DRoutesName.signupRoute);
-              },
-              child: Text(
-                "${S.current.dontHaveAccont} ${S.current.singUp}",
-                style: TextStyle(
-                    color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
-              ),
-            ),
-
-            /// terms and conditions button
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, DRoutesName.termsAndConditionRoute);
-              },
-              child: Text(
-                "${S.current.termsOfUse} ",
-                style: TextStyle(
-                    color: ColorRes.primary, fontSize: AppSizes.fontSizeSm),
-              ),
-            ),
-          ],
+            ],
+          ),
         );
       },
     );

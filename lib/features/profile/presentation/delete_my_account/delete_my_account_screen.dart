@@ -9,7 +9,7 @@ class DeleteMyAccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DAppBar(title: S.current.deleteAccount,),
+      appBar: DAppBar(title: S.current.deleteAccount),
       body: const DeleteMyAccountBody(),
     );
   }

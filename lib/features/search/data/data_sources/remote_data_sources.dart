@@ -1,6 +1,7 @@
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 
 import '../../../../utils/constants/api_constants.dart';
+import '../../../../utils/error/failure.dart';
 import '../model/Searched_item_list_model.dart';
 
 abstract class SearchRemoteDataSources {
@@ -13,7 +14,11 @@ class SearchRemoteDataSourcesImp implements SearchRemoteDataSources {
   @override
   Future<AllSearchItemsModel> getSearchItemList(
       {required String query}) async {
-    final response = await _dio.getData(URL: "${URL.search}$query");
-    return AllSearchItemsModel.fromJsonList(response);
+try{
+  final response = await _dio.getData(URL: "${URL.search}$query");
+  return AllSearchItemsModel.fromJsonList(response);
+} on ServerFailure {
+      throw ServerFailure(message: "Server Failure");
+    }
   }
 }

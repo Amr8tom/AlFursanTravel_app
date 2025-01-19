@@ -8,7 +8,9 @@ part 'gallary_state.dart';
 
 class GallaryCubit extends Cubit<GallaryState> {
   final HomeImagesUseCase _homeImagesUseCase;
-  GallaryCubit(this._homeImagesUseCase) : super(GallaryInitial());
+  GallaryCubit(this._homeImagesUseCase) : super(GallaryInitial()){
+    getGalaryData();
+  }
 
   Future getGalaryData() async {
     final result = await _homeImagesUseCase.call();

@@ -17,6 +17,8 @@ class NotificationRepositoryImp implements NotificationRepository {
     if (await _networkInfo.isConnected) {
       try {
         final model = await _remote.getNotificationData();
+        final List<Map<String, dynamic>> json=model.toJson();
+      await  _local.cacheNotificationData(notificationJsonList:json);
         return right(model);
       } on ServerFailure {
         return Left(ServerFailure(

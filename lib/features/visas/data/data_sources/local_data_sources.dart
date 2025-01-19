@@ -8,24 +8,24 @@ import '../model/visa_details_model.dart';
 
 abstract class VisasLocalDataSources {
   Future<Unit> cacheAllVisas({required AllVisasModel allVisas});
-  Future<Unit> cacheVisaDetails({required VisaDetailsModel visaDetails});
+  Future<Unit> cacheVisaDetails({required VisaDetailsModel visaDetails,required String Params});
   Future<AllVisasModel> getAllVisas();
-  Future<VisaDetailsModel> getVisaDetails();
+  Future<VisaDetailsModel> getVisaDetails({required String Params});
 }
 
 class VisasLocalDataSourcesImp implements VisasLocalDataSources {
   @override
   Future<Unit> cacheAllVisas({required AllVisasModel allVisas}) async {
-    final cachedVisas = jsonEncode(allVisas);
+    final cachedVisas = jsonEncode(allVisas.toJsonList());
     await PrefService.putString(key: CacheKeys.allVisas, value: cachedVisas);
     return Future.value(unit);
   }
 
   @override
-  Future<Unit> cacheVisaDetails({required VisaDetailsModel visaDetails}) async {
-    final cachedVisaDetails = jsonEncode(VisaDetailsModel());
-    await PrefService.putString(
-        key: CacheKeys.visaDetails, value: cachedVisaDetails);
+  Future<Unit> cacheVisaDetails({required VisaDetailsModel visaDetails,required String Params}) async {
+    final cachedVisaDetails = jsonEncode(visaDetails.toJson());
+    await PrefService.putStringbyString(
+        key: CacheKeys.visaDetails.name+Params, value: cachedVisaDetails);
     return Future.value(unit);
   }
 
@@ -42,8 +42,8 @@ class VisasLocalDataSourcesImp implements VisasLocalDataSources {
   }
 
   @override
-  Future<VisaDetailsModel> getVisaDetails() async {
-    final jsonString = await PrefService.getString(key: CacheKeys.visaDetails);
+  Future<VisaDetailsModel> getVisaDetails({required String Params}) async {
+    final jsonString = await PrefService.getStringByString(key: CacheKeys.visaDetails.name+Params);
     if (jsonString != null) {
       final json = jsonDecode(jsonString);
       return VisaDetailsModel.fromJson(json);

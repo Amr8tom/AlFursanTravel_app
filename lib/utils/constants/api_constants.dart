@@ -21,7 +21,7 @@ class URL {
   /// post APIs
   static const login = baseUrl + "login";
   static const logOut = baseUrl + "logout";
-  static const signIn = baseUrl + "sign_in";
+  static const signIn = baseUrl + "register";
   static const search = baseUrl + "search?q=";
   static const tourReservation = baseUrl + "tours/reservation";
   static const visaReservation = baseUrl + "visa/reservation";

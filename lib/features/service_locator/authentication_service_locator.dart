@@ -36,7 +36,7 @@ serviceLocator.registerLazySingleton<LogOutUseCase>(
     /// register controllers
     /// here its as singleton to detect the user state around the whole app
     serviceLocator
-        .registerFactory<LoginCubit>(()=> LoginCubit(serviceLocator(),serviceLocator()));
+        .registerFactory<LoginCubit>(()=>LoginCubit(serviceLocator(),serviceLocator()));
     serviceLocator
         .registerFactory<SingUpCubit>(() => SingUpCubit(serviceLocator()));
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fursan_travel_app/features/app/app.dart';
-import 'features/authentication/presentation/controller/log/login_cubit.dart';
 import 'features/language/presentation/controller/language_cubit.dart';
 import 'features/service_locator/service_locator.dart';
 import 'utils/constants/colors.dart';
@@ -16,20 +14,7 @@ void main() async {
   DDeviceUtils.setStatusBarColor(ColorRes.transparent);
   DDeviceUtils.initCacheHelper();
   await ScreenUtil.ensureScreenSize();
-
   /// get the cached language
   await serviceLocator<LanguageCubit>().init();
-
-
-
-
-  runApp(MultiBlocProvider(
-    providers: [
-      BlocProvider<LanguageCubit>(
-          create: (context) => serviceLocator<LanguageCubit>()),
-      BlocProvider<LoginCubit>(
-          create: (context) => serviceLocator<LoginCubit>())
-    ],
-    child: const FursanApp(),
-  ));
+  runApp(const FursanApp());
 }

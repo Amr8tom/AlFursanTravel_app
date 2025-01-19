@@ -22,6 +22,7 @@ class VisasRepositoryImp implements VisasRepository {
     if (await networkInfo.isConnected) {
       try {
         final allVisasModel = await remote.getAllVisas();
+        await local.cacheAllVisas(allVisas: allVisasModel);
         return right(allVisasModel);
       } on ServerFailure {
         return left(ServerFailure(
@@ -44,6 +45,7 @@ class VisasRepositoryImp implements VisasRepository {
     if (await networkInfo.isConnected) {
       try {
         final visaDetailsModel = await remote.getVisaDetails(params: params);
+        await local.cacheVisaDetails(visaDetails: visaDetailsModel,Params: params);
         return right(visaDetailsModel);
       } on ServerFailure {
         return left(ServerFailure(
@@ -51,7 +53,7 @@ class VisasRepositoryImp implements VisasRepository {
       }
     } else {
       try {
-        final visaDetailsModel = await local.getVisaDetails();
+        final visaDetailsModel = await local.getVisaDetails(Params: params);
         return right(visaDetailsModel);
       } on CacheFailure {
         return left(CacheFailure());

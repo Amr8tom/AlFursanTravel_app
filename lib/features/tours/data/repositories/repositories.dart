@@ -21,7 +21,7 @@ class ToursRepositoryImp extends ToursRepository {
     if (await networkInfo.isConnected) {
       try {
         final allToursModel = await remote.getAllTours();
-        local.cacheAllTours(Tours: allToursModel);
+       await local.cacheAllTours(Tours: allToursModel);
         return Right(allToursModel);
       } on ServerFailure {
         throw ServerFailure(
@@ -43,14 +43,15 @@ class ToursRepositoryImp extends ToursRepository {
     if (await networkInfo.isConnected) {
       try {
         final tourDetailsModel = await remote.getTourDetails(params: params);
+        await local.cacheTourDetails(tourDetails: tourDetailsModel, Params: params);
         return right(tourDetailsModel);
       } on ServerFailure {
         throw ServerFailure(
-            message: "================= server failure =============");
+            message: "================= server failure =================");
       }
     } else {
       try {
-        final tourDetailsModel = await local.getTourDetail();
+        final tourDetailsModel = await local.getTourDetail(Params: params);
         return right(tourDetailsModel);
       } on CacheFailure {
         throw CacheFailure();

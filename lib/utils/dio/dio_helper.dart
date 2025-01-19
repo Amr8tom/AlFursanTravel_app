@@ -66,7 +66,10 @@ class DioHelper {
       print(response.headers);
       if (response.statusCode == 204 ||
           response.statusCode == 200 ||
-          response.statusCode == 201) {
+          response.statusCode == 401 ||
+          response.statusCode == 201
+
+      ) {
         print(
             "/////////////////// API Data Fetched Successfully ///////////////////////");
         print(response.data);
@@ -106,7 +109,10 @@ class DioHelper {
       if (response.statusCode == 204 ||
           response.statusCode == 200 ||
           response.statusCode == 201) {
-      } else if (response.statusCode == 403) {}
+      } else if (response.statusCode == 403) {
+        throw ServerFailure(
+            message: '================== server failure =============');
+      }
       return response.data;
     } on DioError catch (error) {
       rethrow;

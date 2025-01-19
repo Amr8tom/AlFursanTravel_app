@@ -8,15 +8,15 @@ import 'package:fursan_travel_app/utils/local_storage/cache_helper.dart';
 
 abstract class NotificationLocalDataSources {
   Future<Unit> cacheNotificationData(
-      {required Map<String, dynamic> notificationJson});
+      {required List<Map<String, dynamic>> notificationJsonList});
   Future<NotificationModel> getNotificationData();
 }
 
 class NotificationLocalDataSourcesImp implements NotificationLocalDataSources {
   @override
   Future<Unit> cacheNotificationData(
-      {required Map<String, dynamic> notificationJson}) async {
-    final stringJson = jsonEncode(notificationJson);
+      {required List<Map<String, dynamic>>  notificationJsonList}) async {
+    final stringJson = jsonEncode(notificationJsonList);
     await PrefService.putString(key: CacheKeys.notification, value: stringJson);
     return Future.value(unit);
   }

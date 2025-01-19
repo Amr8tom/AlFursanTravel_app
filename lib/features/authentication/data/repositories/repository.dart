@@ -21,8 +21,6 @@ class AuthenticationRepositoryImp implements AuthenticationRepository {
     if (await networkInfo.isConnected) {
       try {
         final signUpModel = await remote.singUp(params: params);
-        final json = signUpModel.toJson();
-        await local.cacheLoginData(json: json);
         return right(signUpModel);
       } on ServerFailure {
         return left(
@@ -39,19 +37,13 @@ class AuthenticationRepositoryImp implements AuthenticationRepository {
     if (await networkInfo.isConnected) {
       try {
         final logInModel = await remote.login(params: params);
-        await local.cacheLoginData(json: logInModel.toJson());
         return right(logInModel);
       } on ServerFailure {
         return left(
             ServerFailure(message: "================= server error========="));
       }
     } else {
-      try {
-        final logInModel = await local.getLoginData();
-        return right(logInModel);
-      } on CacheFailure {
         return left(CacheFailure());
-      }
     }
   }
 

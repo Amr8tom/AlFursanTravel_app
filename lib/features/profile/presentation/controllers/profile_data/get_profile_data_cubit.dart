@@ -8,7 +8,9 @@ part 'get_profile_data_state.dart';
 class GetProfileDataCubit extends Cubit<GetProfileDataState> {
   final GetProfileDataUseCase _getProfileDataUseCase;
   GetProfileDataCubit(this._getProfileDataUseCase)
-      : super(GetProfileDataLoading());
+      : super(GetProfileDataLoading()){
+    getProfileData();
+  }
 
   Future getProfileData() async {
     final result = await _getProfileDataUseCase.call();

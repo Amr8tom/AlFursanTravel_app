@@ -2,6 +2,7 @@ import 'package:fursan_travel_app/features/notifications/data/models/notificatio
 import 'package:fursan_travel_app/utils/dio/dio_helper.dart';
 
 import '../../../../utils/constants/api_constants.dart';
+import '../../../../utils/error/failure.dart';
 
 abstract class NotificationRemoteDataSources {
   Future<NotificationModel> getNotificationData();
@@ -10,11 +11,16 @@ abstract class NotificationRemoteDataSources {
 class NotificationRemoteDataSourcesImp
     implements NotificationRemoteDataSources {
   final DioHelper _dio;
+
   const NotificationRemoteDataSourcesImp(this._dio);
 
   @override
   Future<NotificationModel> getNotificationData() async {
-    final responose = await _dio.getData(URL: URL.notification);
-    return NotificationModel.fromJson(responose);
+    try {
+      final responose = await _dio.getData(URL: URL.notification);
+      return NotificationModel.fromJson(responose);
+    } on ServerFailure {
+      throw ServerFailure(message: "Server Failure");
+    }
   }
 }

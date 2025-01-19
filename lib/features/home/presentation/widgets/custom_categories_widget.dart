@@ -7,23 +7,24 @@ import '../../../../utils/constants/colors.dart';
 
 class CustomCategoriesWidget extends StatelessWidget {
   const CustomCategoriesWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        _categoryIconButton(
-            tilte: S.current.exploreIraq,
-            icon: Icons.travel_explore_rounded,
-            onTab: () {
-              {
-                Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
-                    arguments: {
-                      "title": S.current.exploreIraq,
-                      "items": DummyLists.offers
-                    });
-              }
-            }),
+        // _categoryIconButton(
+        //     tilte: S.current.exploreIraq,
+        //     icon: Icons.travel_explore_rounded,
+        //     onTab: () {
+        //       {
+        //         Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
+        //             arguments: {
+        //               "title": S.current.exploreIraq,
+        //               "items": DummyLists.offers
+        //             });
+        //       }
+        //     }),
         _categoryIconButton(
             icon: Icons.card_travel,
             onTab: () {
@@ -56,8 +57,7 @@ Widget _categoryIconButton(
     {required final IconData icon,
     required final VoidCallback onTab,
     required final String tilte}) {
-  return GestureDetector(
-    excludeFromSemantics: true,
+  return InkWell(
     onTap: onTab,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +69,7 @@ Widget _categoryIconButton(
             height: AppSizes.heightcontainerCategories,
             padding: EdgeInsets.all(AppSizes.iconPadding),
             // child: SvgPicture.asset(imagePath)),
-            child: Icon(
+            child:Icon(
               icon,
               color: ColorRes.white,
             )),
