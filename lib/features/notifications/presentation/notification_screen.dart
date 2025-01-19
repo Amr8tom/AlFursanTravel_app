@@ -6,7 +6,6 @@ import 'package:fursan_travel_app/features/notifications/presentation/controller
 import 'package:fursan_travel_app/features/service_locator/service_locator.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
 
-import '../../../dummy/dummy_lists.dart';
 import '../../../generated/l10n.dart';
 import '../../../utils/constants/colors.dart';
 
