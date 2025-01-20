@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fursan_travel_app/features/search/presentation/controllers/search_cubit/search_cubit.dart';
 import 'package:fursan_travel_app/utils/constants/colors.dart';
 import 'package:fursan_travel_app/utils/constants/sizes.dart';
-
 import '../../../../common/custom_ui.dart';
 import '../../../../routing/routes_name.dart';
 import '../../../../utils/constants/api_constants.dart';
+
 
 class SearchResultsColumn extends StatelessWidget {
   const SearchResultsColumn({super.key});
@@ -34,9 +34,7 @@ class SearchResultsColumn extends StatelessWidget {
                         crossAxisSpacing: 8.0,
                         mainAxisSpacing: 8.0,
                         childAspectRatio: 1.5
-
                       ),
-
                       itemCount: 1,
                       itemBuilder: (context, index) {
                         final destination = items;
@@ -57,7 +55,7 @@ class SearchResultsColumn extends StatelessWidget {
                                   flex:4,
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(8.0)),
+                                        top: Radius.circular(AppSizes.borderRadiusMd)),
                                     child: Image.network(
                                       "${URL.image}${destination?[index].images?[0].imageFilename}",
                                       fit: BoxFit.fitWidth,
@@ -76,7 +74,7 @@ class SearchResultsColumn extends StatelessWidget {
                                         destination![index].nameAr!.toString(),
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 16.0,
+                                          fontSize: AppSizes.fontSizeSm,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),

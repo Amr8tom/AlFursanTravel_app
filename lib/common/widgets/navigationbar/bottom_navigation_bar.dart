@@ -4,6 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fursan_travel_app/features/navigation_menu/pressentation/controller/navigation_cubit.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
+
 import 'package:iconsax/iconsax.dart';
 import '../../../generated/l10n.dart';
 import '../../../utils/constants/colors.dart';
@@ -18,32 +21,32 @@ class CustomBottomNavigationBar extends StatelessWidget {
     final List<Widget> _items = [
       Column(
         children: [
-          const Icon(Iconsax.home, color: ColorRes.primary),
+          Icon(Iconsax.home,size: AppSizes.iconMd, color: ColorRes.primary),
           Text(
             S.current.home,
-            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+            style:  TextStyle(fontSize:AppSizes.fontSizeSm/1.2, color: ColorRes.primary),
           ),
         ],
       ),
       Column(
         children: [
-          const Icon(Iconsax.notification, color: ColorRes.primary),
+          Icon(Iconsax.notification,size: AppSizes.iconMd, color: ColorRes.primary),
           Text(
             S.current.notifications,
-            style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+            style:  TextStyle(fontSize:AppSizes.fontSizeSm/1.2, color: ColorRes.primary),
           ),
         ],
       ),
       InkWell(
         onTap: () async {
-          await Contacts.makePhoneCall("+201024264021");
+          await Contacts.makePhoneCall("009647702756666");
         },
         child: Column(
           children: [
-            Icon(Iconsax.call, color: ColorRes.primary),
+            Icon(Iconsax.call, color: ColorRes.primary,size: AppSizes.iconMd,),
             Text(
               S.current.callUs,
-              style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+              style:  TextStyle(fontSize:AppSizes.fontSizeSm/1.2, color: ColorRes.primary),
             ),
           ],
         ),
@@ -51,18 +54,18 @@ class CustomBottomNavigationBar extends StatelessWidget {
       InkWell(
         onTap: () {
           Contacts.openWhatsAppChat(
-              num: "201024264021", message: S.current.whatisNewOffers);
+              num: "009647702756666", message: S.current.whatisNewOffers);
         },
         child: Column(
           children: [
             SvgPicture.asset(
               AssetRes.whatsappIconWhite,
               color: ColorRes.primary,
-              height: 26.sp,
+              height:  AppSizes.iconMd
             ),
             Text(
               S.current.whatsApp,
-              style: const TextStyle(fontSize: 12, color: ColorRes.primary),
+              style:  TextStyle(fontSize:AppSizes.fontSizeSm/1.2, color: ColorRes.primary),
             ),
           ],
         ),
@@ -72,7 +75,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
       textDirection: TextDirection.ltr,
       child: AnimatedBottomNavigationBar.builder(
         itemCount: _items.length,
-        height: kToolbarHeight * .9,
+        height: kToolbarHeight * 1.3.h,
         tabBuilder: (int index, bool isActive) {
           return _items[index];
         },

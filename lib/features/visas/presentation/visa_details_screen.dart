@@ -50,16 +50,16 @@ class VisaDetailsScreen extends StatelessWidget {
                                   price: "${state?.visaDetailsModel!.price}",
                                   imagePath:
                                       "${URL.image}${state.visaDetailsModel.featuredImage?.imageFilename}"),
-                              SizedBox(height: AppSizes.space),
 
-                              /// informations
+                              /// information
                               CustomVisaDetails(
                                 icon: Icons.short_text_rounded,
-                                title: "informations",
-                                body: state.visaDetailsModel.mobInfoAr ??
+                                title: S.current.information,
+                                body: ((S.current.localeee == "ar")
+                                        ? state.visaDetailsModel.mobInfoAr
+                                        : state.visaDetailsModel.mobInfoEn) ??
                                     S.current.noData,
                               ),
-
                               /// size
                               SizedBox(
                                 height: AppSizes.spaceBtwItems,
@@ -69,7 +69,15 @@ class VisaDetailsScreen extends StatelessWidget {
                               CustomVisaDetails(
                                 icon: Icons.playlist_add_check_rounded,
                                 title: S.current.requirements,
-                                body: S.current.noData,
+                                body: ((S.current.localeee == "ar")
+                                        ? state.visaDetailsModel.mobReqAr
+                                        : state.visaDetailsModel.mobReqEn) ??
+                                    S.current.noData,
+                              ),
+
+                              /// size
+                              SizedBox(
+                                height: AppSizes.spaceBtwItems * 2,
                               ),
                             ],
                           ),

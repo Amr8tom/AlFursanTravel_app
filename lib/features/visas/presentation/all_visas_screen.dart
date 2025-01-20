@@ -64,7 +64,8 @@ class AllVisasScreen extends StatelessWidget {
                                     child: CachedNetworkImage(
                                       imageUrl: "${URL.image}${destination?.featuredImage?.imageFilename}",  // Image URL
                                       fit: BoxFit.cover,  // BoxFit to cover the available space
-                                      height: AppSizes.spaceBtwSections * 4,  // Adjust height
+                                        height: AppSizes.productImageSize*1.2, // Adjust the height of the image
+                                          // Adjust height
                                       width: double.infinity,  // Full width
                                       placeholder: (context, url) => Center(
                                         child: CircularProgressIndicator(),  // Placeholder while loading

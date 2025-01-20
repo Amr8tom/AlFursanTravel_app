@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
 import 'package:fursan_travel_app/utils/helpers/navigation_extension.dart';
 import 'package:lottie/lottie.dart';
 import '../../../../generated/l10n.dart';
@@ -16,10 +18,10 @@ class CustomLottieFloatingAvtionBottom extends StatelessWidget {
       },
       child: CircleAvatar(
         backgroundColor: ColorRes.primary,
-        radius: 35,
+        radius: AppSizes.productImageRadius*2.2,
         child: SizedBox(
-          width: 70,
-          height: kToolbarHeight * 1.5,
+          width: AppSizes.space*3,
+          height: kToolbarHeight * 1.9.h,
           child: Stack(
             children: [
               Center(
@@ -28,6 +30,7 @@ class CustomLottieFloatingAvtionBottom extends StatelessWidget {
                   child: Transform.scale(
                       scale: 2.1,
                       child: Icon(
+                        size: AppSizes.iconSm,
                         Icons.search,
                         color: Colors.white,
                       )),

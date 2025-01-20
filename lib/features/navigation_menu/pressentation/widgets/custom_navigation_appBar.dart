@@ -35,25 +35,23 @@ class CustomNavigationAppbar extends StatelessWidget
             S.current.favorite,
             S.current.profileInfo
           ];
-
           return Directionality(
             textDirection: TextDirection.rtl,
             child: AppBar(
-              leading: Center(
-                child: IconButton(
-                  onPressed: () {
-                    print(loginController.isGuest);
-                    if (loginController.isGuest) {
-                      Navigator.pushNamed(context, DRoutesName.loginRoute);
-                    } else {
-                      Navigator.pushNamed(
-                          context, DRoutesName.profileInfoRoute);
-                    }
-                  },
-                  icon: const Icon(
-                    Iconsax.profile_tick5,
-                    color: ColorRes.primary,
-                  ),
+              leading: IconButton(
+                onPressed: () {
+                  print(loginController.isGuest);
+                  if (loginController.isGuest) {
+                    Navigator.pushNamed(context, DRoutesName.loginRoute);
+                  } else {
+                    Navigator.pushNamed(
+                        context, DRoutesName.profileInfoRoute);
+                  }
+                },
+                icon: Icon(
+                  Iconsax.profile_tick5,
+                  color: ColorRes.primary,
+                  size: AppSizes.iconLg/1.6,
                 ),
               ),
               actions: [
@@ -61,36 +59,44 @@ class CustomNavigationAppbar extends StatelessWidget
                   onTap: () {
                     context.read<LanguageCubit>().toggleLand();
                   },
-                  child: Row(
-                    children: [
-                      Text(
-                        context.watch<LanguageCubit>().ShowLand,
-                        style: TextStyle(
-                          fontSize: AppSizes.fontSizeSm,
-                          color: ColorRes.primary,
-                        ),
-                      ),
-                      const SizedBox(width: 7),
-                      const Icon(
-                        Icons.language,
-                        color: ColorRes.primary,
-                      ),
-                    ],
+                  child: Text(
+                    context.watch<LanguageCubit>().ShowLand,
+                    style: TextStyle(
+                      fontSize: AppSizes.fontSizeSm ,
+                      color: ColorRes.primary,
+                    ),
                   ),
                 ),
-                IconButton(
-                  onPressed: () {
+                const SizedBox(width: 7),
+                GestureDetector(
+                  onTap: () {
+                    context.read<LanguageCubit>().toggleLand();
+                  },
+                  child: Icon(
+                    Icons.language,
+                    color: ColorRes.primary,
+                    size: AppSizes.iconLg / 1.4,
+                  ),
+                ),
+                const SizedBox(width: 7),
+
+                InkWell(
+                  onTap: () {
                     Navigator.pushNamed(context, DRoutesName.contactUs);
                   },
-                  icon: const Icon(
-                    Icons.mark_as_unread_sharp,
+                  child: Icon(
+                    Icons.mail_outline_sharp,
                     color: ColorRes.primary,
+                    size: AppSizes.iconLg/1.3,
                   ),
                 ),
+                const SizedBox(width: 7),
               ],
               title: Text(
                 _title[controller.indx],
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  fontSize: AppSizes.fontSizeLg/1.3
+                ),
               ),
               backgroundColor: Colors.white,
               automaticallyImplyLeading: false,

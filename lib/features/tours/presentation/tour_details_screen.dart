@@ -50,14 +50,15 @@ class TourDetailsScreen extends StatelessWidget {
                                       "${state?.tourDetailsModel!.tktSinglePrice}",
                                   imagePath:
                                       "${URL.image}${state.tourDetailsModel.images?[0].imageFilename}"),
-                              SizedBox(height: AppSizes.space),
 
                               /// informations
                                CustomTourDetails(
                                 icon: Icons.short_text_rounded,
                                 title: S.current.information,
-                                body:
-                                    state.tourDetailsModel.infoAr??S.current.noData,
+                                body: ((S.current.localeee == "ar")
+                                    ? state.tourDetailsModel.infoAr
+                                    : state.tourDetailsModel.infoEn) ??
+                                    S.current.noData,
                               ),
 
                               /// size
@@ -69,7 +70,10 @@ class TourDetailsScreen extends StatelessWidget {
                               CustomTourDetails(
                                 icon: Icons.playlist_add_check_rounded,
                                 title: S.current.requirements,
-                                body:S.current.noData,
+                                body: ((S.current.localeee == "ar")
+                                    ? state.tourDetailsModel.mobReqAr
+                                    : state.tourDetailsModel.mobReqEn) ??
+                                    S.current.noData,
                               ),
                             ],
                           ),

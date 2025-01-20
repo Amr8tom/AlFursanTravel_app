@@ -24,7 +24,7 @@ class CustomShowAllButton extends StatelessWidget {
                 //     });
                 Navigator.pushNamed(context,DRoutesName.AllVisasScreen);
               },
-              child: Text(S.current.viewAll))
+              child: Text(S.current.viewAll,style: Theme.of(context).textTheme.headlineSmall,))
         ],
       ),
     );

@@ -33,11 +33,11 @@ class LanguageCubit extends Cubit<LanguageState> {
     emit(LanguageLoading());
     if (currentLang == Locale("en")) {
       currentLang = Locale("ar");
-      ShowLand = "AR";
+      ShowLand = "EN";
       PrefService.putString(key: CacheKeys.lang, value: "ar");
     } else {
       currentLang = Locale("en");
-      ShowLand = "EN";
+      ShowLand = "AR";
       PrefService.putString(key: CacheKeys.lang, value: "en");
     }
     print(currentLang);

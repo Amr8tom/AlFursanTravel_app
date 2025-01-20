@@ -49,7 +49,7 @@ class CustomAllToursScreenBody extends StatelessWidget {
                             child: CachedNetworkImage(
                               imageUrl: "${URL.image}${destination?.images?[0].imageFilename}",
                               fit: BoxFit.cover,
-                              height: 120.0, // Adjust the height of the image
+                              height: AppSizes.productImageSize*1.2, // Adjust the height of the image
                               width: double.infinity,
                               placeholder: (context, url) => Center(
                                 child: CircularProgressIndicator(), // Show a loading indicator while fetching the image
@@ -66,7 +66,7 @@ class CustomAllToursScreenBody extends StatelessWidget {
                                   destination!.nameAr!.toString(),
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 16.0,
+                                    fontSize: AppSizes.fontSizeSm,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),

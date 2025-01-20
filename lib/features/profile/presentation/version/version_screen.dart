@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fursan_travel_app/common/widgets/appbar/appbar.dart';
+import 'package:fursan_travel_app/utils/constants/sizes.dart';
 
 import '../../../../generated/l10n.dart';
 import '../../../../utils/constants/colors.dart';
@@ -20,15 +21,15 @@ class VersionScreen extends StatelessWidget {
           children: [
             // App Logo
             CircleAvatar(
-              radius: 50,
+              radius: AppSizes.borderRadiusXXLg*2,
               backgroundColor: ColorRes.primaryBackground,
               child: Icon(
                 Icons.apps,
-                size: 50,
+                size: AppSizes.iconLg*2,
                 color: ColorRes.primary,
               ),
             ),
-            const SizedBox(height: 20),
+             SizedBox(height: AppSizes.space/2),
             // App Name
             Text(
               S.current.appName,
@@ -38,16 +39,16 @@ class VersionScreen extends StatelessWidget {
                 color: ColorRes.primaryBGAppBar,
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: AppSizes.space/2),
             // Version Number
             Text(
-              S.current.version + " 1.0.0 ",
+              S.current.version + " 2.0.0 ",
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.grey[600],
               ),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: AppSizes.space/2),
             // Additional Info
             Text(
               S.current.welcomeMessage,

@@ -1,5 +1,5 @@
 plugins {
-
+    id 'com.google.gms.google-services'
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
@@ -11,12 +11,12 @@ if (localPropertiesFile.exists()) {
         localProperties.load(reader)
     }
 }
-
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
+
 android {
     namespace = "com.fursan_travel_app"
     compileSdk = flutter.compileSdkVersion
@@ -58,4 +58,10 @@ android {
 }
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.8.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
 }

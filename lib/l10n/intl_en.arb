@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appName": "Fursan",
+  "appName": "Al Fursan",
   "skip": "skip",
   "home": "home",
     "deleteAccount": "Delete My Account",
@@ -198,7 +198,7 @@
   "selectCountry": "Select Country",
   "buyingLimit": "You cannot buy for less than 500 pounds",
   "saudiArabia": "saudiArabia",
-  "singIn": "Sing In",
+  "singIn": "Sign In",
   "size": "Size",
   "description": "Description",
   "flashTodaySale": "Today Sale",

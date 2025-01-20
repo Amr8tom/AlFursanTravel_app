@@ -60,6 +60,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
                   context.pop();
                 },
                 icon: Icon(Icons.arrow_back_ios,
+                    size: AppSizes.iconMd,
                     color:
                         arrowBackColor ? ColorRes.primary : ColorRes.primary))
             : Padding(
@@ -72,9 +73,11 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
             [
               IconButton(
                 onPressed: () {
-                  Contacts.makePhoneCall("+201024264021");
+                  Contacts.makePhoneCall("009647702756666");
                 },
-                icon: const Icon(Iconsax.call, color: ColorRes.primary),
+                icon:  Icon(Iconsax.call, color: ColorRes.primary,
+                  size: AppSizes.iconMd,
+                ),
                 color: ColorRes.primary,
               ),
               SizedBox(
@@ -83,7 +86,7 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
               InkWell(
                 onTap: () {
                   Contacts.openWhatsAppChat(
-                      num: "201024264021", message: S.current.whatisNewOffers);
+                      num: "+009647702756666", message: S.current.whatisNewOffers);
                 },
                 child: SvgPicture.asset(
                   AssetRes.whatsappIconWhite,
@@ -100,5 +103,5 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(DDeviceUtils.getAppBarHeight());
+  Size get preferredSize => Size.fromHeight(DDeviceUtils.getAppBarHeight().sp);
 }

@@ -16,6 +16,8 @@ class TourDetailsModel {
     this.notesAr,
     this.status,
     this.order,
+    this.mobReqEn,
+    this.mobReqAr,
     this.infoEn,
     this.programEn,
     this.includeEn,
@@ -64,6 +66,8 @@ class TourDetailsModel {
     durationAr = json['duration_ar'];
     infoAr = json['mob_info_ar'];
     programAr = json['program_ar'];
+    mobReqEn = json['mob_req_en'];
+    mobReqAr = json['mob_req_ar'];
     includeAr = json['include_ar'];
     excludeAr = json['exclude_ar'];
     notesAr = json['notes_ar'];
@@ -121,6 +125,8 @@ class TourDetailsModel {
   String? infoAr;
   String? programAr;
   String? includeAr;
+  String? mobReqEn;
+  String? mobReqAr;
   String? excludeAr;
   String? notesAr;
   String? status;
@@ -179,6 +185,8 @@ class TourDetailsModel {
     map['status'] = status;
     map['order'] = order;
     map['mob_info_en'] = infoEn;
+    map['mob_req_en'] = mobReqEn;
+    map['mob_req_ar'] = mobReqAr;
     map['program_en'] = programEn;
     map['include_en'] = includeEn;
     map['exclude_en'] = excludeEn;

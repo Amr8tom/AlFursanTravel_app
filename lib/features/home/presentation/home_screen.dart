@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHight = MediaQuery.of(context).size.height;
     return Padding(
-      padding: EdgeInsets.all(AppSizes.padding),
+      padding: EdgeInsets.symmetric(horizontal:AppSizes.padding),
       child: SingleChildScrollView(
         child: Directionality(
           textDirection: TextDirection.ltr,

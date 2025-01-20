@@ -27,12 +27,7 @@ class CustomTourDetails extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
-            icon,
-            color: ColorRes.primary,
-            size: AppSizes.iconLg,
-          ),
-          SizedBox(width: AppSizes.padding),
+
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,11 +41,12 @@ class CustomTourDetails extends StatelessWidget {
                 ),
                 SizedBox(height: AppSizes.spaceBtwTexts),
                 Text(
-                  maxLines: 3,
+                  maxLines: 20,
                   body,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: ColorRes.primaryBGAppBar,
-                      ),
+                    fontSize: AppSizes.fontSizeSm,
+                    color: ColorRes.grey2,
+                  ),
                 ),
               ],
             ),

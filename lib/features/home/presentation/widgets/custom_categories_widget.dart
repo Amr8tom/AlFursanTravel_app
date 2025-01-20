@@ -12,18 +12,7 @@ class CustomCategoriesWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        // _categoryIconButton(
-        //     tilte: S.current.exploreIraq,
-        //     icon: Icons.travel_explore_rounded,
-        //     onTab: () {
-        //       {
-        //         Navigator.pushNamed(context, DRoutesName.certainCategoryRoute,
-        //             arguments: {
-        //               "title": S.current.exploreIraq,
-        //               "items": DummyLists.offers
-        //             });
-        //       }
-        //     }),
+
         _categoryIconButton(
             icon: Icons.card_travel,
             onTab: () {
@@ -58,22 +47,29 @@ Widget _categoryIconButton(
     required final String tilte}) {
   return InkWell(
     onTap: onTab,
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-            decoration: BoxDecoration(
-                color: ColorRes.primary,
-                borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXLg)),
-            height: AppSizes.heightcontainerCategories,
-            padding: EdgeInsets.all(AppSizes.iconPadding),
-            // child: SvgPicture.asset(imagePath)),
-            child:Icon(
-              icon,
-              color: ColorRes.white,
-            )),
-        Text(tilte)
-      ],
+    child: Center(
+      child: Column(
+        children: [
+          Container(
+              padding: EdgeInsets.all(AppSizes.iconPadding),
+              decoration: BoxDecoration(
+                  color: ColorRes.primary,
+                  borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXLg)),
+              height: AppSizes.heightcontainerCategories,
+              width: AppSizes.widthcontainer/2,
+              child:Padding(
+                padding: EdgeInsets.only(bottom:AppSizes.iconPadding*2),
+                child: Icon(
+                  size: AppSizes.iconMd/1.1,
+                  icon,
+                  color: ColorRes.white,
+                ),
+              )),
+          Text(tilte,style: TextStyle(
+            fontSize: AppSizes.fontSizeMd
+          ),)
+        ],
+      ),
     ),
   );
 }

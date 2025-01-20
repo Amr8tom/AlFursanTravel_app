@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178431606917",
+    "project_id": "fursan-tourism-app",
+    "storage_bucket": "fursan-tourism-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178431606917:android:c5d3a4027d027a820ae9ec",
+        "android_client_info": {
+          "package_name": "com.fursan_travel_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHwFDOn4ShPvXPsV2HNhxqPcLqYN8VJss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

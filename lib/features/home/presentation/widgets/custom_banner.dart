@@ -8,13 +8,18 @@ class CustomBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: AppSizes.productImageSize,
-      child: Image.asset(
-        scale: 0.8,
-        AssetRes.homeBanner3,
-        height: AppSizes.imageThumbSize,
+    return Padding(
+      padding:  EdgeInsets.symmetric(horizontal:AppSizes.padding),
+      child: SizedBox(
+        width: double.maxFinite,
+        height: AppSizes.productImageSize/1.2,
+        child: Image.asset(
+          fit: BoxFit.fitWidth,
+          // width: double.infinity,
+          scale: 0.8,
+          AssetRes.homeBanner3,
+          // height: AppSizes.imageThumbSize,
+        ),
       ),
     );
   }

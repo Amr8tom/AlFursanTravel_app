@@ -19,7 +19,7 @@ class DeleteMyAccountBody extends StatelessWidget {
           return Padding(
             padding: EdgeInsets.all(AppSizes.padding),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 /// asking the user

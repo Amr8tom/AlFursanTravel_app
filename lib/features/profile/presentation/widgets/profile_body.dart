@@ -25,7 +25,7 @@ class ProfileBody extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return Center(
+        return SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: AppSizes.padding),
             child: Column(
@@ -53,20 +53,6 @@ class ProfileBody extends StatelessWidget {
                   },
                 ),
 
-                // ///size
-                // SizedBox(
-                //   height: AppSizes.spaceBetweenIcon,
-                // ),
-                //
-                // /// bookMarked
-                // CustomProfileButtonWidget(
-                //   title: S.current.bookmarked,
-                //   icon: Iconsax.bookmark,
-                //   onTap: () {
-                //     Navigator.pushNamed(context, DRoutesName.bookmarkedRoute);
-                //   },
-                // ),
-
                 ///size
                 SizedBox(
                   height: AppSizes.spaceBetweenIcon,
@@ -81,11 +67,7 @@ class ProfileBody extends StatelessWidget {
                   },
                 ),
 
-                ///size
-                SizedBox(
-                  height: AppSizes.spaceBetweenIcon*3,
-                ),
-
+                //
                 /// delete profile
                 CustomProfileButtonWidget(
                   title: S.current.deleteAccount,
